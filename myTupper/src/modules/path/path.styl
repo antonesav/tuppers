@@ -1,0 +1,26 @@
+@require '../../css/partials/_params.styl'
+@require '../../css/partials/_mixins.styl'
+
+.path
+	font-family 'TupperPRO', sans-serif!important
+	display none
+	&__content
+		display flex
+		align-items center
+		flex-wrap wrap
+		line-height 2
+		padding-bottom 20px
+		padding-top 20px
+	&__link
+		font-size 14px
+		font-weight 300
+		color $black-color
+		text-decoration: none
+		&_active
+			color $orange-color
+	&__separator
+		margin 0 10px
+
+@media screen and (min-width $view-port-tablet)
+	.path
+		display block

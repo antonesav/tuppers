@@ -1,0 +1,111 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+
+.pavangard
+	font-family 'TupperPRO', sans-serif !important
+	& p
+		line-height 25px
+	&__image
+		& img
+			width 100%
+		&_text
+			& p
+				margin-bottom 15px
+			& span
+				color $main-color
+	&__h2
+		font-size 20px
+		color $main-color
+		text-transform: uppercase
+		&_hidden
+			display none
+			font-size 24px
+			color $main-color
+			text-transform: uppercase
+		&_mob
+			flex(row,space-between,center)
+			cursor pointer
+	&__hidden
+		margin-top 20px
+		& ul
+			margin-left 17px
+			& li
+				margin-bottom 15px
+				list-style-type disc
+				color grey
+				& p
+					color $black-color
+	&__border
+		border-bottom 1px solid $light-color
+		padding 15px 0
+	&__noborder
+		padding 15px 0
+	&__block
+		flex(row,space-between,center)
+		background-color $main-color
+		color $white-color
+		padding 20px 25px
+		&-table
+			font-size 5px
+		& p
+			line-height normal
+			&:nth-child(1)
+				width 20%
+			&:nth-child(2)
+				width 20%
+			&:nth-child(3)
+				width 40%
+		&_line
+			border 1px solid $light-color
+			border-top none
+			padding 20px 25px
+			flex(row,space-between,center)
+			&:hover
+				background-color $fill-color
+			& p
+				line-height normal
+				&:nth-child(1)
+					width 20%
+				&:nth-child(2)
+					width 20%
+				&:nth-child(3)
+					width 40%
+	&__gray
+		background-color $fill-color
+		padding 20px
+		&_h3
+			margin-bottom 20px
+			color $main-color
+
+@media screen and (min-width $view-port-mob)
+	.pavangard
+		&__block
+			&-table
+				font-size 10px
+@media screen and (min-width $view-port-medium)
+	.pavangard
+		&__flex
+			flex(row,space-between)
+		&__image
+			width 55%
+			&_text
+				width 43%
+		&__h2
+			&_hidden
+				display block
+			&_mob
+				display none
+		&__block
+			&-table
+				font-size 14px
+
+@media screen and (min-width $view-port-tablet)
+	.pavangard
+		&__block
+			&-table
+				font-size 16px
+@media screen and (min-width $view-port-large)
+	.pavangard
+		flex(row,space-between)
+		&__content
+			width 73%

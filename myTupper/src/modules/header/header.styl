@@ -1,0 +1,121 @@
+@require '../../css/partials/_params.styl'
+@require '../../css/partials/_mixins.styl'
+
+.header
+	font-family 'TupperPRO', sans-serif !important
+	flex($jc: space-between, $ai: center)
+	flex-wrap wrap
+	position relative
+	border-bottom 1px solid #E0E0E0
+	&__logo
+		width 100%
+		flex($jc: center, $ai: center)
+		padding 20px 0 15px
+		position relative
+		&_img
+			width 162px
+		&::after
+			content ''
+			display block
+			position absolute
+			bottom 0
+			left -13px
+			right -13px
+			background-color #E0E0E0
+			height 1px
+	&__account
+		position absolute
+		right 13px
+		top 19%
+		flex(row, space-between, center)
+		&_text
+			display none
+			padding 0 20px
+	&__menu
+		margin-top 5px
+		cursor pointer
+	&__search
+		width 53%
+		margin 18px 0 15px 17px
+		border-bottom 1px solid $black-color
+		position relative
+		&_input
+			position absolute
+			top 0
+			bottom 0
+			right 0
+			left 15%
+			width 85%
+			padding 0 2px
+			border none
+			&:focus
+				outline none
+	&__basket
+		margin-top 5px
+		&_block
+			flex($ai: center)
+		&_number
+			margin-left 6px
+			font-size 20px
+		&_text
+			display none
+			
+@media screen and (min-width $view-port-mob)
+	.header
+		&__account
+			right $padding-mob
+		&__logo
+			&_img
+				width 182px
+			&::after
+				left -20px
+				right -20px
+	
+@media screen and (min-width $view-port-medium)
+	.header
+		&__account
+			right $padding-medium
+		&__logo
+			&_img
+				width 202px
+			&::after
+				left -25px
+				right -25px
+			
+@media screen and (min-width $view-port-tablet)
+	.header
+		padding-top 30px
+		border-bottom none
+		&__logo
+			width 28%
+			&_img
+				width 100%
+			&::after
+				display none
+		&__search
+			width 25%
+		&__menu
+			display none
+		&__account
+			right $padding-tablet
+			top 5%
+			flex()
+			&_text
+				display block
+		&__basket
+			flex($ai: flex-start)
+			margin-top 20px
+			&_text
+				width 180px
+				flex(column)
+				flex-wrap wrap
+				margin-left 20px
+				&_wrapper
+					flex($jc: space-between)
+					margin 2.5px 0
+		
+@media screen and (min-width $view-port-large)
+	.header
+		&__account
+			right $padding-large
+	

@@ -1,0 +1,103 @@
+extends ../layouts/default
+
+include ../modules/icon/icon
+include ../modules/path/path
+
+block content
+	+path({title: ['Главная страница', 'Результаты поиска для: “эко-бутылка”', 'Буклеты «online»'], href: ['index.html', 'programs.html']})
+	.booklet-online.view-port
+		.pformula__aside
+			ul
+				li
+					a(href='#') Программа «Менеджер»
+				li
+					a(href='#') Программа «Директор»
+				li
+					a(href='#') Программа «Формула успеха»
+				li
+					a(href='#') Программа «Авангард»
+				li
+					a(href='#') Программа «Живые деньги»
+				li
+					a(href='#') Программа ШУНК
+				li
+					a(href='#') Программа ШУМ
+				li
+					a(href='#') Карьерные возможности
+				li
+					a(href='#').aside-active Буклеты «online»
+		.booklet-online__wrap
+			h1.booklet-online__title Буклеты «online»
+			.booklet-online__box
+				.booklet-online__box_item
+					.booklet-online__box_item_img-wrapper
+						img.booklet-online__box_item_img(src='images/booklet-online_1.jpg')
+					.booklet-online__box_item_line
+					.booklet-online__box_item_text
+						p.booklet-online__box_item_title Буклет Консультанты/Менеджеры
+						p.booklet-online__box_item_p Будьте успешным Менеджером с Tupperware!
+						p.booklet-online__box_item_p Май - идеальный месяц для заработка. Вы можете достичь максимальных уровней продаж и собрать большую коллекцию подарков.
+						.booklet-online__box_item_buttons
+							.booklet-online__box_item_book
+								+icon('book')
+							.booklet-online__box_item_button Начать просмотр
+				.booklet-online__box_item
+					.booklet-online__box_item_text.booklet-online__box_item_text--inverse
+						p.booklet-online__box_item_title Буклет гости/хозяйки
+						p.booklet-online__box_item_p Будьте успешным Менеджером с Tupperware!
+						p.booklet-online__box_item_p Май - идеальный месяц для заработка. Вы можете достичь максимальных уровней продаж и собрать большую коллекцию подарков.
+						.booklet-online__box_item_buttons
+							.booklet-online__box_item_book
+								+icon('book')
+							.booklet-online__box_item_button Начать просмотр
+					.booklet-online__box_item_line
+					.booklet-online__box_item_img-wrapper.booklet-online__box_item_img-wrapper--inverse
+						img.booklet-online__box_item_img(src='images/booklet-online_2.jpg')
+				.booklet-online__box_item
+					.booklet-online__box_item_img-wrapper
+						img.booklet-online__box_item_img(src='images/booklet-online_1.jpg')
+					.booklet-online__box_item_line
+					.booklet-online__box_item_text
+						p.booklet-online__box_item_title Сезонный каталог
+						p.booklet-online__box_item_p Будьте успешным Менеджером с Tupperware!
+						p.booklet-online__box_item_p Май - идеальный месяц для заработка. Вы можете достичь максимальных уровней продаж и собрать большую коллекцию подарков.
+						.booklet-online__box_item_buttons
+							.booklet-online__box_item_book
+								+icon('book')
+							.booklet-online__box_item_button Начать просмотр
+				.booklet-online__box_item
+					.booklet-online__box_item_text.booklet-online__box_item_text--inverse
+						p.booklet-online__box_item_title Каталог
+						p.booklet-online__box_item_p Будьте успешным Менеджером с Tupperware!
+						p.booklet-online__box_item_p Май - идеальный месяц для заработка. Вы можете достичь максимальных уровней продаж и собрать большую коллекцию подарков.
+						.booklet-online__box_item_buttons
+							.booklet-online__box_item_book
+								+icon('book')
+							.booklet-online__box_item_button Начать просмотр
+					.booklet-online__box_item_line
+					.booklet-online__box_item_img-wrapper.booklet-online__box_item_img-wrapper--inverse
+						img.booklet-online__box_item_img(src='images/booklet-online_2.jpg')
+	.booklet-online__modal(style='display: none;')
+		.booklet-online__modal_wrapper.view-port
+			.booklet-online__modal_top
+				a.booklet-online__modal_logo(href='index.html')
+					img.booklet-online__modal_logo_img(src='images/logo.svg', alt='Логотип')
+				.booklet-online__modal_buttons
+					+icon('print', 'booklet-online-modal')
+					+icon('download', 'booklet-online-modal')
+					+icon('share', 'booklet-online-modal')
+				.booklet-online__modal_search
+					+icon('search', 'booklet-online-modal')
+			.booklet-online__modal_slider-wrapper
+				.booklet-online__modal_arrow-left
+					+icon('arrow', 'booklet-online icon__arrow_left')
+				.booklet-online__modal_slider
+					.booklet-online__modal_content
+						img.booklet-online__modal_content_img(src='images/booklet-online_modal.jpg', alt='')
+					.booklet-online__modal_content
+						img.booklet-online__modal_content_img(src='images/booklet-online_modal.jpg', alt='')
+					.booklet-online__modal_content
+						img.booklet-online__modal_content_img(src='images/booklet-online_modal.jpg', alt='')
+				.booklet-online__modal_arrow-right
+					+icon('arrow', 'booklet-online')
+			.booklet-online__modal_pagination 20-21 / 24

@@ -1,0 +1,48 @@
+include ../layouts/default_min
+include ../modules/icon/icon
+
+
+block content
+    .login.view-port
+        .login__wrapper-form
+            .login__form_account
+                .login__title
+                    h2 Корпоративный сайт для консультантов студий
+                .login__form
+                    form.login__form_box
+                        .login__form_item
+                            input.login__form_input(type='text', name='login' required)
+                            label.login__form_label Логин
+                        .login__form_item
+                            input.login__form_input(type='password', name='password' required)
+                            label.login__form_label Пароль
+                        .login__form_button.login__form_in Войти
+                        .login__form_links
+                            .login__form_links_consult
+                                a(href='checkin.html') Стать консультантом
+                            .login__form_links_password
+                                a(href='#') Восстановить пароль
+            .login__form_password.hidden
+                .login__title
+                    h2 Забыли пароль?
+                .login__paragraph
+                    p Если вы забыли пароль, введите адрес Вашей электронной почты, и мы вышлем инструкцию по его восстановлению.
+                .login__form
+                    form.login__form_box
+                        .login__form_item
+                            input.login__form_input(type='email', name='email' required)
+                            label.login__form_label Адрес электронной почты
+                        .login__form_button.login__form_restoring Восстановить пароль
+    .login__modal
+        .login__modal_message
+            .login__modal_message_banner
+                h2 Неверные данные
+                .login__modal_message_close
+                    span
+            .login__modal_message_text
+                p К сожалению, ни один аккаунт пользователя не совпадает с предоставленными Вами данными. Если Вы забыли свой пароль, воспользуйтесь ссылкой “Восстановить пароль”
+                .login__modal_password
+                    a(href='#') Восстановить пароль
+
+
+.login__wrapper-image

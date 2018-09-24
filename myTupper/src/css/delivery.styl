@@ -1,0 +1,103 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+.delivery
+	font-family 'TupperPRO', sans-serif !important
+	line-height 1.3
+	&__content
+		&_h2
+			color $main-color
+			font-size 20px
+		&_title-mob
+			flex(row,space-between,center)
+			padding-right 20px
+			cursor pointer
+		&_title-desc
+			display none
+		&_hidden
+			margin-top 20px
+			& ul
+				margin-left 17px
+			& li
+				margin-bottom 15px
+				color $disc-color
+				list-style-type disc
+				& span
+					color $black-color
+		&_block
+			padding 30px 0
+			border-top 1px solid $light-color
+			&:last-child
+				padding-bottom 0
+		&_table
+			font-size 3.6px
+	&__table
+		flex(row,space-between,center)
+		background-color $main-color
+		color $white-color
+		padding 15px 10px
+		& p
+			&:nth-child(1)
+				width 25%
+			&:nth-child(2)
+				width 15%
+			&:nth-child(3)
+				width 23%
+			&:nth-child(4)
+				width 13%
+			&:nth-child(5)
+				width 12%
+	&__list
+		border 1px solid $icon-color
+		border-top none
+		flex(row,space-between,center)
+		padding 10px
+		&:hover
+			background-color $fill-color
+		& p
+			&:nth-child(1)
+				width 25%
+			&:nth-child(2)
+				width 15%
+			&:nth-child(3)
+				width 23%
+			&:nth-child(4)
+				width 13%
+			&:nth-child(5)
+				width 12%
+	&__attention
+		flex(column,center,center)
+		& p
+			margin-top 15px
+			color $red-color
+			text-transform uppercase
+			& span
+				text-transform none
+				color $black-color
+
+@media screen and (min-width $view-port-mob)
+	.delivery
+		&__content
+			&_table
+				font-size 10px
+@media screen and (min-width $view-port-medium)
+	.delivery
+		&__content
+			&_table
+				font-size 14px
+		&__list
+			padding 20px 10px
+@media screen and (min-width $view-port-tablet)
+	.delivery
+		&__content
+			&_table
+				font-size 16px
+			&_title-desc
+				display block
+			&_title-mob
+				display none
+		&__attention
+			flex(row,flex-start,center)
+			& p
+				margin 0
+				width 80%
+				margin-left 30px

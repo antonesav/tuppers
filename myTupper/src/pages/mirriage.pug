@@ -1,0 +1,108 @@
+extends ../layouts/default
+include ../modules/icon/icon
+include ../modules/add_consult/add_consult
+include ../modules/path/path
+
+block content
+    +path({title: ['Главная страница', 'Личный кабинет', 'Недовложения и брак'], href: ['index.html']})
+    .mirriage.view-port
+        h1.big-title.standart-gap.mirriage__title Недовложения или брак изделий
+        .mirriage__box
+            .mirriage__image
+                .mirriage__background
+            .mirriage__form_wrapper
+                form.mirriage__form.standart-gap
+                    .profile__info_form_item-total.mirriage__item
+                        select.active__form_input.active__form_select(name='question')
+                        label.active__form_label Тип вопроса
+                        .active__form_input_arrow
+                            +icon('select-arrow')
+                    .profile__info_form_item-total.mirriage__item
+                        input.profile__info_form_input(type='text', name='full-name')
+                        label.profile__info_form_label Консультант (ФИО)
+                        .addcons__form_input_search
+                            +icon('search','add-consult')
+                    .profile__info_form_item-total.mirriage__item
+                        input.profile__info_form_input(type='text', name='number-order')
+                        label.profile__info_form_label Номер заказа
+                        .addcons__form_input_search
+                            +icon('search','add-consult')
+                    .profile__info_form_item-total.mirriage__item
+                        input.profile__info_form_input(type='text', name='name')
+                        label.profile__info_form_label Изделие (фабричный код 3456798)
+                    .profile__info_form_item-total.mirriage__item
+                        input.profile__info_form_input(type='text', name='name')
+                        label.profile__info_form_label Количество
+                    .profile__info_form_item-total.mirriage__item
+                        input.profile__info_form_input(type='text', name='file')
+                        label.profile__info_form_label Вложение
+                        label( for='mirriage__file').mirriage__file
+                            +icon('file','mirriage')
+                            input.mirriage__file_hide( type='file', id='mirriage__file')
+                    .profile__info_form_item-total.mirriage__comment_block
+                        textarea.profile__info_form_input.profile__modal_input.mirriage__comment(name='name' placeholder='Пожалуйста, опишите возникшую проблему как можно подробнее - это поможет нам быстрее с ней разобраться. ')
+                        label.profile__info_form_label.profile__modal_label Описание
+                .mirriage__button
+                    a(href='#') Отправить
+
+
+
+
+        .addcons__modal
+            .addcons__modal_wrapper
+                .addcons__modal_header.standart-gap
+                    .addcons__modal_select
+                        p Показать записей:
+                        .addcons__modal_select_span
+                            span 5
+                            +icon('arrow','down')
+                    .addcons__modal_search
+                        input( type ='text', name ='search')
+                        +icon('search','add-search')
+                    .addcons__modal_close
+                        span
+                .addcons__modal_blocks
+                    +search_block(blocks)
+                .addcons__modal_lines
+                    .addcons__lines_header
+                        .addcons__lines_header_check
+                            input(type='checkbox')
+                        .addcons__lines_header_item
+                            p Код
+                            +icon('arrow-up' , 'addcons-up')
+                        .addcons__lines_header_item
+                            p Фамилия
+                            +icon('arrow-up' , 'addcons-up')
+                        .addcons__lines_header_item
+                            p Имя
+                            +icon('arrow-up' , 'addcons-up')
+                        .addcons__lines_header_item
+                            p Отчество
+                            +icon('arrow-up' , 'addcons-up')
+                        .addcons__lines_header_item
+                            p Телефон
+                            +icon('arrow-up' , 'addcons-up')
+                        .addcons__lines_header_item
+                            p Email
+                            +icon('arrow-up' , 'addcons-up')
+                        .addcons__lines_header_item
+                            p Руководитель
+                            +icon('arrow-up' , 'addcons-up')
+                    +search_list(lines)
+                .addcons__modal_footer
+                    .addcons__scroll
+                        p.addcons__scroll_p.standart-gap Записи с 1 по 5 из 176 записей
+                        .addcons__scroll_pages.standart-gap
+                            +icon('arrow','products-scroll icon__arrow_left')
+                            ul
+                                li 1
+                                li 2
+                                li 3
+                                li 4
+                                li 5
+                                li ...
+                                li 20
+                            +icon('arrow','products-scroll icon__arrow_right')
+                    .addcons__scroll_button
+                        a(href='') Выбрать
+            

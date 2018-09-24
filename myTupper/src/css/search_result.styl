@@ -1,0 +1,195 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+
+.results
+	line-height 1.3
+	position relative
+	font-family 'TupperPRO', sans-serif !important
+	&__main
+		&_catalog
+			display flex
+			flex-direction row
+			flex-wrap wrap
+			justify-content space-between
+			margin-top 25px
+			& :nth-child(9)
+				display flex
+			&_item
+				display flex
+				flex-direction column
+				align-items center
+				width 100%
+				margin-bottom 40px
+				position relative
+				&_wrapper
+					flex(column,center,center)
+					text-align center
+				&_box
+					flex(column,center,center)
+				&_box-price
+					margin-top 15px
+					flex(row,space-between,center)
+
+				&_img
+					width 100%
+					&_discount, &_newcolor
+						font-size 8px
+						color #ffffff
+						border-bottom 20px solid #FF7000
+						border-left 11px solid transparent
+						border-right 37px solid transparent
+						height 0
+						width 111px
+						transform: rotate(-30deg)
+						position absolute
+						top 8px
+						left -13px
+						text-align center
+						text-transform uppercase
+						& p
+							padding 5px 0 0 11px
+					&_newcolor
+						border-bottom 20px solid #36C73D
+				&_vendor-code
+					margin-top 15px
+					font-size 13px
+					color #787878
+					text-align center
+				&_title
+					line-height 20px
+					margin-top 12px
+					font-size 16px
+					text-align center
+				&_your-price
+					margin-right 10px
+					font-size 18px
+					text-align center
+				&_price-color
+				
+					font-size 18px
+					color #E30385
+					text-align center
+				&_price
+					margin-top 9px
+					font-size 14px
+					text-align center
+				&_count
+					width 130px
+					margin 12px 4px 0 4px
+					display flex
+					justify-content space-between
+					align-items center
+					font-size 20px
+					color #36C73D
+					&_minus, &_plus
+						border 1px solid #36C73D
+						border-radius 50%
+						height 28px
+						width 28px
+						display flex
+						justify-content center
+						align-items center
+						cursor pointer
+						padding-bottom 2px
+						&:hover
+							background-color: #36C73D
+							color $white-color
+				&_add-basket
+					width 130px
+					height 36px
+					background-color $red-color
+					margin 13px 4px 0 4px
+					text-transform uppercase
+					font-size 12px
+					font-weight: 500
+					color #ffffff
+					display flex
+					justify-content center
+					align-items center
+					cursor pointer
+					transition .3s all
+					&:hover
+						background-color darken($red-color, 15%)
+		&_scroll
+			width 100%
+			flex(row,space-between,center)
+			border-top 1px solid $light-color
+			border-bottom 1px solid $light-color
+			padding 30px 0
+			&_pages
+				flex(row, space-between, center)
+				width 100%
+				& .icon__arrow_products-scroll
+					font-size 36px
+					color $light-color
+					&:hover
+						color #999999
+				& ul
+					width 90%
+					flex(row, space-between, center)
+					& li
+						font-size 16px
+						color #999999
+						margin 0 5px
+						cursor pointer
+						&:hover
+							color $black-color
+			&_txt
+				display none
+				font-size 16px
+				width 40%
+				cursor pointer
+
+				& span
+					margin 0 10px
+					font-weight 500
+				&:hover
+					.icon__arrow_products-scroll
+						color $black-color
+
+	&__settings
+		font-size 16px
+		&_result
+			flex(column,flex-start,flex-start)
+			&_txt
+				margin-bottom 10px
+				margin-right 20px
+			&_sorting
+				margin-bottom 10px
+				cursor pointer
+				margin-right 20px
+				flex(row,flex-start,center)
+				& ul
+					margin 0 10px
+					flex(row,flex-start,center)
+					& li
+						display none
+						&:first-child
+							display block
+							
+
+@media screen and (min-width $view-port-medium)
+	.results
+		&__main
+			&_scroll
+				&_pages
+					width 40%
+				&_txt
+					flex(row, center, center)
+			&_catalog
+				&_item
+					width 45%
+		&__settings
+			&_result
+				flex(row,flex-start,center)
+				&_txt
+					margin-bottom 0
+				&_sorting
+					margin-bottom 0
+					
+@media screen and (min-width $view-port-tablet)
+	.results
+		&__main
+			&_catalog
+				&_item
+					width 22%

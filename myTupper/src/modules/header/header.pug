@@ -1,0 +1,31 @@
+include ../icon/icon
+include ../nav/nav
+
+mixin header()
+	header.header.view-port
+		a.header__logo(href='index.html')
+			img.header__logo_img(src='images/logo.svg', alt='Логотип')
+		.header__account
+			+icon('account', 'header')
+			.header__account_text.text-sm Астахова Мария
+			+icon('logout')
+		.header__menu
+			+icon('menu')
+		+nav(nav)
+		form.header__search(action='', method='POST')
+			input.header__search_input.text-mid(type='text', name='search')
+			+icon('search')
+		.header__basket
+			.header__basket_block
+				+icon('basket')
+				span.header__basket_number 15
+			.header__basket_text
+				.header__basket_text_wrapper
+					span.header__basket_text_span Оборот
+					span.header__basket_text_span 4 567 руб.
+				.header__basket_text_wrapper
+					span.header__basket_text_span Стоимость
+					span.header__basket_text_span 3 567 руб.
+				.header__basket_text_wrapper
+					span.header__basket_text_span Неделя
+					span.header__basket_text_span 2018/11

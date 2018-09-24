@@ -1,0 +1,81 @@
+---
+    basket_box:
+        -
+            title_items:
+                goods: 'Товары'
+                price: 'Цена'
+                count: 'Количество'
+                total: 'Сумма'
+            items:
+                -
+                    good:
+                        src: 'images/basket/good_1.png'
+                        title: 'Эко-бутылка "Фанат воды" (500 мл) квадратная...'
+                        vendor_code: 'РП003'
+                    total: true
+                -
+                    good:
+                        src: 'images/basket/good_2.png'
+                        title: 'Эко-бутылка "Фанат воды" (500 мл) квадратная...'
+                        vendor_code: 'РП003'
+                    total: true
+                -
+                    good:
+                        src: 'images/basket/good_3.png'
+                        title: 'Эко-бутылка "Фанат воды" (500 мл) квадратная...'
+                        vendor_code: 'РП003'
+                    total: true
+        -
+            title: 'Спецпредложения'
+            items:
+                -
+                    good:
+                        src: 'images/basket/good_1.png'
+                        title: 'Эко-бутылка "Фанат воды" (500 мл) квадратная...'
+                        vendor_code: 'РП003'
+                    add_basket:
+                        text: 'В корзину'
+                        class: ''
+                -
+                    good:
+                        src: 'images/basket/good_2.png'
+                        title: 'Эко-бутылка "Фанат воды" (500 мл) квадратная...'
+                        vendor_code: 'РП003'
+                    add_basket:
+                        text: 'В корзину'
+                        class: ''
+                -
+                    good:
+                        src: 'images/basket/good_3.png'
+                        title: 'Эко-бутылка "Фанат воды" (500 мл) квадратная...'
+                        vendor_code: 'РП003'
+                    add_basket:
+                        text: 'В корзину'
+                        class: ''
+        -
+            title: 'Потенциально доступные'
+            items:
+                -
+                    good:
+                        src: 'images/basket/good_1.png'
+                        title: 'Эко-бутылка "Фанат воды" (500 мл) квадратная...'
+                        vendor_code: 'РП003'
+                    add_basket:
+                        text: 'В корзину'
+                        class: ' disabled'
+                -
+                    good:
+                        src: 'images/basket/good_2.png'
+                        title: 'Эко-бутылка "Фанат воды" (500 мл) квадратная...'
+                        vendor_code: 'РП003'
+                    add_basket:
+                        text: 'В корзину'
+                        class: ' disabled'
+                -
+                    good:
+                        src: 'images/basket/good_3.png'
+                        title: 'Эко-бутылка "Фанат воды" (500 мл) квадратная...'
+                        vendor_code: 'РП003'
+                    add_basket:
+                        text: 'В корзину'
+                        class: ' disabled'

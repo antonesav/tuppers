@@ -1,0 +1,393 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+
+
+.order
+	line-height 1.3
+	font-family 'TupperPRO', sans-serif !important
+	&_content
+		position relative
+	&__title
+		margin-top 10px
+		flex(row,flex-start,center)
+		& h1
+			font-size 22px
+		&_a
+			display none
+			link($orange-color)
+			& .icon__arrow_right_order
+				color $orange-color
+				margin-left 10px
+			&:hover
+				text-decoration underline
+	&__tabs
+		display none
+		width 100%
+		& li
+			border-bottom 48px solid $main-color
+			border-right 50px solid transparent
+			position relative
+			margin-bottom 1px
+			color $white-color
+			cursor pointer
+			height 0
+			width 100%
+
+			& span
+				width 100%
+				position absolute
+				top 15px
+				left 30px
+		&_active
+			display block
+
+		&_arrow
+			position absolute
+			width 20px
+			height 0
+			border-top 13px solid $main-color
+			border-left 13px solid transparent
+			border-right 13px solid transparent
+			top 47px
+			left 30px
+
+		&_wrapper
+			//flex(row,space-between,center)
+			margin-top 30px
+			position relative
+			width 100%
+		&_accordion
+			display block
+			border-bottom 48px solid $main-color
+			border-right 50px solid transparent
+			position relative
+			margin-bottom 1px
+			color $white-color
+			cursor pointer
+			height 0
+			width 100%
+
+			& span
+				position absolute
+				top 15px
+				left 30px
+
+	&__dactive
+		display block
+
+	&__list
+		&_item
+			flex(row,space-between,center)
+			padding 15px 10px
+			color $black-color
+			border-right 1px solid $light-color
+			border-bottom 1px solid $light-color
+			border-left 1px solid $light-color
+			background-color $white-color
+			&:hover
+				background-color $snow-color
+
+			&_title
+				width 45%
+
+			&_description
+				flex(column)
+				width 50%
+
+				& span
+					cursor pointer
+					color $red-color
+					text-decoration underline
+				& .light-color
+					color $icon-color !important
+
+	&__products
+		margin-top 30px
+		&_footer
+			flex(column-reverse,center,center)
+			margin-top 20px
+		&_a
+			link($orange-color)
+			display inline-table
+			& .icon__arrow_left_order
+				color $orange-color
+				margin-right 10px
+				transform rotate(180deg)
+			&:hover
+				text-decoration underline
+		&_total
+			margin-bottom 20px
+			width 85%
+			&-sum
+				flex(row,space-between)
+				margin-bottom 15px
+		&_button
+			flex(row,center)
+			& a
+				background-color $red-color
+				text-transform uppercase
+				link($white-color)
+				padding 10px 32px
+				display block
+				font-size 12px
+				&:hover
+					background-color darken($red-color, 15%)
+
+		&_tab
+			display none
+			background-color $main-color
+			color $white-color
+			padding 15px 15px
+			width 100%
+
+			&_item
+				text-align left
+				width 15%
+				&:first-child
+					width 40%
+				&:last-child
+					width 20%
+
+		&_box
+			padding 15px 5px
+
+	&__item
+		position relative
+		flex(column,center,center)
+		border 1px solid $light-color
+
+		&_img
+			width 50%
+
+		&_title
+			width 90%
+			flex(column,center,center)
+			text-align center
+
+			&_wrap
+				margin-top 15px
+			&_span
+
+				font-size 13px
+				color #787878
+			&_p
+				line-height 1.5
+				font-size 14px
+				color #424242
+		&_your
+			width 80%
+		&_price
+			width 80%
+		&_price,&_your
+			flex(row,space-between)
+			margin 15px 0
+			&_pink
+				& span
+					color $red-color
+					font-size 18px
+		& .light-color
+			color $icon-color
+			& .circle-color
+				border 1px solid $icon-color
+				&:hover
+					color $white-color
+					background-color $icon-color
+		&_count
+			margin-top 15px
+			width 80%
+			flex(row,center,center)
+			font-size 20px
+			color $main-color
+
+			&_number
+				margin 0 15px
+			&_minus, &_plus
+				border 1px solid $main-color
+				border-radius 50%
+				height 28px
+				width 28px
+				flex(row,center,center)
+				cursor pointer
+				padding-bottom 2px
+				&:hover
+					background-color: $main-color
+					color $white-color
+
+		&_basket
+			position absolute
+			top 2%
+			right 1%
+
+	&__modal
+		line-height 1.3
+		position fixed
+		font-family 'TupperPRO'
+		top 0
+		left 0
+		bottom 0
+		right 0
+		background-color rgba(0,0,0,0.6)
+		z-index 100
+		display none
+		&_box
+			width 90%
+			position absolute
+			top 30%
+			left 5%
+		&_banner
+			text-transform uppercase
+			color $white-color
+			font-size 20px
+			font-weight 500
+			background-color $main-color
+			width 100%
+			text-align center
+			padding 27px 0
+		&_content
+			width 100%
+			background-color $white-color
+			flex(column,space-around,center)
+			& p
+				padding 40px 10px
+				font-size 16px
+				text-align center
+			& a
+				link($orange-color)
+				margin-bottom 20px
+		&_buttons
+			width 80%
+			margin-bottom 20px
+			font-size 12px
+			color $white-color
+			flex(row,space-around)
+
+		&_yes, &_no
+			text-transform uppercase
+			cursor pointer
+			padding 12px 0
+			width 45%
+			text-align center
+			background-color $icon-color
+			&:hover
+				background-color $main-color
+		&_no
+			margin-left 15px
+
+@media screen and (min-width $view-port-mob)
+	.order
+		&__products
+			&_tab
+				display none
+
+		&__modal
+			&_box
+				width 60%
+				left 20%
+
+@media screen and (min-width $view-port-medium)
+	.order
+		&__modal
+			&_box
+				width 50%
+				left 20%
+@media screen and (min-width $view-port-tablet)
+	.order
+		&__title
+			flex(row,space-between,center)
+		&__list
+			&_item
+				&_title
+					width 30%
+
+
+				&_description
+					width 65%
+
+		&__products
+			&_tab
+				flex(row,space-between,center)
+			&_box
+				border-right 1px solid $light-color
+				border-bottom 1px solid $light-color
+				border-left 1px solid $light-color
+			&_footer
+				flex(row,space-between)
+			&_total
+				width 35%
+			&_button
+				flex(row,flex-end)
+		&__item
+			margin-bottom 25px
+			flex(row,space-between,center)
+			border none
+
+			&_img
+				width 15%
+
+			&_title
+				width 20%
+				text-align left
+				flex(column,space-between)
+
+			&_your
+				width 21%
+			&_price
+				width 14%
+			&_price,&_your
+				flex(column,space-between)
+				margin 0
+				&_static
+					margin-top 30px
+			&_count
+				margin 0
+				width 14%
+			&_basket
+				top 35%
+				right 1%
+
+		&__modal
+			&_box
+				width 35%
+				left 32%
+
+@media screen and (min-width $view-port-large)
+	.order
+		flex(row,space-between)
+
+		&__title
+			& h1
+				font-size 28px
+			&_a
+				display block
+
+		&__list
+			&_item
+				&_description
+					flex(row)
+
+					& span
+						margin-left 20px
+
+		&__content
+			width 80%
+
+		&__tabs
+			flex(row)
+			& li
+				& span
+					left 20px
+
+			&_accordion
+				display none
+
+		&__modal
+			&_box
+				width 30%
+				left 35%
+
+@media screen and (min-width $view-port-xl)
+	.order
+		&__modal
+			&_box
+				max-width 330px
+				left 40%

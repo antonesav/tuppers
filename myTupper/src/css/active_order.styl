@@ -1,0 +1,373 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+
+.active
+	line-height 1.3
+	font-family 'TupperPRO', sans-serif !important
+	&__aside
+		margin-top 15px
+		width 19%
+		display none
+		&_nav,&_current
+			margin-bottom 45px
+			& h2
+				margin-bottom 15px
+				text-transform uppercase
+				color $pink-color
+			& ul
+				& li
+					border-bottom 1px solid $light-color
+					& a
+						display block
+						width 100%
+						padding 10px 0
+		&_nav
+			& a
+				link($black-color)
+				&:hover
+					color $orange-color
+		&_current
+			& a
+				link($black-color)
+				&:hover
+					color $orange-color
+	&__orders
+		position relative
+		&_title
+			margin-top 10px
+			flex(row,flex-start,center)
+			margin-bottom 30px
+		&_h1
+			font-size 28px
+		&_filter
+			margin-bottom 20px
+			position relative
+			width 120px
+			flex()
+			&:hover
+				.icon__filter-icon_active_orders
+					color $main-color
+			&_p
+				margin-right 15px
+
+		&_modal
+			background-color $white-color
+			position absolute
+			width 278px
+			z-index 20
+			padding-bottom 80px
+			border 1px solid $light-color
+	&__modal
+		&_title
+			border-bottom 1px solid $light-color
+			position relative
+			text-align center
+			padding 20px
+			& p
+				text-transform uppercase
+				font-size 18px
+				font-weight 300
+			& span
+				width 1px
+				height 18px
+				background-color #979797
+				display block
+				//position absolute
+				transform rotate(0deg)
+				&:before
+					content ''
+					width 1px
+					height 18px
+					background-color #979797
+					display block
+					transform rotate(-90deg)
+			&_span
+				position absolute
+				cursor pointer
+				right 10px
+				top 20px
+				width 28px
+				height 28px
+				padding 5px 0 0 14px
+		&_input
+			border-bottom 1px solid $light-color
+			position relative
+			text-align center
+			padding 20px
+			&_title
+				cursor pointer
+				flex(row,space-between,center)
+				& p
+					text-transform uppercase
+					font-size 18px
+					font-weight 300
+		&_buttons
+			margin-top 20px
+			flex(row,space-around,center)
+		&_reset
+			margin 0 !important
+
+
+
+	&__form
+		flex(row,space-between)
+		width 80%
+		&_wrapper
+			flex()
+			display none
+		&_modal
+			width 100% !important
+			margin-top 25px
+		&_item
+			position relative
+			width 35%
+			&:first-child
+				width 20%
+		&_input
+			font-family 'TupperPRO'
+			outline none
+			border none
+			border-bottom 2px solid #787878
+			width 100%
+			font-size 16px
+			padding 8px 0
+			line-height 20px
+			transition .6s all
+			&:focus
+				border-bottom 2px solid $main-color
+			&:focus ~ .active__form_label
+				top -14px
+				font-size 12px
+			&_arrow
+				top 8px
+				right 5px
+				width 20px
+				height 20px
+				position absolute
+				pointer-events none
+				background-color $white-color
+
+		&_label
+			position absolute
+			top 7px
+			left 0
+			line-height 20px
+			color #787878
+			pointer-events none
+			transition .6s all
+			&:last-child~ .active__form_label
+				top -14px !important
+				font-size 12px !important
+		&_buttons
+			width 20%
+			flex(column, $ai: flex-end)
+		&_search
+			background-color $main-color
+			text-transform uppercase
+			color $white-color
+			padding 10px 42px
+			font-size 12px
+			cursor pointer
+			width 130px
+			&:hover
+				background-color darken($main-color, 15%)
+		&_reset
+			margin-top 15px
+			cursor pointer
+			flex(row,flex-end,center)
+			&_p
+				color $red-color
+				font-size 12px
+				text-transform uppercase
+				text-decoration underline
+		&_circle
+			width 22px
+			height 22px
+			margin-left 15px
+			border 1px solid $red-color
+			border-radius 50%
+			position relative
+			& span
+				width 1px
+				height 12px
+				background-color $red-color
+				display block
+				position absolute
+				left 10px
+				top 4px
+				transform rotate(45deg)
+				&:before
+					content ''
+					width 1px
+					height 12px
+					background-color $red-color
+					display block
+					transform rotate(-90deg)
+	&__table
+		&_block
+			background-color $main-color
+			color $white-color
+			position relative
+			padding 10px
+			width 100%
+			&_info
+				margin-bottom 10px
+				& p
+					margin-bottom 10px
+			&_summ
+				flex(row)
+				& span
+					margin-left 5px
+			& .icon__basket-2_active
+				position absolute
+				bottom 10px
+				right 10px
+		&_items
+			border-right 1px solid $light-color
+			border-bottom 1px solid $light-color
+			border-left 1px solid $light-color
+		&_item
+			link($black-color)
+			padding 10px
+			flex()
+			&_img
+				width 30%
+				& img
+					width 100%
+			&_txt
+				width 70%
+			&_p
+				overflow hidden
+				text-overflow ellipsis
+				display -webkit-box
+				-webkit-line-clamp 3
+				-webkit-box-orient vertical
+				&:hover
+					-webkit-line-clamp 50
+			&_span
+				display inline-block
+				margin 10px 0
+				font-size 13px
+				color #787878
+			&_quantity
+				flex()
+				& span
+					margin 5px 15px
+					width 1px
+					height 13px
+					background-color $orange-color
+					display block
+					transform rotate(45deg)
+					&:before
+						content ''
+						width 1px
+						height 13px
+						background-color $orange-color
+						display block
+						transform rotate(-90deg)
+		&_status
+			border-right 1px solid $light-color
+			border-bottom 1px solid $light-color
+			border-left 1px solid $light-color
+			flex(column,center,center)
+			padding 10px
+			&_wrapper
+				margin-left 20%
+				width 60%
+			&_p
+				color $red-color
+			&_delivery
+				margin 15px 0
+				flex(row,flex-start,center)
+				& p
+					margin-left 15px
+					color $main-color
+			&_address
+				& p
+					color $main-color
+					margin-bottom 15px
+		&_button
+			border-right 1px solid $light-color
+			border-bottom 1px solid $light-color
+			border-left 1px solid $light-color
+			flex(row,center)
+			margin-bottom 20px
+			padding 20px
+			& a
+				background-color $red-color
+				text-transform uppercase
+				link($white-color)
+				text-align center
+				cursor pointer
+				display block
+				font-size 12px
+				max-height 36px
+				width 130px
+				padding 10px
+				&:hover
+					background-color darken($red-color,15%)
+		&_wrapper
+			margin-bottom 20px
+
+	&__more
+		text-align center
+		p
+			font-size 12px
+			cursor pointer
+			display inline-block
+			color $main-color
+			text-transform uppercase
+			&:hover
+				text-decoration underline
+	&__up
+		flex($jc: center, $ai: center)
+		background-color $main-color
+		text-align center
+		width 44px
+		height 44px
+		border-radius 50%
+		position fixed
+		bottom 21px
+		right 10px
+		cursor pointer
+		z-index 200
+		&:hover
+			background-color darken($main-color,15%)
+
+
+
+@media screen and (min-width $view-port-tablet)
+	.active
+		&__more
+			display none
+		&__form
+			&_wrapper
+				margin-bottom 20px
+				flex()
+		&__table
+			margin 0
+			&_wrapper
+				flex()
+			&_items
+				width 60%
+			&_status
+				flex(row,center,flex-start)
+				width 20%
+				&_wrapper
+					margin 0
+					width 90%
+				&_delivery
+					flex(column)
+					& p
+						margin 15px 0
+			&_button
+				width 20%
+				margin 0
+				padding 10px
+@media screen and (min-width $view-port-large)
+	.active
+		flex(row,space-between)
+		&__aside
+			display block
+		&__orders
+			width 80%

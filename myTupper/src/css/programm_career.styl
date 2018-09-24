@@ -1,0 +1,196 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+
+.pcareer
+	font-family 'TupperPRO', sans-serif !important
+	& p
+		line-height 25px
+	&__manager
+		&-desctop, &-mob
+			& h2
+				color #787878
+				font-size 18px // desctop 20px
+				text-transform uppercase
+				cursor pointer
+
+		&-desctop
+			display none
+			& h3
+				margin-bottom 20px
+				color $main-color
+				font-size 16px
+		&_h2
+			flex(row,space-between,center)
+
+		&_status
+			flex(row,space-between)
+			&-number
+				width 56px
+				height 56px
+				display block
+				border-radius 50%
+				border 2px solid $main-color
+				flex(row,center,center)
+				& p
+					flex(row,space-between,center)
+					color $main-color
+					font-size 30px
+					& span
+						font-size 16px
+			&-p
+				width 75%
+		&_gray
+			background-color $fill-color
+			padding 20px
+			& h3
+				margin-bottom 20px
+				color $main-color
+				font-size 16px
+			& p
+				margin-bottom 15px
+		&_hidden
+			& h3
+				margin-bottom 20px
+				color $main-color
+				font-size 16px
+
+	&__ladder
+		& img
+			width 100%
+		&_mob
+			max-width 280px
+			margin 0 auto
+		&_desctop
+			max-width 890px
+			margin 0 auto
+			display none
+	&__list
+		font-size 4px !important
+		& p
+			line-height normal !important
+		&_block
+			flex(row,space-between,center)
+			background-color $main-color
+			color $white-color
+			padding 20px 25px
+			& p
+				&:nth-child(1)
+					width 30%
+				&:nth-child(2)
+					width 13%
+				&:nth-child(3)
+					width 13%
+				&:nth-child(4)
+					width 13%
+				&:nth-child(5)
+					width 13%
+		&_box
+			border 1px solid $light-color
+			border-top none
+			border-bottom none
+			&_item
+				padding 20px 25px
+				border-bottom 1px solid $light-color
+				flex(row,space-between,center)
+				&:hover
+					background-color $fill-color
+				& p
+					&:nth-child(1)
+						width 30%
+					&:nth-child(2)
+						width 13%
+					&:nth-child(3)
+						width 13%
+					&:nth-child(4)
+						width 13%
+					&:nth-child(5)
+						width 13%
+				& sup
+					font-size 3px
+					vertical-align top
+	&__fotnote
+		font-size 14px
+		& p
+			margin-bottom 10px
+			line-height 25px
+		& sup
+			font-size 8px
+			vertical-align top
+	&__img-desctop
+		display none !important
+
+@media screen and (min-width $view-port-mob)
+	.pcareer
+		&__list
+			font-size 8px !important
+@media screen and (min-width $view-port-medium)
+	.pcareer
+		flex(row,space-between)
+		&__maxwidth
+			max-width 420px
+		&__list
+			font-size 14px !important
+		&__content
+			&_wrapper
+				&_manager
+					flex(row,space-between)
+		&__manager
+			&_hidden
+				&-desctop
+					display none
+			&-desctop
+
+				width 43%
+				display block
+				& h2
+					cursor default
+					font-size 20px
+			&-mob
+				display none
+				& h2
+					font-size 20px
+			&_status
+				width 48%
+			&_icons
+				&-wrapper
+					flex(row,space-between)
+					flex-wrap wrap
+			&_flex
+				flex(row,space-between)
+		&__img-desctop
+			display block !important
+		&__block_img
+			display none !important
+
+@media screen and (min-width $view-port-tablet)
+	.pcareer
+		&__list
+			font-size 16px !important
+		&__ladder
+			&_desctop
+				display block
+			&_mob
+				display none
+
+
+@media screen and (min-width $view-port-large)
+	.pcareer
+		&__content
+			width 73%
+//	.pcareer
+//		flex(row,space-between)
+//		&__content
+//			width 73%
+//			&_wrapper
+//				&_manager
+//					flex(row,space-between)
+//		&__manager
+//			&_hidden
+//				display block
+//				&-desctop
+//					display none
+//			&-desctop
+//				width 43%
+//				display block
+//			&-mob
+//				display none

@@ -1,0 +1,26 @@
+---
+    active:
+        order:
+            -
+                src: 'images/catalog/products_catalog_4.png'
+                quantity: '2 из 5'
+            -
+                src: 'images/catalog/products_catalog_5.png'
+                quantity: '1'
+        double:
+            -
+                src: 'images/catalog/products_catalog_4.png'
+                quantity: '2'
+            -
+                src: 'images/catalog/products_catalog_5.png'
+                quantity: '1'
+            -
+                src: 'images/catalog/products_catalog_6.png'
+                quantity: '1'
+    dactive:
+         three:
+            -
+                delivery: 'Самовывоз'
+            -
+                delivery: 'Курьер'
+                new: true

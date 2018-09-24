@@ -1,0 +1,23 @@
+---
+    programms:
+        formula:
+            -
+                filelink: 'Формула успеха.pdf'
+        director:
+            -
+                filelink: 'Директор.pdf'
+        manager:
+            -
+                filelink: 'Менеджер.pdf'
+        career:
+            -
+                filelink: 'Карьерные возможности.pdf'
+        avangard:
+            -
+                filelink: 'Авангард.pdf'
+        live_money:
+            -
+                filelink: 'Живые Деньги.pdf'
+        shunk:
+            -
+                filelink: 'ШУНК Россия.pdf'

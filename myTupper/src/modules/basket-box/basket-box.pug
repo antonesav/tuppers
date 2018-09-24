@@ -1,0 +1,49 @@
+mixin basket-box(data)
+	.basket__container
+		.basket__container_top
+			if data.title
+				.basket__box_good-title= data.title
+			if data.title_items
+				.basket__box_good-title= data.title_items.goods
+				.basket__box_price= data.title_items.price
+				.basket__box_count-title= data.title_items.count
+				if data.title_items.total
+					.basket__box_total= data.title_items.total
+		.basket__box-wrapper
+			each item in data.items
+				.basket__box
+					.basket__box_good
+						img.basket__box_good_img(src= item.good.src)
+						.basket__box_good_text
+							span.basket__box_title= item.good.title
+							span.basket__box_good_vendor-code= item.good.vendor_code
+							span.basket__box_good_orders Заказывали
+								span.basket__box_good_orders_count 1
+					.basket__box_price
+						.basket__box_price_wrapper
+							span.basket__box_title Ваша цена
+							span.basket__box_your-price 899 руб.
+						.basket__box_price_wrapper
+							span.basket__box_text Цена
+							span.basket__box_text 1 199 руб.
+					if item.add_basket
+						- var count_class = 'basket__box_count basket__box_count_basket'
+					else
+						- var count_class = 'basket__box_count'
+					div(class=count_class)
+						.basket__box_count_wrapper
+							.basket__box_count_minus -
+							.basket__box_count_number 1
+							.basket__box_count_plus +
+						if item.add_basket
+							div(class='basket__box_count_add-basket' + item.add_basket.class)= item.add_basket.text
+					if item.total
+						.basket__box_total
+							.basket__box_price_wrapper
+								span.basket__box_title Ваша стоимость
+								span.basket__box_your-price 899 руб.
+							.basket__box_price_wrapper
+								span.basket__box_text Оборот
+								span.basket__box_text 1 199 руб.
+							.basket__box_total_basket
+								+icon('basket-2', 'basket-box')

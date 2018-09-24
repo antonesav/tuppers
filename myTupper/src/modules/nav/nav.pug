@@ -1,0 +1,27 @@
+mixin nav(data)
+	nav.nav
+		.nav__home
+			a.nav__home_link(href='index.html')
+				+icon('home')
+				.nav__underline
+			.nav__close
+				+icon('close')
+		ul.nav__menu
+			each item, index in data
+				li.nav__menu_item(data-item='menu', data-number= index)
+					.nav__menu_item_wrapper
+						.nav__menu_item_text= item.title
+							.nav__underline
+						+icon('arrow', 'menu')
+					ul.nav__submenu.hidden(data-number= index, class='nav__submenu--' + (index + 1))
+						if item.submenu
+							each i, ind in item.submenu
+								li.nav__submenu_item(data-item='submenu', data-number= ind)
+									.nav__submenu_item_wrapper
+										.nav__submenu_item_text= i.title
+										+icon('arrow', 'submenu')
+									ul.nav__deepmenu.hidden(data-number= ind)
+										if i.items
+											each j in i.items
+												li.nav__deepmenu_item(data-item='deepmenu')
+													a.nav__deepmenu_item_text(href='#')= j.title

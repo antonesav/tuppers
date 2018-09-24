@@ -1,0 +1,333 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+
+.basket
+	font-family 'TupperPRO', sans-serif !important
+	position relative
+	&__title
+		font-size 22px
+		line-height 1.3
+		margin 10px 0
+		width 80%
+		font-weight 300
+		&_delivery
+			margin 10px 0 30px
+	&__clear
+		flex($jc: flex-end, $ai: center)
+		color $red-color
+		text-decoration underline
+		font-size 12px
+		text-transform uppercase
+		cursor pointer
+		font-weight 400
+		&_close
+			margin-left 10px
+			flex($jc: center, $ai: center)
+			width 21px
+			height 21px
+			border 1px solid $red-color
+			border-radius 50%
+	&__aside
+		margin 0 auto
+		flex(column)
+		width 296px
+		&_item
+			width 100%
+			flex(column)
+			padding 30px
+			background-color #F7F8FC
+			margin-bottom 10px
+		&_title
+			color #E30385
+			font-size 20px
+			text-transform uppercase
+			margin-bottom 30px
+			&_blue
+				color $main-color
+		&_text
+			flex($jc: space-between)
+			margin-bottom 15px
+		&_form
+			flex(column)
+			&_title
+				color #787878
+				font-size 13px
+				margin-bottom 10px
+			&_input
+				border none
+				border-bottom 2px solid $red-color
+				background-color #F7F8FC
+				padding 5px 0
+				margin-bottom 10px
+				font-size 16px
+				&:focus
+					outline none
+			&_button
+				border none
+				background-color #F7F8FC
+				color $red-color
+				font-size 16px
+				text-align right
+				align-self flex-end
+				text-decoration underline
+				margin-bottom 35px
+				cursor pointer
+				&:hover
+					text-decoration none
+				&:focus
+					outline none
+		&_total
+			padding 35px 0
+			border-top 1px solid #E0E0E0
+			font-size 22px
+			text-transform uppercase
+			flex($jc: space-between)
+		&_recount
+			padding 12px
+			font-size 12px
+			text-transform uppercase
+			color $white-color
+			background-color $main-color
+			margin-bottom 25px
+			text-align center
+			cursor pointer
+			transition .3s all
+			&:hover
+				background-color darken($main-color, 10%)
+		&_order
+			padding 12px
+			font-size 12px
+			text-transform uppercase
+			color $white-color
+			background-color $red-color
+			text-align center
+			cursor pointer
+			transition .3s all
+			&:hover
+				background-color darken($red-color, 10%)
+		&_results
+			flex($jc: space-between, $ai: center)
+			margin-bottom 30px
+			line-height 1.4
+			&:last-child
+				margin-bottom 0
+			&_text
+				max-width 75%
+				font-size 16px
+			&_descr
+				margin-bottom 10px
+			&_price
+				color $main-color
+	&__back
+		width 100%
+		flex()
+		&_content
+			flex($ai: center)
+			margin 30px auto 20px 0
+			cursor pointer
+			&:hover
+				.basket__back_text
+					text-decoration underline
+		&_text
+			color $orange-color
+			font-size 16px
+			margin-left 12px
+	&__delivery
+		flex($jc: space-between)
+		width 100%
+		flex-wrap wrap
+		&_item
+			flex(column)
+			width 100%
+			&--1
+				grid-column 1
+				grid-row 1
+			&--2
+				grid-column 2
+				grid-row 1
+				justify-self end
+				grid-row-start 1
+				grid-row-end 3
+			&--3
+				grid-column 1
+				grid-row 2
+		&_title
+			display none
+			font-size 18px
+			text-transform uppercase
+			padding 30px 0
+		&_block
+			flex($jc: space-between, $ai: center)
+			padding 25px 10px
+			font-size 16px
+			line-height 1.4
+			cursor pointer
+			border-top 1px solid #E0E0E0
+			&_title_only
+				pointer-events none
+				display none
+				padding 0
+				border-top none
+			&:last-child
+				border-bottom 1px solid #E0E0E0
+			&_active
+				background-color #F7F8FC
+			&_wrapper
+				width 75%
+			&_title
+				text-transform uppercase
+			&_text
+				font-size 16px
+				display none
+			&_check
+				flex($jc: center, $ai: center)
+				width 33px
+				height 33px
+				background-color #36C73D
+				border-radius 50%
+				&_disabled
+					background-color #E0E0E0
+		&_contacts
+			font-size 16px
+			line-height 1.4
+			padding 25px 0
+			&_metro
+				display block
+				text-transform uppercase
+				margin-bottom 25px
+				&-wrapper
+					flex(column)
+				&_price
+					display block
+					align-self flex-end
+					margin-bottom -22px
+					color #36C73D
+			&_phone
+				margin-bottom 10px
+				flex($ai: center, $jc: space-between)
+				&_text
+					width 85%
+			&_mail
+				margin-bottom 10px
+				flex($ai: center, $jc: space-between)
+				&_text
+					width 85%
+			&_address
+				margin-bottom 10px
+				flex($ai: center, $jc: space-between)
+				&_text
+					width 85%
+			&_time
+				margin 15px 0
+				&_orange
+					color #36C73D
+			&_buttons-wrapper
+				flex($jc: space-between, $ai: center)
+				width 100%
+				margin-top 25px
+			&_button
+				flex($ai: center)
+				color #36C73D
+				cursor pointer
+				&:hover
+					text-decoration underline
+				&_text
+					margin-right 10px
+		&_result
+			width 296px
+			padding-top 25px
+			line-height 1.4
+			margin 0 auto
+			flex(column)
+			&_text
+				flex($jc: space-between, $ai: center)
+				margin-bottom 10px
+			&_total
+				flex($jc: space-between, $ai: center)
+				text-transform uppercase
+				margin 15px 0 30px
+				font-size 18px
+			&_button
+				background-color $red-color
+				padding 12px 0
+				text-align center
+				text-transform uppercase
+				color $white-color
+				width 80%
+				align-self center
+				font-size 12px
+				cursor pointer
+				transition .3s all
+				&:hover
+					background-color darken($red-color, 10%)
+		
+
+@media screen and (min-width $view-port-medium)
+	.basket
+		&__title
+			width auto
+			font-size 25px
+		&__aside
+			margin 0
+			flex-direction row
+			justify-content space-between
+			width auto
+			&_item
+				width 296px
+			
+@media screen and (min-width $view-port-tablet)
+	.basket
+		&__title
+			width auto
+			font-size 28px
+			&_delivery
+				margin-bottom 10px
+		&__aside
+			justify-content center
+			margin 0 auto
+			&_item
+				&:last-child
+					margin-left 20px
+		&__delivery
+			display grid
+			grid-template-columns 50% 50%
+			&_item
+				width 90%
+				&--2
+					border-bottom 1px solid #E0E0E0
+				&--3
+					justify-content space-between
+			&_title
+				display block
+			&_block
+				&_text
+					display block
+				&_title
+					margin-bottom 15px
+					&_only
+						display block
+			&_contacts
+				border-top 1px solid #E0E0E0
+			&_result
+				margin-right 0
+				grid-row 4
+				grid-column 2
+	
+@media screen and (min-width $view-port-large)
+	.basket
+		&__container
+			margin-left auto
+			margin-right auto
+@media screen and (min-width $view-port-xl)
+	.basket
+		&__container
+			margin-left 0
+			margin-right 0
+		&__aside
+			position absolute
+			right 40px
+			top 76px
+			flex-direction column
+			&_item
+				&:last-child
+					margin-left 0

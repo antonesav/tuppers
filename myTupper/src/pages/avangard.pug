@@ -1,0 +1,61 @@
+extends ../layouts/default
+include ../modules/icon/icon
+include ../modules/path/path
+
+block content
+    +path({title: ['Главная страница', 'Личный кабинет', 'Обороты', 'Авангард'], href: ['index.html']})
+    .avangard.view-port
+        .avangard__aside
+            ul
+                li
+                    a.aside-active(href='avangard.html') Авангард
+                li
+                    a(href='shunk.html') ШУНК
+                li
+                    a(href='shum.html') ШУМ
+                li
+                    a(href='total_indicators.html') Общие показатели
+        .avangard__content
+            h1.big-title Авангард
+            .avangard__index
+                .avangard__index_line
+                    .avangard__index_block
+                        .avangard__index_title
+                            p Квалификационные заказы
+                        .avangard__index_marks
+                            span.avangard__index_green 31 к/з
+                            p.avangard__index_large 249 000 / 8 000 = 31.125
+                    .avangard__index_block
+                        .avangard__index_title
+                            p Оборот:
+                            span.avangard__index_select май 2018
+                            +icon('arrow','active_down')
+                        .avangard__index_marks
+                            p.avangard__index_green 249 000 руб.
+                    .avangard__index_block
+                        .avangard__index_title
+                            p Уровень
+                        .avangard__index_marks
+                            +icon('medal','avangard')
+                            p.avangard__index_small Бронзовый
+                    .avangard__index_block
+                        .avangard__index_title
+                            p До следующего уровня не хватает
+                        .avangard__index_marks
+                            span.avangard__index_grey + 71 000 руб.
+            .avangard__progress-wrapper
+                .avangard__progress
+                    .avangard__progress_bar
+                        .avangard__progress_bar-fill(style='width:25%')
+                        .avangard__progress_circle
+                        .avangard__progress_circle
+                        .avangard__progress_circle
+                        .avangard__progress_circle
+                        .avangard__progress_text Бронзовый
+                        .avangard__progress_text Серебряный
+                        .avangard__progress_text Золотой
+                        .avangard__progress_text Платиновый
+            .avangard__back
+                a(href='#') К описанию программы
+                    +icon('arrow','right_avangard')
+

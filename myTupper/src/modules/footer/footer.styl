@@ -1,0 +1,124 @@
+@require '../../css/partials/_params.styl'
+@require '../../css/partials/_mixins.styl'
+
+.footer
+	font-family 'TupperPRO', sans-serif !important
+	margin-top 40px
+	padding-top 40px
+	flex(column, $ai: center)
+	border-top 1px solid #E0E0E0
+	&__logo
+		margin-bottom 20px
+		&_img
+			width 162px
+	&__links
+		margin-bottom 15px
+		flex(column, $ai: center)
+		&_link
+			link($black-color)
+			margin-bottom 10px
+			&:hover
+				link($orange-color)
+	&__contacts
+		margin-bottom 20px
+		flex(column, $ai: center)
+		&_phone
+			flex($ai: center)
+			margin-bottom 10px
+		&_mail
+			flex($ai: center)
+	&__address
+		flex($ai: center)
+		margin-bottom 30px
+	&__studio
+		color $pink-color
+		margin-bottom 20px
+		&_link
+			link($pink-color)
+			text-decoration underline
+			&:hover
+				text-decoration none
+	
+@media screen and (min-width $view-port-mob)
+	.footer
+		&__logo
+			&_img
+				width 182px
+		&__links
+			flex-direction row
+			&_link
+				margin 0 10px
+		&__contacts
+			flex-direction row
+			&_phone
+				margin 0 10px
+			&_mail
+				margin 0 10px
+	
+	
+@media screen and (min-width $view-port-medium)
+	.footer
+		flex-direction row
+		justify-content space-between
+		flex-wrap wrap
+		align-items stretch
+		&__logo
+			align-self center
+			&_img
+				width 202px
+		&__links
+			margin-bottom 0
+			width 25%
+			align-items flex-start
+			flex-direction column
+			&_link
+				margin 0 0 10px
+		&__contacts
+			margin-bottom 5px
+			width 35%
+			align-items flex-start
+			flex-direction column
+			&_phone
+				margin 0 0 10px
+			&_mail
+				margin 0 0 10px
+		&__address
+			width 50%
+			align-items flex-start
+			margin-left 33%
+			margin-bottom 5px
+		&__studio
+			margin-left auto
+	
+@media screen and (min-width $view-port-tablet)
+	.footer
+		&__logo
+			width 28%
+			margin-right 4%
+			&_img
+				width 100%
+	
+@media screen and (min-width $view-port-large)
+	.footer
+		&__logo
+			align-self flex-start
+			padding-top 3px
+		&__links
+			width 15%
+			margin-bottom 15px
+		&__contacts
+			width 25%
+			margin-bottom 20px
+		&__address
+			width 20%
+			margin-left 0
+			margin-bottom 30px
+	
+@media screen and (min-width $view-port-xl)
+	.footer
+		&__logo
+			margin-right 10%
+			padding-top 0
+		&__address
+			width 22%
+	

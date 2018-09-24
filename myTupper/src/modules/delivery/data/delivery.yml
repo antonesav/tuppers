@@ -1,0 +1,45 @@
+---
+    delivery:
+        line:
+            -
+                region: 'Москва и Московская область'
+                time: '2 - 5 дней'
+                minprice: '-'
+                point: '100'
+                delivery: '300'
+            -
+                region: 'Махачкала'
+                time: '8 - 10 дней'
+                minprice: '1000'
+                point: '300'
+                delivery: 'не доступно'
+            -
+                region: 'Санкт-Петербург'
+                time: '2 - 5 дней'
+                minprice: '-'
+                point: '100'
+                delivery: '300'
+            -
+                region: 'Набережные Челны'
+                time: '3-4 дней'
+                minprice: '1000'
+                point: '300'
+                delivery: 'не доступно'
+            -
+                region: 'Нижний Новгород'
+                time: '3-5 дней'
+                minprice: '1000'
+                point: '200'
+                delivery: 'не доступно'
+            -
+                region: 'Краснодар'
+                time: '5-8 дней'
+                minprice: '1000'
+                point: '300'
+                delivery: 'не доступно'
+            -
+                region: 'Курск'
+                time: '4-6 дней'
+                minprice: '1000'
+                point: '300'
+                delivery: 'не доступно'

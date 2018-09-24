@@ -1,0 +1,143 @@
+extends ../layouts/default
+include ../modules/icon/icon
+include ../modules/path/path
+include ../modules/shunk_steps/programm_shunk
+include ../modules/catalog/catalog
+
+block content
+    +path({title: ['Главная страница', 'Изделия', 'Программа ШУНК', 'ШУНК Доступные изделия'], href: ['index.html']})
+    .psteps.view-port
+        .pformula__aside
+            ul
+                li
+                    a(href='#') Программа «Менеджер»
+                li
+                    a(href='#') Программа «Директор»
+                li
+                    a(href='#') Программа «Формула успеха»
+                li
+                    a(href='#') Программа «Авангард»
+                li
+                    a(href='#') Программа «Живые деньги»
+                li
+                    a(href='#').aside-active Программа ШУНК
+                li
+                    a(href='#') Программа ШУМ
+                li
+                    a(href='#') Карьерные возможности
+                li
+                    a(href='#') Буклеты «online»
+            .products__aside_filter
+                .products__aside_filter_button
+                    input(type ='checkbox' id ='check')
+                    label(for='check') Только подарки
+                .products__aside_consultant-price
+                    p Цена консультанта
+                    .products__aside_consultant-price_input
+                        .products__aside_consultant-price_input_field
+                            input(type='text' placeholder='0 руб.' min='0' max='29999')
+                            span -
+                            input(type='text' placeholder='29 999 руб.' min='0' max='29999')
+                        .products__aside_consultant-price_input_slider
+                            .products__aside_consultant-price_input_slider_bar
+                                .products__aside_consultant-price_input_slider_bar_left
+                                .products__aside_consultant-price_input_slider_bar_right
+                .products__aside_buttons
+                    .products__aside_buttons_show Показать
+                    .products__aside_buttons_reset Сбросить
+                        .products__aside_buttons_reset_circle
+                            span
+        +add-basket()
+        .psteps__content
+            .pshunk__h1.standart-gap
+                h1.big-title.lower-gap Шаги Успеха Нового Консультанта
+                .pshunk__next
+                    a(href='programm_shunk.html')
+                        p Назад к описанию программы
+                        +icon('arrow','pformula')
+            .products__settings
+                .products__settings_view
+                    .products__settings_view_layout
+                        +icon('view-square','products')
+                        +icon('view-table','products')
+                    .products__settings_view_arrows
+                        .products__settings_view_arrows_arrow-bottom
+                            +icon('arrow','products-bottom icon__arrow_down')
+                        .products__settings_view_arrows_arrow-top
+                            +icon('arrow','products-top icon__arrow_up')
+                .products__settings_filter
+                    .products__settings_filter_box
+                        .products__settings_filter_box_txt Фильтры
+                        .products__settings_filter_box_icon
+                            +icon('filter-icon','products')
+                        .products__settings_modal
+                            .products__settings_modal_txt Фильтры
+                            .products__settings_modal_close &times;
+                            .products__settings_modal_sorting Сортировка
+                                ul.hidden
+                                    li По названию
+                                    li По коду продаж
+                                    li По цене
+                                +icon('arrow','products_modal-right icon__arrow_right')
+                            .products__aside_filter.products__aside_filter_icon
+                                .products__aside_filter_button
+                                    input(type ='checkbox' id ='check')
+                                    label(for='check') Только подарки
+                                .products__aside_customer-price
+                                    p Цена клиента
+                                    .products__aside_customer-price_input
+                                        .products__aside_customer-price_input_field
+                                            input(type='text' placeholder='0 руб.' min='0' max='29999')
+                                            span -
+                                            input(type='text' placeholder='29 999 руб.' min='0' max='29999')
+                                        .products__aside_customer-price_input_slider
+                                            .products__aside_customer-price_input_slider_bar
+                                                .products__aside_customer-price_input_slider_bar_left
+                                                .products__aside_customer-price_input_slider_bar_right
+                                .products__aside_consultant-price
+                                    p Цена консультанта
+                                    .products__aside_consultant-price_input
+                                        .products__aside_consultant-price_input_field
+                                            input(type='text' placeholder='0 руб.' min='0' max='29999')
+                                            span -
+                                            input(type='text' placeholder='29 999 руб.' min='0' max='29999')
+                                        .products__aside_consultant-price_input_slider
+                                            .products__aside_consultant-price_input_slider_bar
+                                                .products__aside_consultant-price_input_slider_bar_left
+                                                .products__aside_consultant-price_input_slider_bar_right
+                                .products__aside_buttons
+                                    .products__aside_buttons_show Показать
+                                    .products__aside_buttons_reset Сбросить
+                                        .products__aside_buttons_reset_circle
+                                            span
+
+                .products__settings_result
+                    .products__settings_result_number 45
+                    .products__settings_result_txt товаров найдено
+                    .products__settings_result_sorting Сортировка:
+                        ul
+                            li По названию
+                            li По коду продаж
+                            li По цене
+                        +icon('arrow','products_result-bottom icon__arrow_down')
+            .products__main
+
+                +shunk_steps(shunk.steps)
+
+            .active__up
+                +icon('arrow','active-up icon__arrow_up')
+            .results__main_scroll
+                .results__main_scroll_pages
+                    +icon('arrow','products-scroll icon__arrow_left')
+                    ul
+                        li 1
+                        li 2
+                        li 3
+                        li 4
+                        li 5
+                        li ...
+                        li 20
+                    +icon('arrow','products-scroll icon__arrow_right')
+                .results__main_scroll_txt Показывать на странице
+                    span 12
+                    +icon('arrow','products-scroll icon__arrow_down')

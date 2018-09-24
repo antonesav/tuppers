@@ -1,0 +1,11 @@
+mixin programm_file(data)
+    each item in data
+        .pformula__wrapper.standart-gap
+            .pformula__info.standart-gap
+                a(href='#')
+                    +icon('pdf-file','pformula')
+                    p= item.filelink
+            .pformula__back
+                a(href='#')
+                    p Перейти к личным результатам
+                    +icon('arrow','pformula')

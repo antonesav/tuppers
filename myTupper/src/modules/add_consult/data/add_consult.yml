@@ -1,0 +1,42 @@
+---
+    blocks:
+            -
+                surname: 'Ковалевская'
+                name: 'Анастасия'
+                secondname: 'Владимировна'
+                icon: true
+            -
+                surname: 'Фролова'
+                name: 'Марианна'
+                secondname: 'Григорьевна'
+            -
+                surname: 'Ковалевская'
+                name: 'Анастасия'
+                secondname: 'Владимировна'
+            -
+                surname: 'Фролова'
+                name: 'Марианна'
+                secondname: 'Григорьевна'
+            -
+                surname: 'Ковалевская'
+                name: 'Анастасия'
+                secondname: 'Владимировна'
+    lines:
+            -
+                surname: 'Ковалевская'
+                name: 'Анастасия'
+                secondname: 'Владимировна'
+            -
+                surname: 'Фролова'
+                name: 'Марианна'
+                secondname: 'Григорьевна'
+                apply: true
+            -
+                surname: 'Извольская'
+                name: 'Екатерина'
+                secondname: 'Олеговна'
+            -
+                surname: 'Извольская'
+                name: 'Екатерина'
+                secondname: 'Олеговна'
+

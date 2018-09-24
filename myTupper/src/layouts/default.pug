@@ -1,0 +1,15 @@
+include ../modules/head/head
+include ../modules/header/header
+include ../modules/footer/footer
+
+doctype html
+html(lang='ru')
+	head
+		+head({title: 'Tupperware'})
+
+	body
+		+header()
+
+		block content
+
+		+footer()

@@ -1,0 +1,46 @@
+mixin search_block(data)
+    each item in data
+        .addcons__modal_block
+            .addcons__modal_title
+                p 5678
+                if item.icon
+                    +icon('apply-green')
+            .addcons__modal_items
+                .addcons__modal_item
+                    p Фамилия
+                    span= item.surname
+                .addcons__modal_item
+                    p Имя
+                    span= item.name
+                .addcons__modal_item
+                    p Отчество
+                    span= item.secondname
+                .addcons__modal_item
+                    p Телефон
+                    span +7 (495) 345-67-67
+                .addcons__modal_item
+                    p Email
+                    span astahova@gmail.com
+                .addcons__modal_item
+                    p Руководитель
+                    span Прохорова Ирина
+mixin search_list(data)
+    .addcons__lines_box
+        each items in data
+            .addcons__line
+                .addcons__line_empty
+                    +icon('apply-green','change')
+                .addcons__line_item
+                    p 5678
+                .addcons__line_item
+                    p= items.surname
+                .addcons__line_item
+                    p= items.name
+                .addcons__line_item
+                    p= items.secondname
+                .addcons__line_item
+                    p +7 (495) 345-67-67
+                .addcons__line_item
+                    p astahova@gmail.com
+                .addcons__line_item
+                    p Прохорова Ирина

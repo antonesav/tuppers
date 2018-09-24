@@ -1,0 +1,199 @@
+extends ../layouts/default
+include ../modules/icon/icon
+include ../modules/path/path
+include ../modules/programm_file/programm_file
+
+block content
+    +path({title: ['Главная страница', 'Программы','Программа «Живые деньги»'], href: ['index.html']})
+    .plive.view-port
+        .pformula__aside
+            ul
+                li
+                    a(href='#') Программа «Менеджер»
+                li
+                    a(href='#') Программа «Директор»
+                li
+                    a(href='#') Программа «Формула успеха»
+                li
+                    a(href='#') Программа «Авангард»
+                li
+                    a(href='#').aside-active Программа «Живые деньги»
+                li
+                    a(href='#') Программа ШУНК
+                li
+                    a(href='#') Программа ШУМ
+                li
+                    a(href='#') Карьерные возможности
+                li
+                    a(href='#') Буклеты «online»
+        .plive__content
+            h1.big-title.standart-gap Программа «Живые деньги»
+
+            // DESKTOP VARIANT
+            .plive__flex_desktop
+                .plive__image.standart-gap
+                    img(src='images/live-money.jpg')
+
+                // HIDDEN ON MOBILE
+                .plive__text_desktop.plive__header.standart-gap
+                    h3 Новый менеджер
+                    .plive__text_p
+                        p Разовый бонус в сумме #[span 5 000] рублей для Нового Менеджера при родвижении. Менеджер получает бонусы при заключении договора с компанией и наличия статуса индивидуального предпринимателя.
+
+            //MOBILE VARIANT --------NEW MANAGER-------
+            .plive__flex_mobile
+
+                // HIDDEN ON DESKTOP
+                .plive__text_mobile.standart-gap
+                    h3 Новый менеджер
+                    +icon('arrow','pformula_down')
+
+                // HIDDEN-BLOCK
+                .plive__hidden
+                    .plive__text_p.standart-gap
+                        p Разовый бонус в сумме #[span 5 000] рублей для Нового Менеджера при родвижении. Менеджер получает бонусы при заключении договора с компанией и наличия статуса индивидуального предпринимателя.
+                    .plive__grey.standart-gap
+                        h3.plive__grey_h3 Рассмотрим пример
+                        p На закрытие января у Менеджера было 2 дочерних Менеджера. В феврале он продвинул ещё двух Менеджеров и стал Директором. В феврале он получает бонус за личное продвижение в Директора (20 000 руб. / 60 000 тнг / 10 000 грн), но не получает бонус за продвижение Нового Менеджера (10 000 руб. / 30 000 тнг / 5 000 грн), поскольку все остальные бонусы по программе «Живые Деньги» новый Директор получает, начиная с месяца, следующего за месяцем его продвижения.
+                    // TABLE
+                    // block-table
+                    .plive__block-table.standart-gap
+                        .plive__block
+                            p Доход
+                            p Январь
+                            p Февраль
+                            p Март
+                            p Апрель
+                            p Май
+                            p Июнь
+                        //table-lines
+                        .plive__block_line
+                            p Разовый бонус (Новый Директор)
+                            p 20 000р
+                            p
+                            p
+                            p
+                            p
+                            p
+                        .plive__block_line
+                            p Разовый бонус (Новый Менеджер)
+                            p
+                            p 10 000р.
+                            p
+                            p
+                            p
+                            p 10 000р.
+                        .plive__block_line
+                            p Формула успеха (личная группа)
+                            p 5 000р.
+                            p 5 000р.
+                            p 5 000р.
+                            p 5 000р.
+                            p 5 000р.
+                            p 5 000р.
+                        .plive__block_line
+                            p Формула успеха (дочерние группы)
+                            p
+                            p 15 000 р. / 3 группы
+                            p 15 000 р. / 3 группы
+                            p 20 000 р. / 4 группы
+                            p 20 000 р. / 4 группы
+                            p 20 000 р. / 4 группы
+                        .plive__block_line
+                            p Менеджер (личные продажи, комиссия)
+                            p 12 480р.
+                            p 12 480р.
+                            p 12 480р.
+                            p 12 480р.
+                            p 12 480р.
+                            p 12 480р.
+                        .plive__block_line
+                            p Комиссия Директора (дочерние группы)
+                            p
+                            p 10 080 р. / 3 группы
+                            p 10 080 р. / 3 группы
+                            p 13 440 р. / 4 группы
+                            p 13 440 р. / 4 группы
+                            p 13 440 р. / 4 группы
+                        .plive__block_line
+                            p Итого
+                            p 37 480 р.
+                            p 42 560 р.
+                            p 52 560 р.
+                            p 50 920 р.
+                            p 50 920 р.
+                            p 60 920 р.
+                    .plive__total.standart-gap
+                        p Итого (средний):
+                            span 49 230 р.
+
+            //DESKTOP VARIANT
+                // HIDDEN ON MOBILE
+            .plive__text_desktop.standart-gap
+                h3 Директор
+
+            //MOBILE VARIANT --------DIRECTOR-------
+                // HIDDEN ON DESKTOP
+            .plive__text_mobile.standart-gap
+                h3 Директор
+                +icon('arrow','pformula_down')
+
+            // HIDDEN-BLOCK
+            .plive__hidden
+
+                // BLOCKS BLUE
+                .plive__flex_row.standart-gap
+
+                    //LEFT BLUE
+                    .plive__flex_row_left
+                        .plive__blue_item
+                            .plive__blue
+                                p + 20 000 рублей
+                            .plive__blue_p.plive__grey.standart-gap
+                                p Становись Директором и получай разовый бонус в сумме 20 000 рублей;
+
+                        //LEFT BLUE
+                        .plive__blue_item
+                            .plive__blue
+                                p + 10 000 рублей
+                            .plive__blue_p.plive__grey.standart-gap
+                                p Продвигай Нового Менеджера и получай разовый бонус в сумме 10 000 рублей;
+
+                    //RIGHT BLUE
+                    .plive__flex_row_right
+                        .plive__blue
+                            p + 5 000 рублей
+                        .plive__blue_p.plive__grey.standart-gap
+                            p Получай дополнительный ежемесячный бонус 5 000 рублей при условии работы Дочки-Менеджера по Формуле Успеха (или 10 000 рублей за усиленную формулу)
+                            p Бонус выплачивается Новому Директору, получившему статус начиная с 1 недели 2016 года. Директору, получившему статус до 1 недели 2016 года, данный бонус выплачивается только за 4 и последующих Новых Менеджеров.
+                .plive__grey.standart-gap
+                    h3.plive__grey_h3 Рассмотрим пример
+                    p По итогам апреля у Директора 2 действующих Менеджера, и Директор находился на «испытательном сроке» (ему необходимо в течение двух месяцев продвинуть как минимум одного Менеджера). В мае им был продвинут один Менеджер. Бонус не выплачивается, поскольку это продвижение только подтвердило статус Директора, прироста количества дочерних групп нет.
+
+            //DESKTOP VARIANT
+            .plive__flex_mobile
+
+                //MOBILE VARIANT --------DIRECTOR-------
+                // HIDDEN ON DESKTOP
+                .plive__text_mobile.standart-gap
+                    h3 Дистрибьютор/Руководитель
+                    +icon('arrow','pformula_down')
+
+                // HIDDEN-BLOCK
+                .plive__hidden.plive__flex_desktop
+                    .plive__image.standart-gap
+                        img(src='images/live-money2.jpg')
+                    .plive__footer
+
+                        // HIDDEN ON MOBILE
+                        .plive__text_desktop.standart-gap
+                            h3 Дистрибьютор/Руководитель
+                        p.standart-gap Реализовывая программу «Живые Деньги», Дистрибьютор / Руководитель получает:
+                        ul.plive__ul
+                            li
+                                p Разовый бонус в сумме 40 000 рублей для Дистрибьютора / Руководителя за каждого Нового Директора;
+                            li
+                                p Развитие и рост эффективности своей команды;
+                            li
+                                p Увеличение ежемесячного дохода Дистрибьютора.
+            +programm_file(programms.live_money)

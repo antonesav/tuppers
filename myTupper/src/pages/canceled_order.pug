@@ -1,0 +1,195 @@
+extends ../layouts/default
+include ../modules/icon/icon
+include ../modules/active_order/active_order
+include ../modules/catalog/catalog
+include ../modules/path/path
+
+
+block content
+    +path({title: ['Главная страница', 'Личный кабинет', 'Заказы', 'Отмененные заказы'], href: ['index.html']})
+    .active.view-port
+        .active__aside
+            .active__aside_nav
+                h2 Заказы
+                ul
+                    li
+                        a(href='active_order.html') Активные заказы
+                    li
+                        a.aside-active(href='canceled_order.html') Отмененные заказы
+                    li
+                        a(href='done_order.html') Выполненные заказы
+            .active__aside_current
+                h2 Заказы группы
+                ul
+                    li
+                        a(href='orders_list.html') Сводная таблица
+        .active__orders
+            .active__orders_title
+                +icon('arrow', 'back icon__arrow_left').goods__back
+                h1.active__orders_h1 Отмененные заказы
+            .active__orders_filter
+                p.active__orders_filter_p Фильтры
+                +icon('filter-icon','active_orders')
+                .active__orders_modal
+                    .active__modal_title
+                        p Фильтры
+                        .active__modal_title_span
+                            span
+                    .active__modal_input
+                        .active__modal_input_title
+                            p № Заказа
+                            +icon('arrow','active')
+                        .active__form_item.active__form_modal
+                            input.active__form_input(type='text', name='number_order', required)
+                            label.active__form_label № заказа
+                    .active__modal_input
+                        .active__modal_input_title
+                            p Наименование заказа
+                            +icon('arrow','active')
+                        .active__form_item.active__form_modal
+                            input.active__form_input(type='text', name='name_order', required)
+                            label.active__form_label Наименование заказа
+                    .active__modal_input
+                        .active__modal_input_title
+                            p Статус
+                            +icon('arrow','active')
+                        .active__form_item.active__form_modal
+                            select.active__form_input.active__form_select(name='list' required)
+                                option
+                                option(value="item-1" name="value") Требует оформления
+                                option(value="item-2" name="value") Требует оформления
+                            label.active__form_label Статус
+                            .active__form_input_arrow
+                                +icon('select-arrow')
+                    .active__modal_buttons
+                        .active__form_search Искать
+                        .active__form_reset.active__modal_reset
+                            p.active__form_reset_p Сбросить
+                            .active__form_circle
+                                span
+
+
+            .active__form_wrapper
+                form.active__form
+                    .active__form_item
+                        input.active__form_input(type='text', name='number_order', required)
+                        label.active__form_label № заказа
+                    .active__form_item
+                        input.active__form_input(type='text', name='name_order', required)
+                        label.active__form_label Наименование заказа
+                    .active__form_item
+                        select.active__form_input.active__form_select(name='list' required)
+                            option
+                            option(value="item-1" name="value") Требует оформления
+                            option(value="item-2" name="value") Требует оформления
+                        label.active__form_label Статус
+                        .active__form_input_arrow
+                            +icon('select-arrow')
+
+                .active__form_buttons
+                    .active__form_search Искать
+                    .active__form_reset
+                        p.active__form_reset_p Сбросить
+                        .active__form_circle
+                            span
+            .active__table
+                .active__table_block
+                    .active__table_block_info
+                        p Заказ №: 22597 (00000023628)
+                        span 30.03.2018 17:24
+                    .active__table_block_summ
+                        p К оплате:
+                        span 1 345 руб.
+                    +icon('basket-2','active')
+                .active__table_wrapper
+                    .active__table_items
+                        a(href='goods.html').active__table_item
+                            .active__table_item_img
+                                img(src='images/catalog/products_catalog_4.png')
+                            .active__table_item_txt
+                                p(title='Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная').active__table_item_p Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная
+                                span.active__table_item_span РП003
+                                .active__table_item_quantity
+                                    p 1 215 руб.
+                                    span
+                                    p 2 из 5
+                        a(href='goods.html').active__table_item
+                            .active__table_item_img
+                                img(src='images/catalog/products_catalog_5.png')
+                            .active__table_item_txt
+                                p(title='Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная').active__table_item_p Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная
+                                span.active__table_item_span РП003
+                                .active__table_item_quantity
+                                    p 1 215 руб.
+                                    span
+                                    p 1
+                    .active__table_status
+                        .active__table_status_wrapper
+                            .active__table_status_p
+                                p Требует оформления
+                            .active__table_status_delivery
+                                +icon('car','active')
+                                p Самовывоз
+                            .active__table_status_address
+                                p Москва, ул. Большая Никитская, д. 5, стр. 4
+                    .active__table_button
+                        a(href='#').light-background Оформить
+                .active__table_block
+                    .active__table_block_info
+                        p Заказ №: 22597 (00000023628)
+                        span 30.03.2018 17:24
+                    .active__table_block_summ
+                        p К оплате:
+                        span 1 345 руб.
+                    +icon('basket-2','active')
+                .active__table_wrapper
+                    .active__table_items
+                        a(href='goods.html').active__table_item
+                            .active__table_item_img
+                                img(src='images/catalog/products_catalog_4.png')
+                            .active__table_item_txt
+                                p(title='Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная').active__table_item_p Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная
+                                span.active__table_item_span РП003
+                                .active__table_item_quantity
+                                    p 1 215 руб.
+                                    span
+                                    p 2 из 5
+                        a(href='goods.html').active__table_item
+                            .active__table_item_img
+                                img(src='images/catalog/products_catalog_5.png')
+                            .active__table_item_txt
+                                p(title='Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная').active__table_item_p Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная
+                                span.active__table_item_span РП003
+                                .active__table_item_quantity
+                                    p 1 215 руб.
+                                    span
+                                    p 1
+                        a(href='goods.html').active__table_item
+                            .active__table_item_img
+                                img(src='images/catalog/products_catalog_6.png')
+                            .active__table_item_txt
+                                p(title='Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная').active__table_item_p Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная
+                                span.active__table_item_span РП003
+                                .active__table_item_quantity
+                                    p 1 215 руб.
+                                    span
+                                    p 1
+                    .active__table_status
+                        .active__table_status_wrapper
+                            .active__table_status_p
+                                p Требует оформления
+                            .active__table_status_delivery
+                                +icon('car','active')
+                                p Самовывоз
+                            .active__table_status_address
+                                p Москва, ул. Большая Никитская, д. 5, стр. 4
+                    .active__table_button
+                        a(href='#').light-background Оформить
+            .active__more
+                p Загрузить еще
+            +scroll()
+            .active__up
+                +icon('arrow','active-up icon__arrow_up')
+
+
+

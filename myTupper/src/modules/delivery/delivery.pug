@@ -1,0 +1,9 @@
+mixin delivery_lines(data)
+    .delivery__table_wrapper
+        each item in data
+            .delivery__list
+                p= item.region
+                p= item.time
+                p= item.minprice
+                p= item.point
+                p= item.delivery

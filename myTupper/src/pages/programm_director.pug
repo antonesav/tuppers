@@ -1,0 +1,83 @@
+extends ../layouts/default
+include ../modules/icon/icon
+include ../modules/path/path
+include ../modules/programm_file/programm_file
+
+block content
+    +path({title: ['Главная страница', 'Программы','Программа "Директор"'], href: ['index.html']})
+    .pdirector.view-port
+        .pformula__aside
+            ul
+                li
+                    a(href='#') Программа «Менеджер»
+                li
+                    a(href='#').aside-active Программа «Директор»
+                li
+                    a(href='#') Программа «Формула успеха»
+                li
+                    a(href='#') Программа «Авангард»
+                li
+                    a(href='#') Программа «Живые деньги»
+                li
+                    a(href='#') Программа ШУНК
+                li
+                    a(href='#') Программа ШУМ
+                li
+                    a(href='#') Карьерные возможности
+                li
+                    a(href='#') Буклеты «online»
+        .pdirector__content
+            h1.standart-gap.big-title Программа «Директор» TUPPERWARE
+            .pdirector__content_wrapper.standart-gap
+                .pdirector__block_img
+                    img(src='images/director-big.jpg')
+                .pdirector__block_h3.pdirector__block_title
+                    h3 Преимущества статуса «Директор»
+                    ul.pdirector__block_ul
+                        li
+                            p Директор получает
+                                |
+                                span 3% от оборота
+                                |     каждой дочерней группы,вышедшей 		на уровень продаж 12 Квалификационных заказов и 	выше, при условии получения 4% комиссии 			Менеджера в своей личной группе;
+
+                        li
+                            p Возможность участия в программе «Живые деньги»
+
+            .standart-gap
+                .pdirector__block_h3
+                    h3.pdirector__hidden_h3 Условия приобретения статуса
+                    h3.pdirector__hidden Условия приобретения статуса
+                        +icon('arrow','pformula_down')
+                    .pdirector__hidden-blocks
+                        .pdirector__content_wrapper.standart-gap
+                            ul.pdirector__block_ul.pdirector__block_ul_width
+                                li
+                                    p Не менее 3 продвижений Новых Менеджеров за весь 		период работы
+
+                                li
+                                    p Не менее 3 активно работающих дочерних групп на постоянной основе
+                            .pdirector__block_numbers
+                                p 3 + 3
+                        .pdirector__content_wrapper.standart-gap
+                            ul.pdirector__block_ul.pdirector__block_ul_width
+                                li
+                                    p При продвижении Директор получает бонус в размере 20 000 руб. в рамках программы «Живые Деньги».
+
+                                li
+                                    p #[span ВАЖНО!] Директор получает данный бонус при каждом продвижении, даже в том случае, если он ранее был Директором, потерял свой статус, но продвинулся вновь.
+                            .pdirector__block_numbers
+                                p.pdirector__lh 20 000 руб.
+                        .pdirector__content_wrapper.standart-gap
+                            ul.pdirector__block_ul.pdirector__block_ul_width
+                                li
+                                    p Если при получении дочкой-Менеджером статуса Директора количество дочерних групп стало меньше 3, Маме-Директору для сохранения статуса необходимо будет продвинуть Нового Менеджера в течение 2 полных месяцев, следующих за месяцем продвижения дочки-Директора.
+
+                                li
+                                    p В случае если дочка-Директор впоследствии потеряет статус, её связь с Мамой-Директором не восстанавливается.
+                            .pdirector__block_numbers
+                                +icon('attention','shunk')
+                        .pdirector__content_wrapper.standart-gap
+                            .pdirector__block_h3.pdirector__block_h3-fill
+                                h3 Рассмотрим пример
+                                p Менеджер Ирина стала Директором на 15-й неделе (апрель). Её Мама-Директор – Галина – в апреле сможет получить 3% комиссии Директора с личной группы Ирины, если сама вышла на 4% комиссии как Менеджер в своей личной группе и группа Ирины вышла на уровень продаж 12 Квалификационных заказов и выше. В мае Галина при соблюдении вышеуказанных условий также получает комиссию 3% с личной группы Ирины. Начиная с июня Галина теряет право получать комиссию Директора с личной группы Ирины. Если Ирина в дальнейшем была дисквалифицирована из Директоров, её группа не возвращается к Галине или какому-либо другому Директору, а существует обособленной группой.
+            +programm_file(programms.director)

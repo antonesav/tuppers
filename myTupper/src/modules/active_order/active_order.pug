@@ -1,0 +1,71 @@
+mixin active_item(data)
+    .active__table_items
+        each item in data
+            a(href='goods.html').active__table_item
+                .active__table_item_img
+                    img(src= item.src)
+                .active__table_item_txt
+                    p(title='Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная').active__table_item_p Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная
+                    span.active__table_item_span РП003
+                    .active__table_item_quantity
+                        p 1 215 руб.
+                        span
+                        p= item.quantity
+mixin active_table(data_table)
+    .active__table
+        each item in data_table
+            .active__table_block
+                .active__table_block_info
+                    p Заказ №: 22597 (00000023628)
+                    span 30.03.2018 17:24
+                .active__table_block_summ
+                    p К оплате:
+                    span 1 345 руб.
+                +icon('basket-2','active')
+            .active__table_wrapper
+                if item.new
+                    +active_item(active.double)
+                else
+                    +active_item(active.order)
+                .active__table_status
+                    .active__table_status_wrapper
+                        .active__table_status_p
+                            p Требует оформления
+                        .active__table_status_delivery
+                            +icon('car','active')
+                            p= item.delivery
+                        .active__table_status_address
+                            p Москва, ул. Большая Никитская, д. 5, стр. 4
+                            if item.new
+                                span Перемещение товаров 90000045687 от 03.07.2018 19:18
+                .active__table_button
+                    a(href='basket_step1.html').light-background Оформить
+mixin active_table_pink(data_table)
+    .active__table
+        each item in data_table
+            .active__table_block
+                .active__table_block_info
+                    p Заказ №: 22597 (00000023628)
+                    span 30.03.2018 17:24
+                .active__table_block_summ
+                    p К оплате:
+                    span 1 345 руб.
+                +icon('basket-2','active')
+            .active__table_wrapper
+                if item.new
+                    +active_item(active.double)
+                else
+                    +active_item(active.order)
+                .active__table_status
+                    .active__table_status_wrapper
+                        .active__table_status_p
+                            p Требует оформления
+                        .active__table_status_delivery
+                            +icon('car','active')
+                            p= item.delivery
+                        .active__table_status_address
+                            p Москва, ул. Большая Никитская, д. 5, стр. 4
+                            if item.new
+                                span Перемещение товаров 90000045687 от 03.07.2018 19:18
+                .active__table_button
+                    a(href='basket_step1.html') Оформить

@@ -1,0 +1,84 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+
+.pdirector
+	font-family 'TupperPRO', sans-serif !important
+	& p
+		line-height 25px
+	&__hidden
+		flex(row,space-between,center)
+		cursor pointer
+	&__block
+		&_img
+			margin-bottom 15px
+			& img
+				width 100%
+		&_h3
+			font-size 16px
+			& h3
+				color $main-color
+				margin-bottom 20px
+			&-fill
+				background-color $fill-color
+				padding 20px		
+		&_ul
+			margin-left 17px
+			& li
+				margin-bottom 15px
+				list-style-type disc
+				color grey
+				& p
+					color $black-color
+				& span
+					color $main-color	
+		&_numbers
+			padding 20px 20px
+			text-align center
+			color $main-color
+			font-size 48px
+	&__hidden
+		&_h3
+			display none
+	&__lh
+		line-height normal !important
+
+@media screen and (min-width $view-port-mob)
+	.pdirector
+		&__block
+			&_img
+				flex(row,center)
+				& img
+					width 445px
+
+@media screen and (min-width $view-port-medium)
+	.pdirector
+		&__content
+			&_wrapper
+				flex(row,space-between,flex-start)
+		&__block
+			&_img
+				width 55%
+				& img
+					width 100%
+			&_title
+				width 43%
+			&_ul_width
+				width 55%
+			&_numbers
+				width 43%
+		&__hidden
+			display none
+			&_h3
+				display block
+
+@media screen and (min-width $view-port-large)
+	.pdirector
+		flex(row,space-between)
+		&__content
+			width 73%
+		&__hidden
+			display none !important
+			&_h3
+				display block
+		.icon__arrow_pformula_right
+			display none

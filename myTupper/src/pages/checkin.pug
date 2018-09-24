@@ -1,0 +1,57 @@
+include ../layouts/default_min
+include ../modules/icon/icon
+
+block content
+    .checkin.view-port
+        .checkin__wrapper-form
+            .checkin__title
+                h2 Связаться со мной
+            .checkin__paragraph
+                p Для того, чтобы стать Консультантом, пожалуйста, заполните форму, и мы обязательно вам перезвоним
+            .checkin__form
+                form.checkin__form_box
+                    .checkin__form_item
+                        input.checkin__form_input(type='text', name='city' required)
+                        label.checkin__form_label Город
+                    .checkin__form_item
+                        input.checkin__form_input(type='text', name='fullname' required)
+                        label.checkin__form_label ФИО
+                    .checkin__form_item
+                        input.checkin__form_input(type='email', name='email' required)
+                        label.checkin__form_label E-mail
+                    .checkin__form_item
+                        input.checkin__form_input(type='tel', name='tel' required)
+                        label.checkin__form_label Телефон
+                    .checkin__wrapper_items
+                        .checkin__form_item.checkin__wrapper_input
+                            input.checkin__form_input(type='text', name='date' required)
+                            label.checkin__form_label Дата рождения
+                        .checkin__form_item.checkin__wrapper_input
+                            input.checkin__form_input(type='text', name='gender' required)
+                            label.checkin__form_label Пол
+                    .checkin__form_item
+                        select.checkin__form_input(name='list' required)
+                            option
+                            option Список 2
+                            option Список 3
+                        label.checkin__form_label Список студий
+                        .checkin__form_input_arrow
+                            +icon('select-arrow')
+                    .checkin__form_button Отправить
+        .checkin__wrapper-content
+            .checkin__title
+                h2 Стать консультантом выгодно
+            .checkin__list
+                ul.checkin__list_ul
+                    li
+                        span Зарабатывайте столько, сколько Вы хотите
+                    li
+                        span Проявите себя и сделайте карьеру в респектабельной Компании
+                    li
+                        span Получайте за свои успехи подарки и признания
+                    li
+                        span Путешествуйте по миру
+                    li
+                        span Работайте в удовольствие
+            .checkin__image
+                img.checkin__image_img(src='images/profile.jpg')

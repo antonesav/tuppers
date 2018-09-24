@@ -1,0 +1,678 @@
+{
+	"active": {
+		"order": [
+			{
+				"src": "images/catalog/products_catalog_4.png",
+				"quantity": "2 из 5"
+			},
+			{
+				"src": "images/catalog/products_catalog_5.png",
+				"quantity": "1"
+			}
+		],
+		"double": [
+			{
+				"src": "images/catalog/products_catalog_4.png",
+				"quantity": "2"
+			},
+			{
+				"src": "images/catalog/products_catalog_5.png",
+				"quantity": "1"
+			},
+			{
+				"src": "images/catalog/products_catalog_6.png",
+				"quantity": "1"
+			}
+		]
+	},
+	"dactive": {
+		"three": [
+			{
+				"delivery": "Самовывоз"
+			},
+			{
+				"delivery": "Курьер",
+				"new": true
+			}
+		]
+	},
+	"blocks": [
+		{
+			"surname": "Ковалевская",
+			"name": "Анастасия",
+			"secondname": "Владимировна",
+			"icon": true
+		},
+		{
+			"surname": "Фролова",
+			"name": "Марианна",
+			"secondname": "Григорьевна"
+		},
+		{
+			"surname": "Ковалевская",
+			"name": "Анастасия",
+			"secondname": "Владимировна"
+		},
+		{
+			"surname": "Фролова",
+			"name": "Марианна",
+			"secondname": "Григорьевна"
+		},
+		{
+			"surname": "Ковалевская",
+			"name": "Анастасия",
+			"secondname": "Владимировна"
+		}
+	],
+	"lines": [
+		{
+			"surname": "Ковалевская",
+			"name": "Анастасия",
+			"secondname": "Владимировна"
+		},
+		{
+			"surname": "Фролова",
+			"name": "Марианна",
+			"secondname": "Григорьевна",
+			"apply": true
+		},
+		{
+			"surname": "Извольская",
+			"name": "Екатерина",
+			"secondname": "Олеговна"
+		},
+		{
+			"surname": "Извольская",
+			"name": "Екатерина",
+			"secondname": "Олеговна"
+		}
+	],
+	"basket_box": [
+		{
+			"title_items": {
+				"goods": "Товары",
+				"price": "Цена",
+				"count": "Количество",
+				"total": "Сумма"
+			},
+			"items": [
+				{
+					"good": {
+						"src": "images/basket/good_1.png",
+						"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная...",
+						"vendor_code": "РП003"
+					},
+					"total": true
+				},
+				{
+					"good": {
+						"src": "images/basket/good_2.png",
+						"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная...",
+						"vendor_code": "РП003"
+					},
+					"total": true
+				},
+				{
+					"good": {
+						"src": "images/basket/good_3.png",
+						"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная...",
+						"vendor_code": "РП003"
+					},
+					"total": true
+				}
+			]
+		},
+		{
+			"title": "Спецпредложения",
+			"items": [
+				{
+					"good": {
+						"src": "images/basket/good_1.png",
+						"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная...",
+						"vendor_code": "РП003"
+					},
+					"add_basket": {
+						"text": "В корзину",
+						"class": ""
+					}
+				},
+				{
+					"good": {
+						"src": "images/basket/good_2.png",
+						"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная...",
+						"vendor_code": "РП003"
+					},
+					"add_basket": {
+						"text": "В корзину",
+						"class": ""
+					}
+				},
+				{
+					"good": {
+						"src": "images/basket/good_3.png",
+						"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная...",
+						"vendor_code": "РП003"
+					},
+					"add_basket": {
+						"text": "В корзину",
+						"class": ""
+					}
+				}
+			]
+		},
+		{
+			"title": "Потенциально доступные",
+			"items": [
+				{
+					"good": {
+						"src": "images/basket/good_1.png",
+						"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная...",
+						"vendor_code": "РП003"
+					},
+					"add_basket": {
+						"text": "В корзину",
+						"class": " disabled"
+					}
+				},
+				{
+					"good": {
+						"src": "images/basket/good_2.png",
+						"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная...",
+						"vendor_code": "РП003"
+					},
+					"add_basket": {
+						"text": "В корзину",
+						"class": " disabled"
+					}
+				},
+				{
+					"good": {
+						"src": "images/basket/good_3.png",
+						"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная...",
+						"vendor_code": "РП003"
+					},
+					"add_basket": {
+						"text": "В корзину",
+						"class": " disabled"
+					}
+				}
+			]
+		}
+	],
+	"big_slider": [
+		{
+			"title": "Добавьте ярких красок!",
+			"link": "положить в корзину",
+			"text": "Идеально подойдет для приготовления салатов"
+		},
+		{
+			"title": "Добавьте ярких красок!",
+			"link": "положить в корзину",
+			"text": "Идеально подойдет для приготовления салатов"
+		}
+	],
+	"catalog": {
+		"products": [
+			{
+				"src": "images/catalog/products_catalog_1.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл)...",
+				"price_color": "899 р.",
+				"price": "949 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_2.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл)...",
+				"price_color": "899 р.",
+				"price": "949 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_3.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл)...",
+				"price_color": "899 р.",
+				"price": "949 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_4.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл)...",
+				"price_color": "899 р.",
+				"price": "949 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_5.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл)...",
+				"price_color": "899 р.",
+				"price": "949 р.",
+				"discount": true
+			},
+			{
+				"src": "images/catalog/products_catalog_6.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл)...",
+				"price_color": "899 р.",
+				"price": "949 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_7.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл)...",
+				"price_color": "899 р.",
+				"price": "949 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_8.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл)...",
+				"price_color": "899 р.",
+				"price": "949 р.",
+				"newcolor": true
+			},
+			{
+				"src": "images/catalog/products_catalog_1.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл)...",
+				"price_color": "899 р.",
+				"price": "949 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_6.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл)...",
+				"price_color": "899 р.",
+				"price": "949 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_7.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл)...",
+				"price_color": "899 р.",
+				"price": "949 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_8.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл)...",
+				"price_color": "899 р.",
+				"price": "949 р."
+			}
+		]
+	},
+	"delivery": {
+		"line": [
+			{
+				"region": "Москва и Московская область",
+				"time": "2 - 5 дней",
+				"minprice": "-",
+				"point": "100",
+				"delivery": "300"
+			},
+			{
+				"region": "Махачкала",
+				"time": "8 - 10 дней",
+				"minprice": "1000",
+				"point": "300",
+				"delivery": "не доступно"
+			},
+			{
+				"region": "Санкт-Петербург",
+				"time": "2 - 5 дней",
+				"minprice": "-",
+				"point": "100",
+				"delivery": "300"
+			},
+			{
+				"region": "Набережные Челны",
+				"time": "3-4 дней",
+				"minprice": "1000",
+				"point": "300",
+				"delivery": "не доступно"
+			},
+			{
+				"region": "Нижний Новгород",
+				"time": "3-5 дней",
+				"minprice": "1000",
+				"point": "200",
+				"delivery": "не доступно"
+			},
+			{
+				"region": "Краснодар",
+				"time": "5-8 дней",
+				"minprice": "1000",
+				"point": "300",
+				"delivery": "не доступно"
+			},
+			{
+				"region": "Курск",
+				"time": "4-6 дней",
+				"minprice": "1000",
+				"point": "300",
+				"delivery": "не доступно"
+			}
+		]
+	},
+	"nav": [
+		{
+			"title": "Действующие предложения"
+		},
+		{
+			"title": "Изделия"
+		},
+		{
+			"title": "Программы"
+		},
+		{
+			"title": "Личный кабинет",
+			"submenu": [
+				{
+					"title": "Профиль"
+				},
+				{
+					"title": "Заказы "
+				},
+				{
+					"title": "Отчеты",
+					"items": [
+						{
+							"title": "Оборот группы"
+						},
+						{
+							"title": "Еженедельный отчет"
+						},
+						{
+							"title": "Заказы консультанта"
+						},
+						{
+							"title": "Список инфолистов"
+						},
+						{
+							"title": "Продажи изделий"
+						},
+						{
+							"title": "Отчет по Авангарду"
+						},
+						{
+							"title": "Контактные данные консультантов"
+						},
+						{
+							"title": "Обороты счетов консультантов"
+						}
+					]
+				},
+				{
+					"title": "Обороты"
+				},
+				{
+					"title": "Дополнительно"
+				},
+				{
+					"title": "Недовложение и брак"
+				}
+			]
+		}
+	],
+	"order": {
+		"products": [
+			{
+				"src": "images/catalog/products_catalog_4.png",
+				"span": "РП003",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная...",
+				"wrap": true
+			},
+			{
+				"src": "images/catalog/products_catalog_5.png",
+				"span": "РП003",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная +Эко-бутылка \"Секрет внутри\" (500 мл) квадратная"
+			},
+			{
+				"src": "images/catalog/products_catalog_8.png",
+				"span": "РП003",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная...",
+				"wrap": true
+			}
+		],
+		"line": [
+			{
+				"status": "Требует оформления",
+				"delivery": "Самовызов"
+			},
+			{
+				"status": "Требует оформления",
+				"delivery": "Курьер"
+			},
+			{
+				"status": "Требует оформления",
+				"delivery": "Самовызов"
+			},
+			{
+				"status": "В доставке",
+				"delivery": "Самовызов"
+			},
+			{
+				"status": "Требует оформления",
+				"delivery": "Самовызов"
+			},
+			{
+				"status": "В доставке",
+				"delivery": "Курьер"
+			},
+			{
+				"status": "Требует оформления",
+				"delivery": "Самовызов"
+			},
+			{
+				"status": "В доставке",
+				"delivery": "Самовызов"
+			},
+			{
+				"status": "Требует оформления",
+				"delivery": "Самовызов"
+			},
+			{
+				"status": "В доставке",
+				"delivery": "Самовызов"
+			}
+		]
+	},
+	"personal": [
+		"('site','profile')",
+		"('car','profile')",
+		"('studio','profile')"
+	],
+	"programms": {
+		"formula": [
+			{
+				"filelink": "Формула успеха.pdf"
+			}
+		],
+		"director": [
+			{
+				"filelink": "Директор.pdf"
+			}
+		],
+		"manager": [
+			{
+				"filelink": "Менеджер.pdf"
+			}
+		],
+		"career": [
+			{
+				"filelink": "Карьерные возможности.pdf"
+			}
+		],
+		"avangard": [
+			{
+				"filelink": "Авангард.pdf"
+			}
+		],
+		"live_money": [
+			{
+				"filelink": "Живые Деньги.pdf"
+			}
+		],
+		"shunk": [
+			{
+				"filelink": "ШУНК Россия.pdf"
+			}
+		]
+	},
+	"search": {
+		"results": [
+			{
+				"src": "images/catalog/products_catalog_1.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная +Эко-бутылка \"Секрет внутри\" (500 мл) квадратная",
+				"price_color": "899 р.",
+				"price": "949 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_2.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная +Эко-бутылка \"Секрет внутри\" (500 мл) квадратная",
+				"price_color": "899 р.",
+				"price": "949 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_3.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная +Эко-бутылка \"Секрет внутри\" (500 мл) квадратная",
+				"price_color": "899 р.",
+				"price": "949 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_4.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная +Эко-бутылка \"Секрет внутри\" (500 мл) квадратная",
+				"price_color": "899 р.",
+				"price": "949 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_5.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная +Эко-бутылка \"Секрет внутри\" (500 мл) квадратная",
+				"price_color": "899 р.",
+				"price": "949 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_6.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная +Эко-бутылка \"Секрет внутри\" (500 мл) квадратная",
+				"price_color": "899 р.",
+				"price": "949 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_7.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная +Эко-бутылка \"Секрет внутри\" (500 мл) квадратная",
+				"price_color": "899 р.",
+				"price": "949 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_8.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная +Эко-бутылка \"Секрет внутри\" (500 мл) квадратная",
+				"price_color": "899 р.",
+				"price": "949 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_1.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная +Эко-бутылка \"Секрет внутри\" (500 мл) квадратная",
+				"price_color": "899 р.",
+				"price": "949 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_6.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная +Эко-бутылка \"Секрет внутри\" (500 мл) квадратная",
+				"price_color": "899 р.",
+				"price": "949 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_7.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная +Эко-бутылка \"Секрет внутри\" (500 мл) квадратная",
+				"price_color": "899 р.",
+				"price": "949 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_8.png",
+				"vendor_code": "РП070",
+				"title": "Эко-бутылка \"Фанат воды\" (500 мл) квадратная +Эко-бутылка \"Секрет внутри\" (500 мл) квадратная",
+				"price_color": "899 р.",
+				"price": "949 р."
+			}
+		]
+	},
+	"items": [
+		{
+			"src": "images/catalog/products_catalog_4.png"
+		},
+		{
+			"src": "images/catalog/products_catalog_5.png"
+		},
+		{
+			"src": "images/catalog/products_catalog_6.png"
+		},
+		{
+			"src": "images/catalog/products_catalog_7.png"
+		},
+		{
+			"src": "images/catalog/products_catalog_4.png"
+		},
+		{
+			"src": "images/catalog/products_catalog_5.png"
+		},
+		{
+			"src": "images/catalog/products_catalog_6.png"
+		},
+		{
+			"src": "images/catalog/products_catalog_7.png"
+		}
+	],
+	"shunk": {
+		"steps": [
+			{
+				"src": "images/catalog/products_catalog_1.png",
+				"vendor_code": "РП070",
+				"title": "Крышка «УльтраПро™» (800 мл) к кастрюлям «УльтраПро™» (2 л и 3,5 л)",
+				"price_color": "899 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_2.png",
+				"vendor_code": "РП070",
+				"title": "Крышка «УльтраПро™» (800 мл) к кастрюлям «УльтраПро™» (2 л и 3,5 л)",
+				"price_color": "899 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_3.png",
+				"vendor_code": "РП070",
+				"title": "Крышка «УльтраПро™» (800 мл) к кастрюлям «УльтраПро™» (2 л и 3,5 л)",
+				"price_color": "899 р."
+			},
+			{
+				"src": "images/catalog/products_catalog_4.png",
+				"vendor_code": "РП070",
+				"title": "Крышка «УльтраПро™» (800 мл) к кастрюлям «УльтраПро™» (2 л и 3,5 л)",
+				"price_color": "899 р.",
+				"grey": true
+			},
+			{
+				"src": "images/catalog/products_catalog_5.png",
+				"vendor_code": "РП070",
+				"title": "Крышка «УльтраПро™» (800 мл) к кастрюлям «УльтраПро™» (2 л и 3,5 л)",
+				"price_color": "899 р.",
+				"grey": true
+			},
+			{
+				"src": "images/catalog/products_catalog_6.png",
+				"vendor_code": "РП070",
+				"title": "Крышка «УльтраПро™» (800 мл) к кастрюлям «УльтраПро™» (2 л и 3,5 л)",
+				"price_color": "899 р."
+			}
+		]
+	}
+}

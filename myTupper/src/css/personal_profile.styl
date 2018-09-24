@@ -1,0 +1,574 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+.focus-input ~ .profile__info_form_label
+	top -14px
+	font-size 12px
+
+.focus-input ~ .active__form_label
+	top -14px
+	font-size 12px
+
+.profile
+	line-height 1.3
+	font-family 'TupperPRO', sans-serif !important
+	&__info
+		flex(column)
+
+		&_block-total, &_block-password, &_block-delete
+			position relative
+			cursor pointer
+			height 55px
+			width 100%
+			padding-top 20px
+			padding-left 20px
+			background-color $main-color
+			color $white-color
+			font-weight 500
+			margin-top 15px
+
+		&_personal
+			flex(row, space-around)
+
+		&_total
+			margin-top 15px
+
+		&_form
+			margin-top 30px
+
+			&_total
+				flex(column, $ai: center)
+
+			&_password, &_delete
+				width 100%
+				flex(column, $ai: center)
+
+			&_item-password, &_item-total
+				position relative
+				margin-top 25px
+				width 100%
+
+			&_input
+				font-family 'TupperPRO'
+				outline none
+				border none
+				border-bottom 2px solid #787878
+				width 100%
+				font-size 16px
+				padding 8px 0
+				line-height 20px
+				transition .6s all
+				&:focus
+					border-bottom 2px solid $main-color
+				&:focus ~ .profile__info_form_label
+					top -14px
+					font-size 12px
+
+			&_label
+				overflow hidden
+				white-space nowrap
+				position absolute
+				top 7px
+				left 0
+				line-height 20px
+				color #787878
+				pointer-events none
+				transition .6s all
+
+		&_callback
+			letter-spacing 0.5px
+			margin 30px 0
+
+		&_password, &_delete
+			display none
+
+			&_button
+				margin 30px 0
+				flex(row,center)
+
+				& h2
+					text-transform uppercase
+					width 275px
+					padding 10px
+					text-align center
+					background-color $main-color
+					color $white-color
+					font-weight 500
+					font-size 12px
+					cursor pointer
+					&:hover
+						outline 1px solid $main-color
+						background-color $white-color
+						color $main-color
+
+		.icon__arrow_profile_down, .icon__arrow_profile_up
+			position absolute
+			top 20px
+			right 30px
+
+		&_delete
+			padding 25px 0
+
+	&__personal
+
+		&_img
+			width 55%
+			position relative
+			& img
+				width 100%
+
+			&-box
+				display none
+				position absolute
+				right 10px
+				bottom 10px
+				background-color #fff
+				border-radius 50%
+				width 32px
+				height 32px
+
+
+		&_status
+			flex(column,space-around,center)
+
+			&_now, &_next
+				flex(column,center,center)
+
+				& p
+					font-size 15px
+					color #787878
+				& span
+					margin 5px 0
+					color $black-color
+
+			&_next
+				& a
+					margin 5px 0
+					color $orange-color
+					cursor pointer
+					&:hover
+						text-decoration underline
+
+	&__callback
+		cursor pointer
+		font-family 'TupperPRO'
+		width 142px
+		height 36px
+		background-color #e30385
+		color #fff
+		text-transform uppercase
+		padding 10px 17px
+		font-weight 500
+		transform rotate(90deg)
+		font-size 12px
+		position fixed
+		right -53px
+		top 45%
+		&:hover
+			background-color darken($red-color,15%)
+
+	&__modal_apply, &__modal_callback
+		line-height 1.3
+		position fixed
+		font-family 'TupperPRO'
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		background-color rgba(0,0,0,0.6)
+		z-index 100
+		display none
+
+		&_box
+			width 90%
+			position absolute
+			top 30%
+			left 5%
+		&_banner
+			text-transform uppercase
+			color $white-color
+			font-size 20px
+			font-weight 500
+			background-color $main-color
+			width 100%
+			text-align center
+			padding 27px 0
+		&_content
+			width 100%
+			background-color $white-color
+			flex(column,space-around,center)
+			& p
+				padding 40px 10px
+				font-size 16px
+				text-align center
+		&_buttons
+			width 80%
+			margin-bottom 40px
+			font-size 12px
+			color $white-color
+			flex(row,space-around)
+
+		&_yes, &_no
+			text-transform uppercase
+			cursor pointer
+			padding 12px 0
+			width 45%
+			text-align center
+			background-color $icon-color
+			&:hover
+				background-color $main-color
+		&_no
+			margin-left 15px
+
+	&__modal_callback
+		display none
+		&_box
+			top 10%
+
+		&_ul
+			margin-left 5%
+			flex(column)
+			& li
+				text-transform none
+				font-size 13px
+				margin-bottom 10px
+				flex(row,$ai: center)
+				& p
+					margin-left 15px
+
+		&_close
+			top 20px
+			right 20px
+			height 22px
+			padding 12px
+			cursor pointer
+			position absolute
+			&:hover
+				& span
+					background-color $light-color
+					&:after
+						background-color $light-color
+			& span
+				height 2px
+				width 22px
+				display block
+				transform rotate(45deg)
+				background-color $white-color
+				&:after
+					content ''
+					height 2px
+					width 22px
+					display block
+					transform rotate(-90deg)
+					background-color $white-color
+
+	&__modal
+		&_wrap
+			padding-bottom 30px
+			flex(column,space-around,center)
+			background-color $white-color
+		&_questions
+			padding-bottom 30px
+			flex(column,space-around,center)
+			background-color $white-color
+
+		//&_comment-site, &_comment-studio, &_comment-quality
+		//	padding-bottom 30px
+		//	flex(column,space-around,center)
+		//	background-color $white-color
+
+		&_question
+			width 80%
+			margin 30px 0
+
+		&_site, &_quality, &_studio
+			cursor pointer
+			margin-bottom 20px
+			padding 25px 15px
+			background-color $snow-color
+			flex(column,space-around,center)
+			&:hover
+				outline 2px solid $main-color
+			& p
+				margin-bottom 15px
+
+		&_categories
+			flex(column)
+
+		&_site-icon,&_quality-icon
+			padding 25px 19px
+			border-radius 50%
+			border 2px solid $main-color
+		&_studio-icon
+			padding 25px 19px
+		&_stars
+			width 90%
+			margin-top 20px
+			& .icon__stars_profile
+				cursor pointer
+				width 100%
+
+		&_input
+			resize none
+			overflow hidden
+		&_comment
+			width 90% !important
+			padding-top 9px
+			line-height 16px
+			&-quality,&-site,&-studio
+				display none
+		&_label
+			top -14px
+			font-size 12px
+		&_button
+			cursor pointer
+			padding 8px 29px
+			background-color $main-color
+			color $white-color
+			margin-top 30px
+			&:hover
+				background-color darken($main-color,15%)
+	&__thanks
+		display none
+		width 300px
+		position absolute
+		top 30%
+		left 50%
+		margin-left -150px
+		&_block
+			background-color $orange-color
+			text-transform uppercase
+			text-align center
+			padding 20px 0
+			color $white-color
+			font-size 20px
+			&_close
+				top 10px
+				right 0
+				height 22px
+				padding 12px
+				cursor pointer
+				position absolute
+				&:hover
+					& span
+						background-color $light-color
+						&:after
+							background-color $light-color
+				& span
+					height 2px
+					width 22px
+					display block
+					transform rotate(45deg)
+					background-color $white-color
+					&:after
+						content ''
+						height 2px
+						width 22px
+						display block
+						transform rotate(-90deg)
+						background-color $white-color
+		&_text,&_text-next
+			display none
+			background-color $white-color
+			padding 20px 25px
+			text-align center
+
+
+
+@media screen and (min-width $view-port-mob)
+	.profile
+		&__personal
+			&_img
+				width 72%
+
+		&__info
+			&_form
+				flex(row,center)
+
+				&_total, &_password
+					width 80%
+					margin 0 auto
+
+			&_delete
+				& p
+					margin 0 auto
+
+				&_button
+					margin 30px auto
+					width 275px
+
+		&__modal_apply
+			&_box
+				width 60%
+				left 20%
+
+		&__modal_callback
+			&_ul
+				margin-left 10%
+				flex(column)
+			& li
+				text-transform none
+				font-size 16px
+				margin-bottom 10px
+				flex(row,$ai: center)
+				& p
+					margin-left 15px
+		&__modal
+			&_comment
+				width 80% !important
+
+@media screen and (min-width $view-port-medium)
+	.profile
+		&__personal
+			&_img
+				width 60%
+
+		&__info
+			&_delete
+				& p
+					width 80%
+					margin 0 auto
+
+				&_button
+					margin 30px auto
+					width 275px
+		&__modal
+			&_callback
+				&_box
+					width 60%
+					top 5%
+					left 20%
+
+@media screen and (min-width $view-port-tablet)
+	.profile
+		&__personal
+			&_img
+				width 50%
+
+		&__modal_apply
+			&_box
+				width 40%
+				left 30%
+
+@media screen and (min-width $view-port-large)
+	.profile
+		&__info
+			&_personal
+				flex(column,flex-start)
+				width 40%
+
+
+			&_total
+				flex(row,space-between)
+
+			&_form
+				width 55%
+				margin-top 0
+
+		&__personal
+			&_img
+				width 100%
+
+			&_status
+				flex(column)
+
+				&_now, &_next
+					margin-top 15px
+					flex(row,flex-start)
+					& span, & a
+						margin 0
+
+				&_now
+					& p
+						margin-right 15px
+
+				&_next
+					& p
+						margin-right 10px
+
+		&__modal_apply
+			&_box
+				width 30%
+				left 35%
+
+		&__modal
+			&_categories
+				width 95%
+				flex(row,space-around)
+
+			&_callback
+				&_box
+					width 70%
+					top 20%
+					left 15%
+					max-width 700px
+
+				&_ul
+					margin-left 5%
+
+			&_site, &_quality, &_studio
+				width 28%
+				max-width 220px
+
+			&_question
+				width 90%
+
+@media screen and (min-width $view-port-xl)
+	.profile
+		&__info
+			&_personal
+				width 20%
+
+			&_form
+				width 75%
+
+				&_total
+					width 100%
+					flex(row,space-between,flex-end)
+					flex-wrap wrap
+
+				&_item-total
+					width 31%
+
+					&:nth-child(7)
+						width 9%
+
+					&:nth-child(8)
+						width 18%
+
+				&_password
+					margin 0
+					width 70%
+					flex(row,space-between,center)
+
+				&_item-password
+					width 25%
+
+			&_password
+				&_button
+					margin-top 65px
+					margin-bottom 0
+
+				&_item-password
+					width 31%
+					margin-top 0
+			&_box
+				flex(row, space-between, flex-start)
+				& p
+					width 70%
+					margin 0
+
+		&__modal_apply
+			&_box
+				width 22%
+				left 39%
+
+			&_buttons
+				width 90%
+
+		&__modal
+			&_callback
+				&_box
+					width 56%
+					top 20%
+					left 29%
+					max-width 700px

@@ -1,0 +1,158 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+
+.pshunk
+	font-family 'TupperPRO', sans-serif !important
+	& p
+		line-height 25px
+	&__next
+		& a
+			link($orange-color)
+			flex(row,flex-start,center)
+			&:hover
+				text-decoration underline
+		& p
+			margin-right 15px
+	&__image
+		& img
+			width 100%
+		&_text
+			& h3
+				color $main-color
+		&_icons
+			flex(row,space-between)
+			max-width 400px
+			margin 0 auto
+		&_icon
+			width 33%
+			text-align center
+			color $main-color
+		&_relative
+			position relative
+			&-block
+				width 90px
+				height 90px
+				border-radius 50%
+				color $white-color
+				position absolute
+				top -5px
+				left -5px
+				text-align center
+				flex(column,center,center)
+				background-color $red-color
+				& p
+					font-size 11px          // ON DESKTOP 12px
+					line-height normal
+					text-transform uppercase
+				& span
+					font-weight 500
+	&__desktop
+		&_h2
+			display none            // ON DESKTOP -----block
+			color $main-color
+			font-size 18px
+			& span
+				font-size 24px
+				margin-right 15px
+	&__mobile
+		&_h2
+			flex(row,space-between,center)
+			color $main-color
+			font-size 20px
+			cursor pointer
+		&_h3
+			color $main-color
+			font-size 18px
+	&__step
+		&_row
+			flex(row,space-between,center)
+			& span
+				font-size 22px
+				color $red-color
+			& p
+				line-height normal
+		&_span
+			display inline-block
+			margin-bottom 15px
+		&_ul
+			margin-left 17px
+			& li
+				margin-bottom 15px
+				list-style-type disc
+				color grey
+			& p
+				color $black-color
+		&_footnote
+			font-size 14px
+		&_plus
+			text-align center
+			& span
+				width 3px
+				height 25px
+				display inline-block
+				background-color $red-color
+				&:before
+					content ''
+					width 3px
+					height 25px
+					display inline-block
+					background-color $red-color
+					transform rotate(90deg)
+		&_mini
+			text-align center
+	&__training
+		&_row
+			flex(row,space-between,center)
+		&_box
+			& a
+				link($main-color)
+				&:hover
+					text-decoration underline
+	&__border
+		border-bottom 1px solid $light-color
+		margin-top 15px
+		&_none
+			margin-top 15px
+
+@media screen and (min-width $view-port-mob)
+	.pshunk
+		&__mobile
+			&_h2
+				display none
+			&_h3
+				display none
+		&__desktop
+			&_h2
+				display block
+
+@media screen and (min-width $view-port-tablet)
+	.pshunk
+		&__flex
+			&_row
+				flex(row,space-between)
+		&__image
+			width 55%
+			&_text
+				width 43%
+		&__hidden
+			&_row
+				flex(row,space-between)
+			&_step
+				flex(row,space-between)
+		&__step
+			width 43%
+			&_ul
+				width 55%
+		&__training
+			&_row
+				align-items flex-start
+				margin-bottom 15px
+				width 43%
+
+@media screen and (min-width $view-port-large)
+	.pshunk
+		flex(row,space-between)
+		&__content
+			width 73%
+		&__h1
+			flex(row,space-between)

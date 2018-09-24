@@ -1,0 +1,32 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+
+.changecons
+	font-family 'TupperPRO', sans-serif !important
+	&__banner
+		background-color $main-color
+		color $white-color
+		font-weight 500
+		padding 15px 10px
+	&__label
+		&_center
+			flex(row,$ai:center)
+	&__button
+		flex(row,center)
+		padding 20px 0
+		& p
+			background-color $main-color
+			text-transform uppercase
+			display inline-block
+			color $white-color
+			padding 10px 30px
+			cursor pointer
+			font-weight 500
+			font-size 12px
+			&:hover
+				background-color darken($main-color,15%)
+
+@media screen and (min-width $view-port-large)
+	.changecons
+		&__callback
+			flex(row,space-between,center)

@@ -1,0 +1,15 @@
+mixin personal(data_1, data_2, class_name, class_icon)
+
+    div(class=class_name)
+        .profile__modal_wrap
+            .profile__modal_question
+                p Будем рады Вашим отзывам!
+            div(class=class_icon)
+                +icon(data_1,data_2)
+            .profile__modal_stars
+                +icon('stars','profile')
+            .profile__info_form_item-total.profile__modal_comment
+                textarea.profile__info_form_input.profile__modal_input(type='text', name='name' placeholder='Здесь вы можете оставить свои комментарии и пожелания')
+                label.profile__info_form_label.profile__modal_label Комментарий
+            .profile__modal_button
+                p Отправить

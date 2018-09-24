@@ -1,0 +1,92 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+
+*, *:before, *:after
+	box-sizing border-box
+
+.aside-active
+	color $orange-color !important
+.light-background
+	background-color $light-color !important
+.lower-gap
+	margin-bottom 15px
+.standart-gap
+	margin-bottom 30px
+.view-port
+	width 100%
+	max-width $view-port-xl
+	padding-left $padding-sm
+	padding-right $padding-sm
+	margin-left auto
+	margin-right auto
+	
+.text-sm
+	font-size 14px
+	line-height 1.4
+
+.text-mid
+	font-size 16px
+	line-height 1.4
+	
+.text-mid-plus
+	font-size 18px
+	line-height 1.4
+	
+.text-big
+	font-size 20px
+	line-height 1.4
+	
+.text-large
+	font-size 16px
+	line-height 1.4
+	
+.hidden
+	display none !important
+	opacity 0
+	z-index -99
+.hidden_nav
+	display none
+	opacity 0
+	z-index -99
+	
+.big-title
+	font-size 22px
+	
+.title
+	font-size 24px
+	margin-bottom 10px
+	
+.disabled
+	opacity 0.5
+	pointer-events none
+	
+@media screen and (min-width $view-port-mob)
+	.view-port
+		padding-left $padding-mob
+		padding-right $padding-mob
+	
+@media screen and (min-width $view-port-medium)
+	.view-port
+		padding-left $padding-medium
+		padding-right $padding-medium
+	.big-title
+		font-size 28px
+	
+@media screen and (min-width $view-port-tablet)
+	.view-port
+		padding-left $padding-tablet
+		padding-right $padding-tablet
+	.text-large
+		font-size 18px
+@media screen and (min-width $view-port-large)
+	.view-port
+		padding-left $padding-large
+		padding-right $padding-large
+	.text-large
+		font-size 20px
+	
+@media screen and (min-width $view-port-large)
+	.text-large
+		font-size 22px
+	.text-mid-plus
+		font-size 20px

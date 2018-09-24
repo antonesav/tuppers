@@ -1,0 +1,214 @@
+extends ../layouts/default
+include ../modules/icon/icon
+include ../modules/order/order
+include ../modules/orders_list/orders_list
+include ../modules/path/path
+
+block content
+    +path({title: ['Главная страница', 'Личный кабинет', 'Заказы', 'Выполненные заказы', 'Заказ 22597'], href: ['index.html']})
+    .order.view-port
+        .orders__aside
+            .orders__aside_nav
+                h2 Заказы
+                ul
+                    li
+                        a(href='active_order.html') Активные заказы
+                    li
+                        a(href='canceled_order.html') Отмененные заказы
+                    li
+                        a(href='done_order.html') Выполненные заказы
+            .orders__aside_current
+                h2 Заказы группы
+                ul
+                    li
+                        a(href='orders_list.html') Сводная таблица
+        .order__content
+            .order__title
+                +icon('arrow', 'back icon__arrow_left').goods__back
+                h1 Заказ 22597 (00000023628) от 26.03.2018 18:38:37
+                a.order__title_a(href='orders_list.html') Вернуться к заказам
+                    +icon('arrow','right_order')
+            .order__tabs_wrapper
+                ul.order__tabs
+
+                    li(rel='tab1').order__tabs_active
+                        span Заказ
+                        .order__tabs_arrow
+
+                    li(rel='tab2')
+                        span Личные данные
+                        .order__tabs_arrow
+
+                    li(rel='tab3')
+                        span Оплата
+                        .order__tabs_arrow
+
+                    li(rel='tab4')
+                        span Доставка
+                        .order__tabs_arrow
+
+                .order__tabs_info
+                    .order__dactive.order__tabs_accordion(rel='tab1')
+                        span Заказ
+                        .order__tabs_arrow
+                    .order__tabs_content#tab1
+                        .order__list_item
+                            .order__list_item_title
+                                p Текущий статус заказа
+                            .order__list_item_description
+                                p В доставке (от 03.04.2018 11:05:38)
+                        .order__list_item
+                            .order__list_item_title
+                                p Стоимость
+                            .order__list_item_description
+                                p 1 265 руб.
+                        .order__list_item
+                            .order__list_item_title
+                                p Оборот
+                            .order__list_item_description
+                                p 1 265 руб.
+                        .order__list_item
+                            .order__list_item_title
+                                p Стоимость доставки
+                            .order__list_item_description
+                                p 1 265 руб.
+                        .order__list_item
+                            .order__list_item_title
+                                p Отменен
+                            .order__list_item_description
+                                p Нет
+                                span.light-color Отменить
+                        .order__list_item
+                            .order__list_item_title
+                                p Комментарии компании
+                            .order__list_item_description
+                                p Перемещение товаров 90000023456 от 03.04.2018 23:50:25
+                    .order__tabs_accordion(rel='tab2')
+                        span Личные данные
+                        .order__tabs_arrow
+                    .order__tabs_content#tab2
+                        p tab 2
+                    .order__tabs_accordion(rel='tab3')
+                        span Оплата
+                        .order__tabs_arrow
+                    .order__tabs_content#tab3
+                        p tab 3
+                    .order__tabs_accordion(rel='tab4')
+                        span Доставка
+                        .order__tabs_arrow
+                    .order__tabs_content#tab4
+                        p tab 4
+            .order__products
+                .order__products_wrapper
+                    .order__products_tab
+                        .order__products_tab_item Товары
+                        .order__products_tab_item Цена
+                        .order__products_tab_item Количество
+                        .order__products_tab_item Сумма
+                .order__products_box
+                    .order__item
+                        img(src='images/catalog/products_catalog_4.png').order__item_img
+                        .order__item_title
+                            p Эко-бутылка "Фанат воды" (500 мл) квадратная...
+                            .order__item_title_wrap
+                                span.order__item_title_span РП003
+                                p.order__item_title_p Заказывали 1
+                        .order__item_price
+                            .order__item_price_pink
+                                p Ваша цена
+                                span 899 руб.
+                            .order__item_price_static
+                                p Цена
+                                span 1 199 руб.
+                        .order__item_count.light-color
+                            .order__item_count_minus.circle-color -
+                            .order__item_count_number 1
+                            .order__item_count_plus.circle-color +
+                        .order__item_your
+                            .order__item_your_pink
+                                p Ваша стоимость
+                                span 899 руб.
+                            .order__item_your_static
+                                p Оборот
+                                span 1 199 руб.
+                        .order__item_basket
+                            +icon('basket-2','order')
+                    .order__item
+                        img(src='images/catalog/products_catalog_5.png').order__item_img
+                        .order__item_title
+                            p Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри
+                        .order__item_price
+                            .order__item_price_pink
+                                p Ваша цена
+                                span 899 руб.
+                            .order__item_price_static
+                                p Цена
+                                span 1 199 руб.
+                        .order__item_count.light-color
+                            .order__item_count_minus.circle-color -
+                            .order__item_count_number 1
+                            .order__item_count_plus.circle-color +
+                        .order__item_your
+                            .order__item_your_pink
+                                p Ваша стоимость
+                                span 899 руб.
+                            .order__item_your_static
+                                p Оборот
+                                span 1 199 руб.
+                        .order__item_basket
+                            +icon('basket-2','order')
+                    .order__item
+                        img(src='images/catalog/products_catalog_8.png').order__item_img
+                        .order__item_title
+                            p Эко-бутылка "Фанат воды" (500 мл) квадратная...
+                            .order__item_title_wrap
+                                span.order__item_title_span РП003
+                                p.order__item_title_p Заказывали 1
+                        .order__item_price
+                            .order__item_price_pink
+                                p Ваша цена
+                                span 899 руб.
+                            .order__item_price_static
+                                p Цена
+                                span 1 199 руб.
+                        .order__item_count.light-color
+                            .order__item_count_minus.circle-color -
+                            .order__item_count_number 1
+                            .order__item_count_plus.circle-color +
+                        .order__item_your
+                            .order__item_your_pink
+                                p Ваша стоимость
+                                span 899 руб.
+                            .order__item_your_static
+                                p Оборот
+                                span 1 199 руб.
+                        .order__item_basket
+                            +icon('basket-2','order')
+                .order__products_footer
+                    a.order__products_a(href='orders_list.html')
+                        +icon('arrow','left_order')
+                        span Вернуться к заказам
+                    .order__products_total
+                        .order__products_total-sum
+                            p Оборот
+                            p 1 187 руб.
+                        .order__products_total-sum
+                            p Ваша стоимость
+                            p 987 руб.
+                        .order__products_total-sum
+                            p Стоимость доставки
+                            p 300 руб.
+                        .order__products_button
+                            a(href='basket_step1.html').light-background Оформить
+        .order__modal
+            .order__modal_box
+                .order__modal_banner
+                    h2 Отмена заказа №31576
+                .order__modal_content
+                    p Вы уверены, что хотите отменить
+                        a(href='order.html') заказ №31576?
+                        span Отмена заказа необратима
+                    .order__modal_buttons
+                        .order__modal_yes Да
+                        .order__modal_no Нет
+                    a(href='orders_list.html') В список заказов

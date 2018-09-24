@@ -1,0 +1,61 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+
+.pmanager
+	font-family 'TupperPRO', sans-serif !important
+	& p
+		line-height 25px
+
+	&__padding
+		padding 20px 0
+	&__hidden
+		&_h3
+			margin-bottom 0 !important
+			font-size 20px
+			text-transform uppercase
+	&__content_wrapper
+		flex(column,$ai:center)
+		margin-top 20px
+	&__number
+		width 56px
+		height 56px
+		display block
+		border-radius 50%
+		margin-bottom 15px
+		border 2px solid $main-color
+		flex(row,center,center)
+		&-icon
+			margin-bottom 15px
+		& p
+			flex(row,space-between,flex-end)
+			color $main-color
+			font-size 30px
+			& span
+				font-size 16px
+	&__ul
+		margin-left 17px
+		& li
+			margin-bottom 15px
+			list-style-type disc
+			color grey
+			& p
+				color $black-color
+	&__border
+		border-top 1px solid $light-color
+		border-bottom 1px solid $light-color
+	&__space
+		width 100%
+		flex(row,space-between,center)
+
+@media screen and (min-width $view-port-large)
+	.pmanager
+		flex(row,space-between)
+		&__content
+			width 73%
+			&_wrapper
+				flex(row,space-between,center)
+		&__description
+			width 87%
+		&__hidden
+			&_h3
+				font-size 24px

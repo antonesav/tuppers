@@ -1,0 +1,31 @@
+mixin order_products(data)
+    .order__products_box
+        each item in data
+            .order__item
+                img(src=item.src).order__item_img
+                .order__item_title
+                    p=item.title
+                    if item.wrap
+                        .order__item_title_wrap
+                            span.order__item_title_span РП003
+                            p.order__item_title_p Заказывали 1
+                .order__item_price
+                    .order__item_price_pink
+                        p Ваша цена
+                        span 899 руб.
+                    .order__item_price_static
+                        p Цена
+                        span 1 199 руб.
+                .order__item_count
+                    .order__item_count_minus -
+                    .order__item_count_number 1
+                    .order__item_count_plus +
+                .order__item_your
+                    .order__item_your_pink
+                        p Ваша стоимость
+                        span 899 руб.
+                    .order__item_your_static
+                        p Оборот
+                        span 1 199 руб.
+                .order__item_basket
+                    +icon('basket-2','order')

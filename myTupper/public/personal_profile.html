@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="format-detection" content="address=no" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <!--link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic", rel="stylesheet")-->
+        <link rel="stylesheet" href="libs/slick/slick.css" />
+        <link rel="stylesheet" href="libs/slick/slick-theme.css" />
+        <link rel="stylesheet" href="css/style.css" /><script src="libs/jquery.min.js" defer="defer"></script><script src="libs/slick/slick.min.js" defer="defer"></script><script src="js/script.js" defer="defer"></script>
+        <!--script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")-->
+        <title>Tupperware</title>
+    </head>
+    <body>
+        <header class="header view-port">
+            <a class="header__logo" href="index.html">
+                <img class="header__logo_img" src="images/logo.svg" alt="Логотип" />
+            </a>
+            <div class="header__account"><svg class="icon icon__account icon__account_header"><use xlink:href="images/icons/sprite.svg#account"></use></svg>
+                <div class="header__account_text text-sm">Астахова Мария</div><svg class="icon icon__logout"><use xlink:href="images/icons/sprite.svg#logout"></use></svg></div>
+            <div class="header__menu"><svg class="icon icon__menu"><use xlink:href="images/icons/sprite.svg#menu"></use></svg></div>
+            <nav class="nav">
+                <div class="nav__home">
+                    <a class="nav__home_link" href="index.html"><svg class="icon icon__home"><use xlink:href="images/icons/sprite.svg#home"></use></svg>
+                        <div class="nav__underline"></div>
+                    </a>
+                    <div class="nav__close"><svg class="icon icon__close"><use xlink:href="images/icons/sprite.svg#close"></use></svg></div>
+                </div>
+                <ul class="nav__menu">
+                    <li class="nav__menu_item" data-item="menu" data-number="0">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Действующие предложения
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--1" data-number="0"></ul>
+                    </li>
+                    <li class="nav__menu_item" data-item="menu" data-number="1">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Изделия
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--2" data-number="1"></ul>
+                    </li>
+                    <li class="nav__menu_item" data-item="menu" data-number="2">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Программы
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--3" data-number="2"></ul>
+                    </li>
+                    <li class="nav__menu_item" data-item="menu" data-number="3">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Личный кабинет
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--4" data-number="3">
+                            <li class="nav__submenu_item" data-item="submenu" data-number="0">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Профиль</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="0"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="1">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Заказы </div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="1"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="2">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Отчеты</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="2">
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Оборот группы</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Еженедельный отчет</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Заказы консультанта</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Список инфолистов</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Продажи изделий</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Отчет по Авангарду</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Контактные данные консультантов</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Обороты счетов консультантов</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="3">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Обороты</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="3"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="4">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Дополнительно</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="4"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="5">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Недовложение и брак</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="5"></ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <form class="header__search" action="" method="POST">
+                <input class="header__search_input text-mid" type="text" name="search" /><svg class="icon icon__search"><use xlink:href="images/icons/sprite.svg#search"></use></svg></form>
+            <div class="header__basket">
+                <div class="header__basket_block"><svg class="icon icon__basket"><use xlink:href="images/icons/sprite.svg#basket"></use></svg>
+                    <span class="header__basket_number">15</span>
+                </div>
+                <div class="header__basket_text">
+                    <div class="header__basket_text_wrapper">
+                        <span class="header__basket_text_span">Оборот</span>
+                        <span class="header__basket_text_span">4 567 руб.</span>
+                    </div>
+                    <div class="header__basket_text_wrapper">
+                        <span class="header__basket_text_span">Стоимость</span>
+                        <span class="header__basket_text_span">3 567 руб.</span>
+                    </div>
+                    <div class="header__basket_text_wrapper">
+                        <span class="header__basket_text_span">Неделя</span>
+                        <span class="header__basket_text_span">2018/11</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="path view-port">
+            <div class="path__content">
+                <a class="path__link" href="index.html">Главная страница</a>
+                <div class="path__separator"><svg class="icon icon__small-arrow icon__small-arrow_path"><use xlink:href="images/icons/sprite.svg#small-arrow"></use></svg></div>
+                <a class="path__link">Личный кабинет</a>
+                <div class="path__separator"><svg class="icon icon__small-arrow icon__small-arrow_path"><use xlink:href="images/icons/sprite.svg#small-arrow"></use></svg></div>
+                <div class="path__link path__link_active">Профиль</div>
+            </div>
+        </div>
+        <div class="profile view-port">
+            <div class="profile__info">
+                <div class="profile__info_block-total">
+                    <h2>Общая информация</h2>
+                </div>
+                <div class="profile__info_wrapper_total">
+                    <div class="profile__info_total">
+                        <div class="profile__info_personal">
+                            <div class="profile__personal_img">
+                                <img src="images/profile.jpg">
+                                <div class="profile__personal_img-box"><svg class="icon icon__editor icon__editor_profile_edit"><use xlink:href="images/icons/sprite.svg#editor"></use></svg></div>
+                            </div>
+                            <div class="profile__personal_status">
+                                <div class="profile__personal_status_now">
+                                    <p>Текущий статус:</p>
+                                    <span>Консультант</span>
+                                </div>
+                                <div class="profile__personal_status_next">
+                                    <p>Следующий шаг:</p>
+                                    <a href="#">Менеджер</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile__info_form">
+                            <form class="profile__info_form_total">
+                                <div class="profile__info_form_item-total">
+                                    <input class="profile__info_form_input" type="text" name="name" required>
+                                    <label class="profile__info_form_label">Имя*</label>
+                                </div>
+                                <div class="profile__info_form_item-total">
+                                    <input class="profile__info_form_input" type="text" name="surname" required>
+                                    <label class="profile__info_form_label">Фамилия*</label>
+                                </div>
+                                <div class="profile__info_form_item-total">
+                                    <input class="profile__info_form_input" type="text" name="secondname" required>
+                                    <label class="profile__info_form_label">Отчество*</label>
+                                </div>
+                                <div class="profile__info_form_item-total">
+                                    <input class="profile__info_form_input" type="text" name="birdth">
+                                    <label class="profile__info_form_label">Дата рождения</label>
+                                </div>
+                                <div class="profile__info_form_item-total">
+                                    <input class="profile__info_form_input" type="tel" name="tel" required>
+                                    <label class="profile__info_form_label">Мобильный телефон*</label>
+                                </div>
+                                <div class="profile__info_form_item-total">
+                                    <input class="profile__info_form_input" type="text" name="head" required>
+                                    <label class="profile__info_form_label">Номер руководителя*</label>
+                                </div>
+                                <div class="profile__info_form_item-total">
+                                    <input class="profile__info_form_input" type="text" name="gender">
+                                    <label class="profile__info_form_label">Пол</label>
+                                </div>
+                                <div class="profile__info_form_item-total">
+                                    <input class="profile__info_form_input" type="text" name="consult">
+                                    <label class="profile__info_form_label">Номер консультанта</label>
+                                </div>
+                                <div class="profile__info_form_item-total">
+                                    <input class="profile__info_form_input" type="email" name="mail" required>
+                                    <label class="profile__info_form_label">Адрес e-mail*</label>
+                                </div>
+                                <div class="profile__info_form_item-total">
+                                    <input class="profile__info_form_input" type="text" name="invite" required>
+                                    <label class="profile__info_form_label">Кто пригласил в компанию*</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="profile__info_callback">* Для изменение номера телефона, обратитесь в студию Tupperware.</div>
+                </div>
+                <div class="profile__info_wrapper_password">
+                    <div class="profile__info_block-password">
+                        <h2>Смена пароля</h2><svg class="icon icon__arrow icon__arrow_profile_down"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                    <div class="profile__info_password">
+                        <div class="profile__info_box">
+                            <form class="profile__info_form_password">
+                                <div class="profile__info_form_item-password">
+                                    <input class="profile__info_form_input" type="text" name="current_password">
+                                    <label class="profile__info_form_label">Текущий пароль</label>
+                                </div>
+                                <div class="profile__info_form_item-password">
+                                    <input class="profile__info_form_input" type="text" name="new_password">
+                                    <label class="profile__info_form_label">Новый пароль</label>
+                                </div>
+                                <div class="profile__info_form_item-password">
+                                    <input class="profile__info_form_input" type="text" name="confirm_password">
+                                    <label class="profile__info_form_label">Подтверждение пароля</label>
+                                </div>
+                            </form>
+                            <div class="profile__info_password_wrap">
+                                <div class="profile__info_password_button">
+                                    <h2>Сохранить настройки профиля</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile__info_wrapper_delete">
+                    <div class="profile__info_block-delete">
+                        <h2>Удалить аккаунт</h2><svg class="icon icon__arrow icon__arrow_profile_down"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                    <div class="profile__info_delete">
+                        <div class="profile__info_box">
+                            <p>Вы можете удалить свой аккаунт в один клик. Обратите внимание, что в этом случае удалится важная информация: история заказов, бонусы, подписка на новости и т.д. Мы не сможем восстановить эти данные.</p>
+                            <div class="profile__info_delete_wrap">
+                                <div class="profile__info_delete_button">
+                                    <h2>Удалить</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile__modal_apply">
+                    <div class="profile__modal_apply_box">
+                        <div class="profile__modal_apply_banner">
+                            <h2>Удалить аккаунт</h2>
+                        </div>
+                        <div class="profile__modal_apply_content">
+                            <p>Вы действительно хотите удалить свой аккаунт?</p>
+                            <div class="profile__modal_apply_buttons">
+                                <div class="profile__modal_apply_yes">Да</div>
+                                <div class="profile__modal_apply_no">Нет</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile__modal_callback">
+                    <div class="profile__modal_callback_box">
+                        <div class="profile__modal_callback_banner">
+                            <ul class="profile__modal_callback_ul">
+                                <li><svg class="icon icon__address icon__address_profile"><use xlink:href="images/icons/sprite.svg#address"></use></svg>
+                                    <p>Студия Нелли Ахполовой</p>
+                                </li>
+                                <li><svg class="icon icon__phone icon__phone_profile"><use xlink:href="images/icons/sprite.svg#phone"></use></svg>
+                                    <p>+7 (905) 599-82-28</p>
+                                </li>
+                                <li><svg class="icon icon__mail icon__mail_profile"><use xlink:href="images/icons/sprite.svg#mail"></use></svg>
+                                    <p>570_akhpolova@tupperware.su</p>
+                                </li>
+                            </ul>
+                            <div class="profile__modal_callback_close">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="profile__modal_questions">
+                            <div class="profile__modal_question">
+                                <p>Хотите оставить отзыв?</p>
+                            </div>
+                            <div class="profile__modal_categories">
+                                <div class="profile__modal_site">
+                                    <p>Работа сайта</p><svg class="icon icon__site icon__site_profile"><use xlink:href="images/icons/sprite.svg#site"></use></svg></div>
+                                <div class="profile__modal_quality">
+                                    <p>Качество доставки</p><svg class="icon icon__car icon__car_profile"><use xlink:href="images/icons/sprite.svg#car"></use></svg></div>
+                                <div class="profile__modal_studio">
+                                    <p>Работа студии</p><svg class="icon icon__studio icon__studio_profile"><use xlink:href="images/icons/sprite.svg#studio"></use></svg></div>
+                            </div>
+                        </div>
+                        <div class="profile__modal_comment-site">
+                            <div class="profile__modal_wrap">
+                                <div class="profile__modal_question">
+                                    <p>Будем рады Вашим отзывам!</p>
+                                </div>
+                                <div class="profile__modal_site-icon"><svg class="icon icon__site icon__site_profile"><use xlink:href="images/icons/sprite.svg#site"></use></svg></div>
+                                <div class="profile__modal_stars"><svg class="icon icon__stars icon__stars_profile"><use xlink:href="images/icons/sprite.svg#stars"></use></svg></div>
+                                <div class="profile__info_form_item-total profile__modal_comment"><textarea class="profile__info_form_input profile__modal_input" type="text" name="name" placeholder="Здесь вы можете оставить свои комментарии и пожелания"></textarea>
+                                    <label class="profile__info_form_label profile__modal_label">Комментарий</label>
+                                </div>
+                                <div class="profile__modal_button">
+                                    <p>Отправить</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile__modal_comment-quality">
+                            <div class="profile__modal_wrap">
+                                <div class="profile__modal_question">
+                                    <p>Будем рады Вашим отзывам!</p>
+                                </div>
+                                <div class="profile__modal_quality-icon"><svg class="icon icon__car icon__car_profile"><use xlink:href="images/icons/sprite.svg#car"></use></svg></div>
+                                <div class="profile__modal_stars"><svg class="icon icon__stars icon__stars_profile"><use xlink:href="images/icons/sprite.svg#stars"></use></svg></div>
+                                <div class="profile__info_form_item-total profile__modal_comment"><textarea class="profile__info_form_input profile__modal_input" type="text" name="name" placeholder="Здесь вы можете оставить свои комментарии и пожелания"></textarea>
+                                    <label class="profile__info_form_label profile__modal_label">Комментарий</label>
+                                </div>
+                                <div class="profile__modal_button">
+                                    <p>Отправить</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile__modal_comment-studio">
+                            <div class="profile__modal_wrap">
+                                <div class="profile__modal_question">
+                                    <p>Будем рады Вашим отзывам!</p>
+                                </div>
+                                <div class="profile__modal_studio-icon"><svg class="icon icon__studio icon__studio_profile icon__studio-modal"><use xlink:href="images/icons/sprite.svg#studio"></use></svg></div>
+                                <div class="profile__modal_stars"><svg class="icon icon__stars icon__stars_profile"><use xlink:href="images/icons/sprite.svg#stars"></use></svg></div>
+                                <div class="profile__info_form_item-total profile__modal_comment"><textarea class="profile__info_form_input profile__modal_input" type="text" name="name" placeholder="Здесь вы можете оставить свои комментарии и пожелания"></textarea>
+                                    <label class="profile__info_form_label profile__modal_label">Комментарий</label>
+                                </div>
+                                <div class="profile__modal_button">
+                                    <p>Отправить</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile__thanks">
+                        <div class="profile__thanks_block">
+                            <div class="profile__thanks_block_close">
+                                <span></span>
+                            </div>
+                            <p>Спасибо!</p>
+                        </div>
+                        <div class="profile__thanks_text">
+                            <p>Ваш отзыв очень важен для нас. С Вашей помощью мы продоложим совершенствоваться!</p>
+                        </div>
+                        <div class="profile__thanks_text-next">
+                            <p>Спасибо за Ваш отзыв!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="profile__callback">
+            <p>Обратная связь</p>
+        </div>
+        <footer class="footer view-port text-mid">
+            <a class="footer__logo" href="index.html">
+                <img class="footer__logo_img" src="images/logo.svg" alt="Логотип" />
+            </a>
+            <div class="footer__links">
+                <a class="footer__links_link" href="rules.html">Правила компании</a>
+                <a class="footer__links_link" href="delivery.html">Доставка и оплата</a>
+            </div>
+            <div class="footer__contacts">
+                <div class="footer__contacts_phone"><svg class="icon icon__phone icon__phone_footer"><use xlink:href="images/icons/sprite.svg#phone"></use></svg>
+                    <span>+7 (905) 599-82-28</span>
+                </div>
+                <div class="footer__contacts_mail"><svg class="icon icon__mail icon__mail_footer"><use xlink:href="images/icons/sprite.svg#mail"></use></svg>
+                    <span>570_akhpolova@tupperware.su</span>
+                </div>
+            </div>
+            <div class="footer__address"><svg class="icon icon__address icon__address_footer"><use xlink:href="images/icons/sprite.svg#address"></use></svg>
+                <span>Студия Tupperware</span>
+            </div>
+        </footer>
+    </body>
+</html>

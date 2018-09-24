@@ -1,0 +1,70 @@
+extends ../layouts/default
+include ../modules/icon/icon
+include ../modules/shunk/shunk
+include ../modules/path/path
+
+block content
+    +path({title: ['Главная страница', 'Личный кабинет', 'Обороты', 'Общие показатели'], href: ['index.html']})
+    .avangard.view-port
+        .avangard__aside
+            ul
+                li
+                    a(href='avangard.html') Авангард
+                li
+                    a(href='shunk.html') ШУНК
+                li
+                    a(href='shum.html') ШУМ
+                li
+                    a.aside-active(href='total_indicators.html') Общие показатели
+        .avangard__content
+            h1.big-title Общие показатели
+            .avangard__index
+                .avangard__index_line
+                    .avangard__index_block
+                        .avangard__index_title
+                            p Квалификационные заказы
+                            span.avangard__index_select май 2018
+                            +icon('arrow','active_down')
+                        .avangard__index_marks
+                            span.avangard__index_green 31 к/з
+                            p.avangard__index_large 249 000 / 8 000 = 31.125
+                    .avangard__index_block
+                        .avangard__index_title
+                            p Оборот:
+                            span.avangard__index_select май 2018
+                            +icon('arrow','active_down')
+                        .avangard__index_marks
+                            p.avangard__index_green 249 000 руб.
+                    .avangard__index_block
+                        .avangard__index_title
+                            p Количество рекрутов
+                            span.avangard__index_select май 2018
+                            +icon('arrow','active_down')
+                        .avangard__index_marks
+                            p.avangard__index_green 3 чел.
+
+            .avangard__progress-wrapper
+                .avangard__progress
+                    .avangard__progress_bar
+                        .avangard__progress_bar-fill(style='width:25%')
+                        .indicators__progress_circle
+                        .indicators__progress_circle
+                        .indicators__progress_circle
+                        .indicators__progress_circle
+                        .indicators__progress_text Консультант
+                        .indicators__progress_text
+                            a(href = '#').indicators__underline Менеджер
+                        .indicators__progress_text
+                            a(href = '#').indicators__underline Директор
+                        .indicators__progress_text Руководитель
+            .shunk__progress_attention
+                +icon('attention','shunk')
+                span Для получения подарков программы, пожалуйста, оформите заказ
+            .shunk__progress_items
+                .shunk__progress_block-wrapper
+                    .shunk__progress_block
+                        p Потенциально доступные
+                        +icon('arrow','shunk_up')
+                .shunk__progress_scroll
+                    +shunk_items(items)
+

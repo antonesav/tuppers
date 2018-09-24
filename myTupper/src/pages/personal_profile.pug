@@ -1,0 +1,145 @@
+extends ../layouts/default
+include ../modules/icon/icon
+include ../modules/personal_profile/personal_profile
+include ../modules/path/path
+
+block content
+    +path({title: ['Главная страница', 'Личный кабинет', 'Профиль'], href: ['index.html']})
+    .profile.view-port
+        .profile__info
+            .profile__info_block-total
+                h2 Общая информация
+            .profile__info_wrapper_total
+                .profile__info_total
+                    .profile__info_personal
+                        .profile__personal_img
+                            img(src='images/profile.jpg')
+                            .profile__personal_img-box
+                                +icon('editor', 'profile_edit')
+
+                        .profile__personal_status
+                            .profile__personal_status_now
+                                p Текущий статус:
+                                span Консультант
+                            .profile__personal_status_next
+                                p Следующий шаг:
+                                a(href='#') Менеджер
+                    .profile__info_form
+                        form.profile__info_form_total
+                            .profile__info_form_item-total
+                                input.profile__info_form_input(type='text', name='name', required)
+                                label.profile__info_form_label Имя*
+                            .profile__info_form_item-total
+                                input.profile__info_form_input(type='text', name='surname', required)
+                                label.profile__info_form_label Фамилия*
+                            .profile__info_form_item-total
+                                input.profile__info_form_input(type='text', name='secondname', required)
+                                label.profile__info_form_label Отчество*
+                            .profile__info_form_item-total
+                                input.profile__info_form_input(type='text', name='birdth')
+                                label.profile__info_form_label Дата рождения
+                            .profile__info_form_item-total
+                                input.profile__info_form_input(type='tel', name='tel', required)
+                                label.profile__info_form_label Мобильный телефон*
+                            .profile__info_form_item-total
+                                input.profile__info_form_input(type='text', name='head', required)
+                                label.profile__info_form_label Номер руководителя*
+                            .profile__info_form_item-total
+                                input.profile__info_form_input(type='text', name='gender')
+                                label.profile__info_form_label Пол
+                            .profile__info_form_item-total
+                                input.profile__info_form_input(type='text', name='consult')
+                                label.profile__info_form_label Номер консультанта
+                            .profile__info_form_item-total
+                                input.profile__info_form_input(type='email', name='mail', required)
+                                label.profile__info_form_label Адрес e-mail*
+                            .profile__info_form_item-total
+                                input.profile__info_form_input(type='text', name='invite', required)
+                                label.profile__info_form_label Кто пригласил в компанию*
+                .profile__info_callback * Для изменение номера телефона, обратитесь в  студию Tupperware.
+            .profile__info_wrapper_password
+                .profile__info_block-password
+                    h2 Смена пароля
+                    +icon('arrow','profile_down')
+                .profile__info_password
+                    .profile__info_box
+                        form.profile__info_form_password
+                            .profile__info_form_item-password
+                                input.profile__info_form_input(type='text', name='current_password')
+                                label.profile__info_form_label Текущий пароль
+                            .profile__info_form_item-password
+                                input.profile__info_form_input(type='text', name='new_password')
+                                label.profile__info_form_label Новый пароль
+                            .profile__info_form_item-password
+                                input.profile__info_form_input(type='text', name='confirm_password')
+                                label.profile__info_form_label Подтверждение пароля
+                        .profile__info_password_wrap
+                            .profile__info_password_button
+                                h2 Сохранить настройки профиля
+            .profile__info_wrapper_delete
+                .profile__info_block-delete
+                    h2 Удалить аккаунт
+                    +icon('arrow','profile_down')
+                .profile__info_delete
+                    .profile__info_box
+                        p Вы можете удалить свой аккаунт в один клик. Обратите внимание, что в этом случае удалится важная информация: история заказов, бонусы, подписка на новости и т.д. Мы не сможем восстановить эти данные.
+                        .profile__info_delete_wrap
+                            .profile__info_delete_button
+                                h2 Удалить
+            .profile__modal_apply
+                .profile__modal_apply_box
+                    .profile__modal_apply_banner
+                        h2 Удалить аккаунт
+                    .profile__modal_apply_content
+                        p Вы действительно хотите удалить свой аккаунт?
+                        .profile__modal_apply_buttons
+                            .profile__modal_apply_yes Да
+                            .profile__modal_apply_no Нет
+            .profile__modal_callback
+                .profile__modal_callback_box
+                    .profile__modal_callback_banner
+                        ul.profile__modal_callback_ul
+                            li
+                                +icon('address','profile')
+                                p Студия Нелли Ахполовой
+                            li
+                                +icon('phone','profile')
+                                p +7 (905) 599-82-28
+                            li
+                                +icon('mail','profile')
+                                p 570_akhpolova@tupperware.su
+                        .profile__modal_callback_close
+                            span
+                    .profile__modal_questions
+                        .profile__modal_question
+                            p Хотите оставить отзыв?
+                        .profile__modal_categories
+                            .profile__modal_site
+                                p Работа сайта
+                                +icon('site','profile')
+                            .profile__modal_quality
+                                p Качество доставки
+                                +icon('car','profile')
+                            .profile__modal_studio
+                                p Работа студии
+                                +icon('studio','profile')
+
+
+                    +personal('site','profile', 'profile__modal_comment-site', 'profile__modal_site-icon')
+                    +personal('car','profile', 'profile__modal_comment-quality', 'profile__modal_quality-icon')
+                    +personal('studio','profile icon__studio-modal', 'profile__modal_comment-studio', 'profile__modal_studio-icon')
+
+                .profile__thanks
+                    .profile__thanks_block
+                        .profile__thanks_block_close
+                            span
+                        p Спасибо!
+                    .profile__thanks_text
+                        p Ваш отзыв очень важен для нас. С Вашей помощью мы продоложим совершенствоваться!
+                    .profile__thanks_text-next
+                        p Спасибо за Ваш отзыв!
+
+    .profile__callback
+        p Обратная связь
+
+

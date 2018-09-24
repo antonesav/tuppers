@@ -1,0 +1,52 @@
+extends ../layouts/default
+
+include ../modules/big-slider/big-slider
+include ../modules/icon/icon
+
+block content
+	.index
+		+big-slider(big_slider)
+		.index__slider-section.view-port
+			h1.title.index__title Лидеры продаж
+			p.index__subtitle.text-mid Самые популярные товары этого сезона
+			.index__slider_wrapper
+				+icon('arrow', 'slider icon__arrow_left icon__index_left')
+				.index__slider
+					.index__slide
+						img.index__slide_img(src='images/leaders_of_sells_1.png', alt='')
+						p.index__slide_price.text-mid-plus 1 920 р.
+						p.index__slide_text.text-mid Емкость "МикроКук" (2,25 л) круглая с дополнительной крышкой
+					.index__slide
+						img.index__slide_img(src='images/leaders_of_sells_2.png', alt='')
+						p.index__slide_price.text-mid-plus 1 920 р.
+						p.index__slide_text.text-mid Емкость "МикроКук" (2,25 л) круглая с дополнительной крышкой
+					.index__slide
+						img.index__slide_img(src='images/leaders_of_sells_3.png', alt='')
+						p.index__slide_price.text-mid-plus 1 920 р.
+						p.index__slide_text.text-mid Емкость "МикроКук" (2,25 л) круглая с дополнительной крышкой
+					.index__slide
+						img.index__slide_img(src='images/leaders_of_sells_4.png', alt='')
+						p.index__slide_price.text-mid-plus 1 920 р.
+						p.index__slide_text.text-mid Емкость "МикроКук" (2,25 л) круглая с дополнительной крышкой
+					.index__slide
+						img.index__slide_img(src='images/leaders_of_sells_3.png', alt='')
+						p.index__slide_price.text-mid-plus 1 920 р.
+						p.index__slide_text.text-mid Емкость "МикроКук" (2,25 л) круглая с дополнительной крышкой
+				+icon('arrow', 'slider icon__arrow_right icon__index_right')
+		.index__catalogs
+			a.index__catalogs_item(href='#')
+				img.index__catalogs_item_img(src='images/index_catalogs_1.jpg', alt='')
+				.index__catalogs_item_container
+					.index__catalogs_item_title Идеальная форма
+			a.index__catalogs_item(href='#')
+				img.index__catalogs_item_img(src='images/index_catalogs_2.jpg', alt='')
+				.index__catalogs_item_container
+					.index__catalogs_item_title Все для вечеринки
+			a.index__catalogs_item(href='#')
+				img.index__catalogs_item_img(src='images/index_catalogs_3.jpg', alt='')
+				.index__catalogs_item_container
+					.index__catalogs_item_title ХИТ продаж апреля!
+			a.index__catalogs_item(href='#')
+				img.index__catalogs_item_img(src='images/index_catalogs_4.jpg', alt='')
+				.index__catalogs_item_container
+					.index__catalogs_item_title Новый каталог

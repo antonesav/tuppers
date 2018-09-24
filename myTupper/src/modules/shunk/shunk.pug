@@ -1,0 +1,26 @@
+mixin shunk_items(data)
+    each item in data
+        .shunk__progress_box
+            .shunk__item
+                .shunk__item_img
+                    img(src=item.src)
+                .shunk__item_title
+                    p Эко-бутылка "Фанат воды" (500 мл) квадратная...
+                    .shunk__item_title_wrap
+                        span.shunk__item_title_span РП003
+                        p.shunk__item_title_p Заказывали 1
+                .shunk__item_wrapper
+                    .shunk__item_price
+                        .shunk__item_price_pink
+                            p Ваша цена
+                            span 1 199 руб.
+                        .shunk__item_price_static
+                            p Цена
+                            span 2 899 руб.
+                    .shunk__item_buttons
+                        .shunk__item_count
+                            .shunk__item_count_minus -
+                            .shunk__item_count_number 1
+                            .shunk__item_count_plus +
+                        a(href='basket_step1.html').shunk__item_button
+                            p В корзину

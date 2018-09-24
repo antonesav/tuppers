@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="format-detection" content="address=no" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <!--link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic", rel="stylesheet")-->
+        <link rel="stylesheet" href="libs/slick/slick.css" />
+        <link rel="stylesheet" href="libs/slick/slick-theme.css" />
+        <link rel="stylesheet" href="css/style.css" /><script src="libs/jquery.min.js" defer="defer"></script><script src="libs/slick/slick.min.js" defer="defer"></script><script src="js/script.js" defer="defer"></script>
+        <!--script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")-->
+        <title>Tupperware</title>
+    </head>
+    <body>
+        <header class="header view-port">
+            <a class="header__logo" href="index.html">
+                <img class="header__logo_img" src="images/logo.svg" alt="Логотип" />
+            </a>
+            <div class="header__account"><svg class="icon icon__account icon__account_header"><use xlink:href="images/icons/sprite.svg#account"></use></svg>
+                <div class="header__account_text text-sm">Астахова Мария</div><svg class="icon icon__logout"><use xlink:href="images/icons/sprite.svg#logout"></use></svg></div>
+            <div class="header__menu"><svg class="icon icon__menu"><use xlink:href="images/icons/sprite.svg#menu"></use></svg></div>
+            <nav class="nav">
+                <div class="nav__home">
+                    <a class="nav__home_link" href="index.html"><svg class="icon icon__home"><use xlink:href="images/icons/sprite.svg#home"></use></svg>
+                        <div class="nav__underline"></div>
+                    </a>
+                    <div class="nav__close"><svg class="icon icon__close"><use xlink:href="images/icons/sprite.svg#close"></use></svg></div>
+                </div>
+                <ul class="nav__menu">
+                    <li class="nav__menu_item" data-item="menu" data-number="0">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Действующие предложения
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--1" data-number="0"></ul>
+                    </li>
+                    <li class="nav__menu_item" data-item="menu" data-number="1">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Изделия
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--2" data-number="1"></ul>
+                    </li>
+                    <li class="nav__menu_item" data-item="menu" data-number="2">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Программы
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--3" data-number="2"></ul>
+                    </li>
+                    <li class="nav__menu_item" data-item="menu" data-number="3">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Личный кабинет
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--4" data-number="3">
+                            <li class="nav__submenu_item" data-item="submenu" data-number="0">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Профиль</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="0"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="1">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Заказы </div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="1"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="2">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Отчеты</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="2">
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Оборот группы</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Еженедельный отчет</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Заказы консультанта</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Список инфолистов</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Продажи изделий</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Отчет по Авангарду</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Контактные данные консультантов</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Обороты счетов консультантов</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="3">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Обороты</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="3"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="4">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Дополнительно</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="4"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="5">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Недовложение и брак</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="5"></ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <form class="header__search" action="" method="POST">
+                <input class="header__search_input text-mid" type="text" name="search" /><svg class="icon icon__search"><use xlink:href="images/icons/sprite.svg#search"></use></svg></form>
+            <div class="header__basket">
+                <div class="header__basket_block"><svg class="icon icon__basket"><use xlink:href="images/icons/sprite.svg#basket"></use></svg>
+                    <span class="header__basket_number">15</span>
+                </div>
+                <div class="header__basket_text">
+                    <div class="header__basket_text_wrapper">
+                        <span class="header__basket_text_span">Оборот</span>
+                        <span class="header__basket_text_span">4 567 руб.</span>
+                    </div>
+                    <div class="header__basket_text_wrapper">
+                        <span class="header__basket_text_span">Стоимость</span>
+                        <span class="header__basket_text_span">3 567 руб.</span>
+                    </div>
+                    <div class="header__basket_text_wrapper">
+                        <span class="header__basket_text_span">Неделя</span>
+                        <span class="header__basket_text_span">2018/11</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="path view-port">
+            <div class="path__content">
+                <a class="path__link" href="index.html">Главная страница</a>
+                <div class="path__separator"><svg class="icon icon__small-arrow icon__small-arrow_path"><use xlink:href="images/icons/sprite.svg#small-arrow"></use></svg></div>
+                <a class="path__link">Действующие предложения</a>
+                <div class="path__separator"><svg class="icon icon__small-arrow icon__small-arrow_path"><use xlink:href="images/icons/sprite.svg#small-arrow"></use></svg></div>
+                <div class="path__link path__link_active">Летний журнал 23-26/2018</div>
+            </div>
+        </div>
+        <div class="products view-port">
+            <div class="products__modal_wrapper">
+                <div class="products__modal">
+                    <p class="products__modal_basket">Товар добавлен в корзину</p>
+                    <div class="products__modal_close">&times;</div>
+                    <div class="products__modal_title">
+                        <img src="images/catalog/products_catalog_7.png" />
+                        <div class="products__modal_title_description">
+                            <div class="products__modal_title_basket-icon">Корзина<svg class="icon icon__basket icon__basket_products"><use xlink:href="images/icons/sprite.svg#basket"></use></svg>
+                                <span>15</span>
+                            </div>
+                            <p>Емкость "МикроКук" (2,25 л) круглая с дополнительной крышкой</p>
+                            <p>Количество:
+                                <span>5 шт.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="products__modal_button">
+                        <a href="basket_step1.html">Перейти в корзину</a>
+                    </div>
+                </div>
+            </div>
+            <div class="products__aside">
+                <div class="products__aside_nav">
+                    <h2 class="journal__h2">Специальные предложения</h2>
+                    <ul class="products__aside_nav_list standart-gap">
+                        <li>
+                            <a class="products__aside_nav_list_item" href="#">Наполни дом яркими красками 10/13-2018</a>
+                        </li>
+                        <li>
+                            <a class="products__aside_nav_list_item aside-active" href="#">Летний журнал 23-26/2018</a>
+                        </li>
+                    </ul>
+                    <h2 class="journal__h2">Подарки</h2>
+                    <ul class="products__aside_nav_list standart-gap">
+                        <li>
+                            <a class="products__aside_nav_list_item" href="#">Рекрутирование 10-13/2018</a>
+                        </li>
+                    </ul>
+                    <h2 class="journal__h2">Каталог</h2>
+                    <ul class="products__aside_nav_list standart-gap">
+                        <li>
+                            <a class="products__aside_nav_list_item" href="#">Каталог Весна-Лето 2018</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="products__aside_filter">
+                    <div class="products__aside_filter_button">
+                        <input type="checkbox" id="check" />
+                        <label for="check">Только подарки</label>
+                    </div>
+                    <div class="products__aside_customer-price">
+                        <p>Цена клиента</p>
+                        <div class="products__aside_customer-price_input">
+                            <div class="products__aside_customer-price_input_field">
+                                <input type="text" placeholder="0 руб." min="0" max="29999" />
+                                <span>-</span>
+                                <input type="text" placeholder="29 999 руб." min="0" max="29999" />
+                            </div>
+                            <div class="products__aside_customer-price_input_slider">
+                                <div class="products__aside_customer-price_input_slider_bar">
+                                    <div class="products__aside_customer-price_input_slider_bar_left"></div>
+                                    <div class="products__aside_customer-price_input_slider_bar_right"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products__aside_consultant-price">
+                        <p>Цена консультанта</p>
+                        <div class="products__aside_consultant-price_input">
+                            <div class="products__aside_consultant-price_input_field">
+                                <input type="text" placeholder="0 руб." min="0" max="29999" />
+                                <span>-</span>
+                                <input type="text" placeholder="29 999 руб." min="0" max="29999" />
+                            </div>
+                            <div class="products__aside_consultant-price_input_slider">
+                                <div class="products__aside_consultant-price_input_slider_bar">
+                                    <div class="products__aside_consultant-price_input_slider_bar_left"></div>
+                                    <div class="products__aside_consultant-price_input_slider_bar_right"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products__aside_buttons">
+                        <div class="products__aside_buttons_show">Показать</div>
+                        <div class="products__aside_buttons_reset">Сбросить
+                            <div class="products__aside_buttons_reset_circle">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="products__title big-title">Летний журнал 23-26/2018
+                <div class="products__settings">
+                    <div class="products__settings_view">
+                        <div class="products__settings_view_layout"><svg class="icon icon__view-square icon__view-square_products"><use xlink:href="images/icons/sprite.svg#view-square"></use></svg><svg class="icon icon__view-table icon__view-table_products"><use xlink:href="images/icons/sprite.svg#view-table"></use></svg></div>
+                        <div
+                            class="products__settings_view_arrows">
+                            <div class="products__settings_view_arrows_arrow-bottom"><svg class="icon icon__arrow icon__arrow_products-bottom icon__arrow_down"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                            <div class="products__settings_view_arrows_arrow-top"><svg class="icon icon__arrow icon__arrow_products-top icon__arrow_up"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                    </div>
+                </div>
+                <div class="products__settings_filter">
+                    <div class="products__settings_filter_box">
+                        <div class="products__settings_filter_box_txt">Фильтры</div>
+                        <div class="products__settings_filter_box_icon"><svg class="icon icon__filter-icon icon__filter-icon_products"><use xlink:href="images/icons/sprite.svg#filter-icon"></use></svg></div>
+                        <div class="products__settings_modal">
+                            <div class="products__settings_modal_txt">Фильтры</div>
+                            <div class="products__settings_modal_close">&times;</div>
+                            <div class="products__settings_modal_sorting">Сортировка
+                                <ul class="hidden">
+                                    <li>По названию</li>
+                                    <li>По коду продаж</li>
+                                    <li>По цене</li>
+                                </ul><svg class="icon icon__arrow icon__arrow_products_modal-right icon__arrow_right"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                            <div class="products__aside_filter products__aside_filter_icon">
+                                <div class="products__aside_filter_button">
+                                    <input type="checkbox" id="check">
+                                    <label for="check">Только подарки</label>
+                                </div>
+                                <div class="products__aside_customer-price">
+                                    <p>Цена клиента</p>
+                                    <div class="products__aside_customer-price_input">
+                                        <div class="products__aside_customer-price_input_field">
+                                            <input type="text" placeholder="0 руб." min="0" max="29999">
+                                            <span>-</span>
+                                            <input type="text" placeholder="29 999 руб." min="0" max="29999">
+                                        </div>
+                                        <div class="products__aside_customer-price_input_slider">
+                                            <div class="products__aside_customer-price_input_slider_bar">
+                                                <div class="products__aside_customer-price_input_slider_bar_left"></div>
+                                                <div class="products__aside_customer-price_input_slider_bar_right"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="products__aside_consultant-price">
+                                    <p>Цена консультанта</p>
+                                    <div class="products__aside_consultant-price_input">
+                                        <div class="products__aside_consultant-price_input_field">
+                                            <input type="text" placeholder="0 руб." min="0" max="29999">
+                                            <span>-</span>
+                                            <input type="text" placeholder="29 999 руб." min="0" max="29999">
+                                        </div>
+                                        <div class="products__aside_consultant-price_input_slider">
+                                            <div class="products__aside_consultant-price_input_slider_bar">
+                                                <div class="products__aside_consultant-price_input_slider_bar_left"></div>
+                                                <div class="products__aside_consultant-price_input_slider_bar_right"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="products__aside_buttons">
+                                    <div class="products__aside_buttons_show">Показать</div>
+                                    <div class="products__aside_buttons_reset">Сбросить
+                                        <div class="products__aside_buttons_reset_circle">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products__settings_result">
+                    <div class="products__settings_result_number">45</div>
+                    <div class="products__settings_result_txt">товаров найдено</div>
+                    <div class="products__settings_result_sorting">Сортировка:
+                        <ul>
+                            <li>По названию</li>
+                            <li>По коду продаж</li>
+                            <li>По цене</li>
+                        </ul><svg class="icon icon__arrow icon__arrow_products_result-bottom icon__arrow_down"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                </div>
+        </div>
+        <div class="products__main">
+            <div class="products__main_catalog">
+                <div class="products__main_catalog_item"><svg class="icon icon__editor icon__editor_products"><use xlink:href="images/icons/sprite.svg#editor"></use></svg>
+                    <a class="products__main_catalog_a" href="goods.html">
+                        <img class="products__main_catalog_item_img" src="images/catalog/products_catalog_1.png" />
+                    </a>
+                    <div class="products__main_catalog_item_wrapper">
+                        <div class="products__main_catalog_item_wrapper-title">
+                            <span class="products__main_catalog_item_vendor-code">РП070</span>
+                            <div class="products__main_catalog_item_title">Эко-бутылка &quot;Фанат воды&quot; (500 мл)...</div>
+                        </div>
+                        <div class="products__main_catalog_item_box">
+                            <div class="products__main_catalog_item_box-price">
+                                <span class="products__main_catalog_item_your-price">Ваша цена</span>
+                                <span class="products__main_catalog_item_price-color">899 р.</span>
+                            </div>
+                            <span class="products__main_catalog_item_price">Цена
+                                <span class="products__main_catalog_item_price">949 р.</span>
+                            </span>
+                            <div class="products__main_catalog_item_count">
+                                <div class="products__main_catalog_item_count_minus">-</div>
+                                <div class="products__main_catalog_item_count_number">1</div>
+                                <div class="products__main_catalog_item_count_plus">+</div>
+                            </div>
+                            <div class="products__main_catalog_item_add-basket">В корзину</div>
+                            <div class="products__main_catalog_item_condition">Доступно при выполнении условий программы</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products__main_catalog_item"><svg class="icon icon__editor icon__editor_products"><use xlink:href="images/icons/sprite.svg#editor"></use></svg>
+                    <a class="products__main_catalog_a" href="goods.html">
+                        <img class="products__main_catalog_item_img" src="images/catalog/products_catalog_2.png" />
+                    </a>
+                    <div class="products__main_catalog_item_wrapper">
+                        <div class="products__main_catalog_item_wrapper-title">
+                            <span class="products__main_catalog_item_vendor-code">РП070</span>
+                            <div class="products__main_catalog_item_title">Эко-бутылка &quot;Фанат воды&quot; (500 мл)...</div>
+                        </div>
+                        <div class="products__main_catalog_item_box">
+                            <div class="products__main_catalog_item_box-price">
+                                <span class="products__main_catalog_item_your-price">Ваша цена</span>
+                                <span class="products__main_catalog_item_price-color">899 р.</span>
+                            </div>
+                            <span class="products__main_catalog_item_price">Цена
+                                <span class="products__main_catalog_item_price">949 р.</span>
+                            </span>
+                            <div class="products__main_catalog_item_count">
+                                <div class="products__main_catalog_item_count_minus">-</div>
+                                <div class="products__main_catalog_item_count_number">1</div>
+                                <div class="products__main_catalog_item_count_plus">+</div>
+                            </div>
+                            <div class="products__main_catalog_item_add-basket">В корзину</div>
+                            <div class="products__main_catalog_item_condition">Доступно при выполнении условий программы</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products__main_catalog_item"><svg class="icon icon__editor icon__editor_products"><use xlink:href="images/icons/sprite.svg#editor"></use></svg>
+                    <a class="products__main_catalog_a" href="goods.html">
+                        <img class="products__main_catalog_item_img" src="images/catalog/products_catalog_3.png" />
+                    </a>
+                    <div class="products__main_catalog_item_wrapper">
+                        <div class="products__main_catalog_item_wrapper-title">
+                            <span class="products__main_catalog_item_vendor-code">РП070</span>
+                            <div class="products__main_catalog_item_title">Эко-бутылка &quot;Фанат воды&quot; (500 мл)...</div>
+                        </div>
+                        <div class="products__main_catalog_item_box">
+                            <div class="products__main_catalog_item_box-price">
+                                <span class="products__main_catalog_item_your-price">Ваша цена</span>
+                                <span class="products__main_catalog_item_price-color">899 р.</span>
+                            </div>
+                            <span class="products__main_catalog_item_price">Цена
+                                <span class="products__main_catalog_item_price">949 р.</span>
+                            </span>
+                            <div class="products__main_catalog_item_count">
+                                <div class="products__main_catalog_item_count_minus">-</div>
+                                <div class="products__main_catalog_item_count_number">1</div>
+                                <div class="products__main_catalog_item_count_plus">+</div>
+                            </div>
+                            <div class="products__main_catalog_item_add-basket">В корзину</div>
+                            <div class="products__main_catalog_item_condition">Доступно при выполнении условий программы</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products__main_catalog_item"><svg class="icon icon__editor icon__editor_products"><use xlink:href="images/icons/sprite.svg#editor"></use></svg>
+                    <a class="products__main_catalog_a" href="goods.html">
+                        <img class="products__main_catalog_item_img" src="images/catalog/products_catalog_4.png" />
+                    </a>
+                    <div class="products__main_catalog_item_wrapper">
+                        <div class="products__main_catalog_item_wrapper-title">
+                            <span class="products__main_catalog_item_vendor-code">РП070</span>
+                            <div class="products__main_catalog_item_title">Эко-бутылка &quot;Фанат воды&quot; (500 мл)...</div>
+                        </div>
+                        <div class="products__main_catalog_item_box">
+                            <div class="products__main_catalog_item_box-price">
+                                <span class="products__main_catalog_item_your-price">Ваша цена</span>
+                                <span class="products__main_catalog_item_price-color">899 р.</span>
+                            </div>
+                            <span class="products__main_catalog_item_price">Цена
+                                <span class="products__main_catalog_item_price">949 р.</span>
+                            </span>
+                            <div class="products__main_catalog_item_count">
+                                <div class="products__main_catalog_item_count_minus">-</div>
+                                <div class="products__main_catalog_item_count_number">1</div>
+                                <div class="products__main_catalog_item_count_plus">+</div>
+                            </div>
+                            <div class="products__main_catalog_item_add-basket">В корзину</div>
+                            <div class="products__main_catalog_item_condition">Доступно при выполнении условий программы</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products__main_catalog_item"><svg class="icon icon__editor icon__editor_products"><use xlink:href="images/icons/sprite.svg#editor"></use></svg>
+                    <a class="products__main_catalog_a" href="goods.html">
+                        <img class="products__main_catalog_item_img" src="images/catalog/products_catalog_5.png" />
+                    </a>
+                    <div class="products__main_catalog_item_wrapper">
+                        <div class="products__main_catalog_item_wrapper-title">
+                            <span class="products__main_catalog_item_vendor-code">РП070</span>
+                            <div class="products__main_catalog_item_title">Эко-бутылка &quot;Фанат воды&quot; (500 мл)...</div>
+                        </div>
+                        <div class="products__main_catalog_item_box">
+                            <div class="products__main_catalog_item_box-price">
+                                <span class="products__main_catalog_item_your-price">Ваша цена</span>
+                                <span class="products__main_catalog_item_price-color">899 р.</span>
+                            </div>
+                            <span class="products__main_catalog_item_price">Цена
+                                <span class="products__main_catalog_item_price">949 р.</span>
+                            </span>
+                            <div class="products__main_catalog_item_count">
+                                <div class="products__main_catalog_item_count_minus">-</div>
+                                <div class="products__main_catalog_item_count_number">1</div>
+                                <div class="products__main_catalog_item_count_plus">+</div>
+                            </div>
+                            <div class="products__main_catalog_item_add-basket">В корзину</div>
+                            <div class="products__main_catalog_item_condition">Доступно при выполнении условий программы</div>
+                        </div>
+                    </div>
+                    <div class="products__main_catalog_item_img_discount">
+                        <p>30% скидка</p>
+                    </div>
+                </div>
+                <div class="products__main_catalog_item"><svg class="icon icon__editor icon__editor_products"><use xlink:href="images/icons/sprite.svg#editor"></use></svg>
+                    <a class="products__main_catalog_a" href="goods.html">
+                        <img class="products__main_catalog_item_img" src="images/catalog/products_catalog_6.png" />
+                    </a>
+                    <div class="products__main_catalog_item_wrapper">
+                        <div class="products__main_catalog_item_wrapper-title">
+                            <span class="products__main_catalog_item_vendor-code">РП070</span>
+                            <div class="products__main_catalog_item_title">Эко-бутылка &quot;Фанат воды&quot; (500 мл)...</div>
+                        </div>
+                        <div class="products__main_catalog_item_box">
+                            <div class="products__main_catalog_item_box-price">
+                                <span class="products__main_catalog_item_your-price">Ваша цена</span>
+                                <span class="products__main_catalog_item_price-color">899 р.</span>
+                            </div>
+                            <span class="products__main_catalog_item_price">Цена
+                                <span class="products__main_catalog_item_price">949 р.</span>
+                            </span>
+                            <div class="products__main_catalog_item_count">
+                                <div class="products__main_catalog_item_count_minus">-</div>
+                                <div class="products__main_catalog_item_count_number">1</div>
+                                <div class="products__main_catalog_item_count_plus">+</div>
+                            </div>
+                            <div class="products__main_catalog_item_add-basket">В корзину</div>
+                            <div class="products__main_catalog_item_condition">Доступно при выполнении условий программы</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products__main_catalog_item"><svg class="icon icon__editor icon__editor_products"><use xlink:href="images/icons/sprite.svg#editor"></use></svg>
+                    <a class="products__main_catalog_a" href="goods.html">
+                        <img class="products__main_catalog_item_img" src="images/catalog/products_catalog_7.png" />
+                    </a>
+                    <div class="products__main_catalog_item_wrapper">
+                        <div class="products__main_catalog_item_wrapper-title">
+                            <span class="products__main_catalog_item_vendor-code">РП070</span>
+                            <div class="products__main_catalog_item_title">Эко-бутылка &quot;Фанат воды&quot; (500 мл)...</div>
+                        </div>
+                        <div class="products__main_catalog_item_box">
+                            <div class="products__main_catalog_item_box-price">
+                                <span class="products__main_catalog_item_your-price">Ваша цена</span>
+                                <span class="products__main_catalog_item_price-color">899 р.</span>
+                            </div>
+                            <span class="products__main_catalog_item_price">Цена
+                                <span class="products__main_catalog_item_price">949 р.</span>
+                            </span>
+                            <div class="products__main_catalog_item_count">
+                                <div class="products__main_catalog_item_count_minus">-</div>
+                                <div class="products__main_catalog_item_count_number">1</div>
+                                <div class="products__main_catalog_item_count_plus">+</div>
+                            </div>
+                            <div class="products__main_catalog_item_add-basket">В корзину</div>
+                            <div class="products__main_catalog_item_condition">Доступно при выполнении условий программы</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products__main_catalog_item"><svg class="icon icon__editor icon__editor_products"><use xlink:href="images/icons/sprite.svg#editor"></use></svg>
+                    <a class="products__main_catalog_a" href="goods.html">
+                        <img class="products__main_catalog_item_img" src="images/catalog/products_catalog_8.png" />
+                    </a>
+                    <div class="products__main_catalog_item_wrapper">
+                        <div class="products__main_catalog_item_wrapper-title">
+                            <span class="products__main_catalog_item_vendor-code">РП070</span>
+                            <div class="products__main_catalog_item_title">Эко-бутылка &quot;Фанат воды&quot; (500 мл)...</div>
+                        </div>
+                        <div class="products__main_catalog_item_box">
+                            <div class="products__main_catalog_item_box-price">
+                                <span class="products__main_catalog_item_your-price">Ваша цена</span>
+                                <span class="products__main_catalog_item_price-color">899 р.</span>
+                            </div>
+                            <span class="products__main_catalog_item_price">Цена
+                                <span class="products__main_catalog_item_price">949 р.</span>
+                            </span>
+                            <div class="products__main_catalog_item_count">
+                                <div class="products__main_catalog_item_count_minus">-</div>
+                                <div class="products__main_catalog_item_count_number">1</div>
+                                <div class="products__main_catalog_item_count_plus">+</div>
+                            </div>
+                            <div class="products__main_catalog_item_add-basket">В корзину</div>
+                            <div class="products__main_catalog_item_condition">Доступно при выполнении условий программы</div>
+                        </div>
+                    </div>
+                    <div class="products__main_catalog_item_img_newcolor">
+                        <p>Новый цвет</p>
+                    </div>
+                </div>
+                <div class="products__main_catalog_item"><svg class="icon icon__editor icon__editor_products"><use xlink:href="images/icons/sprite.svg#editor"></use></svg>
+                    <a class="products__main_catalog_a" href="goods.html">
+                        <img class="products__main_catalog_item_img" src="images/catalog/products_catalog_1.png" />
+                    </a>
+                    <div class="products__main_catalog_item_wrapper">
+                        <div class="products__main_catalog_item_wrapper-title">
+                            <span class="products__main_catalog_item_vendor-code">РП070</span>
+                            <div class="products__main_catalog_item_title">Эко-бутылка &quot;Фанат воды&quot; (500 мл)...</div>
+                        </div>
+                        <div class="products__main_catalog_item_box">
+                            <div class="products__main_catalog_item_box-price">
+                                <span class="products__main_catalog_item_your-price">Ваша цена</span>
+                                <span class="products__main_catalog_item_price-color">899 р.</span>
+                            </div>
+                            <span class="products__main_catalog_item_price">Цена
+                                <span class="products__main_catalog_item_price">949 р.</span>
+                            </span>
+                            <div class="products__main_catalog_item_count">
+                                <div class="products__main_catalog_item_count_minus">-</div>
+                                <div class="products__main_catalog_item_count_number">1</div>
+                                <div class="products__main_catalog_item_count_plus">+</div>
+                            </div>
+                            <div class="products__main_catalog_item_add-basket">В корзину</div>
+                            <div class="products__main_catalog_item_condition">Доступно при выполнении условий программы</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products__main_catalog_item"><svg class="icon icon__editor icon__editor_products"><use xlink:href="images/icons/sprite.svg#editor"></use></svg>
+                    <a class="products__main_catalog_a" href="goods.html">
+                        <img class="products__main_catalog_item_img" src="images/catalog/products_catalog_6.png" />
+                    </a>
+                    <div class="products__main_catalog_item_wrapper">
+                        <div class="products__main_catalog_item_wrapper-title">
+                            <span class="products__main_catalog_item_vendor-code">РП070</span>
+                            <div class="products__main_catalog_item_title">Эко-бутылка &quot;Фанат воды&quot; (500 мл)...</div>
+                        </div>
+                        <div class="products__main_catalog_item_box">
+                            <div class="products__main_catalog_item_box-price">
+                                <span class="products__main_catalog_item_your-price">Ваша цена</span>
+                                <span class="products__main_catalog_item_price-color">899 р.</span>
+                            </div>
+                            <span class="products__main_catalog_item_price">Цена
+                                <span class="products__main_catalog_item_price">949 р.</span>
+                            </span>
+                            <div class="products__main_catalog_item_count">
+                                <div class="products__main_catalog_item_count_minus">-</div>
+                                <div class="products__main_catalog_item_count_number">1</div>
+                                <div class="products__main_catalog_item_count_plus">+</div>
+                            </div>
+                            <div class="products__main_catalog_item_add-basket">В корзину</div>
+                            <div class="products__main_catalog_item_condition">Доступно при выполнении условий программы</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products__main_catalog_item"><svg class="icon icon__editor icon__editor_products"><use xlink:href="images/icons/sprite.svg#editor"></use></svg>
+                    <a class="products__main_catalog_a" href="goods.html">
+                        <img class="products__main_catalog_item_img" src="images/catalog/products_catalog_7.png" />
+                    </a>
+                    <div class="products__main_catalog_item_wrapper">
+                        <div class="products__main_catalog_item_wrapper-title">
+                            <span class="products__main_catalog_item_vendor-code">РП070</span>
+                            <div class="products__main_catalog_item_title">Эко-бутылка &quot;Фанат воды&quot; (500 мл)...</div>
+                        </div>
+                        <div class="products__main_catalog_item_box">
+                            <div class="products__main_catalog_item_box-price">
+                                <span class="products__main_catalog_item_your-price">Ваша цена</span>
+                                <span class="products__main_catalog_item_price-color">899 р.</span>
+                            </div>
+                            <span class="products__main_catalog_item_price">Цена
+                                <span class="products__main_catalog_item_price">949 р.</span>
+                            </span>
+                            <div class="products__main_catalog_item_count">
+                                <div class="products__main_catalog_item_count_minus">-</div>
+                                <div class="products__main_catalog_item_count_number">1</div>
+                                <div class="products__main_catalog_item_count_plus">+</div>
+                            </div>
+                            <div class="products__main_catalog_item_add-basket">В корзину</div>
+                            <div class="products__main_catalog_item_condition">Доступно при выполнении условий программы</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products__main_catalog_item"><svg class="icon icon__editor icon__editor_products"><use xlink:href="images/icons/sprite.svg#editor"></use></svg>
+                    <a class="products__main_catalog_a" href="goods.html">
+                        <img class="products__main_catalog_item_img" src="images/catalog/products_catalog_8.png" />
+                    </a>
+                    <div class="products__main_catalog_item_wrapper">
+                        <div class="products__main_catalog_item_wrapper-title">
+                            <span class="products__main_catalog_item_vendor-code">РП070</span>
+                            <div class="products__main_catalog_item_title">Эко-бутылка &quot;Фанат воды&quot; (500 мл)...</div>
+                        </div>
+                        <div class="products__main_catalog_item_box">
+                            <div class="products__main_catalog_item_box-price">
+                                <span class="products__main_catalog_item_your-price">Ваша цена</span>
+                                <span class="products__main_catalog_item_price-color">899 р.</span>
+                            </div>
+                            <span class="products__main_catalog_item_price">Цена
+                                <span class="products__main_catalog_item_price">949 р.</span>
+                            </span>
+                            <div class="products__main_catalog_item_count">
+                                <div class="products__main_catalog_item_count_minus">-</div>
+                                <div class="products__main_catalog_item_count_number">1</div>
+                                <div class="products__main_catalog_item_count_plus">+</div>
+                            </div>
+                            <div class="products__main_catalog_item_add-basket">В корзину</div>
+                            <div class="products__main_catalog_item_condition">Доступно при выполнении условий программы</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products__main_more">
+                <span>Загрузить ещё</span>
+            </div>
+            <div class="products__main_button-up"><svg class="icon icon__arrow icon__arrow_products-up icon__arrow_up"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+            <div class="products__main_scroll orders__scroll">
+                <div class="products__main_scroll_pages"><svg class="icon icon__arrow icon__arrow_products-scroll icon__arrow_left"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>...</li>
+                        <li>20</li>
+                    </ul><svg class="icon icon__arrow icon__arrow_products-scroll icon__arrow_right"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                <div class="products__main_scroll_txt">Показывать на странице
+                    <span>12</span><svg class="icon icon__arrow icon__arrow_products-scroll icon__arrow_down"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+            </div>
+        </div>
+        </h1>
+        </div>
+        <footer class="footer view-port text-mid">
+            <a class="footer__logo" href="index.html">
+                <img class="footer__logo_img" src="images/logo.svg" alt="Логотип" />
+            </a>
+            <div class="footer__links">
+                <a class="footer__links_link" href="rules.html">Правила компании</a>
+                <a class="footer__links_link" href="delivery.html">Доставка и оплата</a>
+            </div>
+            <div class="footer__contacts">
+                <div class="footer__contacts_phone"><svg class="icon icon__phone icon__phone_footer"><use xlink:href="images/icons/sprite.svg#phone"></use></svg>
+                    <span>+7 (905) 599-82-28</span>
+                </div>
+                <div class="footer__contacts_mail"><svg class="icon icon__mail icon__mail_footer"><use xlink:href="images/icons/sprite.svg#mail"></use></svg>
+                    <span>570_akhpolova@tupperware.su</span>
+                </div>
+            </div>
+            <div class="footer__address"><svg class="icon icon__address icon__address_footer"><use xlink:href="images/icons/sprite.svg#address"></use></svg>
+                <span>Студия Tupperware</span>
+            </div>
+        </footer>
+    </body>
+</html>

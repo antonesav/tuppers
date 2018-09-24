@@ -1,0 +1,109 @@
+extends ../layouts/default
+include ../modules/icon/icon
+include ../modules/add_consult/add_consult
+include ../modules/path/path
+
+block content
+    +path({title: ['Главная страница', 'Личный кабинет', 'Дополнительно', 'Календарь'], href: ['index.html']})
+    .addcons.view-port
+        .addcons__aside
+            ul
+                li
+                    a(href='add_consult.html') Добавить консультанта
+                li
+                    a(href='change_consult.html') Изменить консультанта
+                li
+                    a.aside-active(href='calendar.html') Календарь
+                li
+                    a(href='#') Условия сотрудничества
+                li
+                    a(href='transfer_group.html') Перевод в другую группу
+        .addcons__content
+
+            h1.big-title.standart-gap.addcons__title Календарь
+
+            form.calendar__form
+                .calendar__form_item.standart-gap
+                    select.active__form_input.active__form_select(name='list')
+                    label.active__form_label Начальная дата
+                    .active__form_input_arrow
+                        +icon('select-arrow')
+                .calendar__form_item.standart-gap
+                    select.active__form_input.active__form_select(name='list')
+                    label.active__form_label Конечная дата
+                    .active__form_input_arrow
+                        +icon('select-arrow')
+
+                .calendar__form_buttons.standart-gap
+                    .calendar__form_search Искать
+                    .calendar__form_reset
+                        p.active__form_reset_p Сбросить
+                        .active__form_circle
+                            span
+
+            .calendar__banner
+                p Месяц 2018/05
+                +icon('arrow', 'calendar')
+            .calendar__block.standart-gap
+                .calendar__block_line
+                    .calendar__line_item
+                        p Неделя 2018/18
+                    .calendar__line_item
+                        p с 01.05.2018
+                    .calendar__line_item
+                        p до 07.05.2018
+                .calendar__block_line
+                    .calendar__line_item
+                        p Неделя 2018/18
+                    .calendar__line_item
+                        p с 01.05.2018
+                    .calendar__line_item
+                        p до 07.05.2018
+                .calendar__block_line
+                    .calendar__line_item
+                        p Неделя 2018/18
+                    .calendar__line_item
+                        p с 01.05.2018
+                    .calendar__line_item
+                        p до 07.05.2018
+                .calendar__block_line
+                    .calendar__line_item
+                        p Неделя 2018/18
+                    .calendar__line_item
+                        p с 01.05.2018
+                    .calendar__line_item
+                        p до 07.05.2018
+
+            .calendar__banner.standart-gap
+                p Месяц 2018/04
+                +icon('arrow', 'calendar')
+            .calendar__block.standart-gap
+                .calendar__block_line
+                    .calendar__line_item
+                        p Неделя 2018/18
+                    .calendar__line_item
+                        p с 01.05.2018
+                    .calendar__line_item
+                        p до 07.05.2018
+                .calendar__block_line
+                    .calendar__line_item
+                        p Неделя 2018/18
+                    .calendar__line_item
+                        p с 01.05.2018
+                    .calendar__line_item
+                        p до 07.05.2018
+                .calendar__block_line
+                    .calendar__line_item
+                        p Неделя 2018/18
+                    .calendar__line_item
+                        p с 01.05.2018
+                    .calendar__line_item
+                        p до 07.05.2018
+                .calendar__block_line
+                    .calendar__line_item
+                        p Неделя 2018/18
+                    .calendar__line_item
+                        p с 01.05.2018
+                    .calendar__line_item
+                        p до 07.05.2018
+            .calendar__empty_block

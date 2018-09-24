@@ -1,0 +1,119 @@
+mixin catalog(data)
+    .products__main_catalog
+        each item in data
+            .products__main_catalog_item
+                +icon('editor','products')
+                a.products__main_catalog_a(href='goods.html')
+                    img.products__main_catalog_item_img(src=item.src)
+                .products__main_catalog_item_wrapper
+                    .products__main_catalog_item_wrapper-title
+                        span.products__main_catalog_item_vendor-code= item.vendor_code
+                        .products__main_catalog_item_title= item.title
+                    .products__main_catalog_item_box
+                        .products__main_catalog_item_box-price
+                            span.products__main_catalog_item_your-price Ваша цена
+                            span.products__main_catalog_item_price-color= item.price_color
+                        span.products__main_catalog_item_price Цена
+                            span.products__main_catalog_item_price= item.price
+                        .products__main_catalog_item_count
+                            .products__main_catalog_item_count_minus -
+                            .products__main_catalog_item_count_number 1
+                            .products__main_catalog_item_count_plus +
+                        .products__main_catalog_item_add-basket В корзину
+                        .products__main_catalog_item_condition Доступно при выполнении условий программы
+                if item.discount
+                    .products__main_catalog_item_img_discount
+                        p 30% скидка
+                if item.newcolor
+                    .products__main_catalog_item_img_newcolor
+                        p Новый цвет
+
+mixin filter(data)
+    .products__aside_filter
+        .products__aside_filter_button
+            input(type ='checkbox' id ='check')
+            label(for='check') Только подарки
+        .products__aside_customer-price
+            p Цена клиента
+            .products__aside_customer-price_input
+                .products__aside_customer-price_input_field
+                    input(type='text' placeholder='0 руб.' min='0' max='29999')
+                    span -
+                    input(type='text' placeholder='29 999 руб.' min='0' max='29999')
+                .products__aside_customer-price_input_slider
+                    .products__aside_customer-price_input_slider_bar
+                        .products__aside_customer-price_input_slider_bar_left
+                        .products__aside_customer-price_input_slider_bar_right
+        .products__aside_consultant-price
+            p Цена консультанта
+            .products__aside_consultant-price_input
+                .products__aside_consultant-price_input_field
+                    input(type='text' placeholder='0 руб.' min='0' max='29999')
+                    span -
+                    input(type='text' placeholder='29 999 руб.' min='0' max='29999')
+                .products__aside_consultant-price_input_slider
+                    .products__aside_consultant-price_input_slider_bar
+                        .products__aside_consultant-price_input_slider_bar_left
+                        .products__aside_consultant-price_input_slider_bar_right
+        .products__aside_buttons
+            .products__aside_buttons_show Показать
+            .products__aside_buttons_reset Сбросить
+                .products__aside_buttons_reset_circle
+                    span
+
+mixin aside-nav(data)
+    .products__aside
+        .products__aside_nav
+            ul.products__aside_nav_list
+                li
+                    a(href='#').products__aside_nav_list_item Все для выпечки
+                li
+                    a(href='#').products__aside_nav_list_item Микроволновая печь
+                li
+                    a(href='#').products__aside_nav_list_item Умные гаджеты
+                li
+                    a(href='#').products__aside_nav_list_item Сервировка
+                li
+                    a(href='#').products__aside_nav_list_item Всегда с собой
+                li
+                    a(href='#').products__aside_nav_list_item.active-list Умное хранение и транспортировка
+                li
+                    a(href='#').products__aside_nav_list_item Рецептурные буклеты
+        +filter()
+
+mixin button-up(data)
+    .products__main_button-up
+        +icon('arrow','products-up icon__arrow_up')
+
+mixin add-basket(data)
+    .products__modal_wrapper
+        .products__modal
+            p.products__modal_basket Товар добавлен в корзину
+            .products__modal_close &times;
+            .products__modal_title
+                img(src='images/catalog/products_catalog_7.png')
+                .products__modal_title_description
+                    .products__modal_title_basket-icon Корзина
+                        +icon('basket','products')
+                        span 15
+                    p Емкость "МикроКук" (2,25 л) круглая с дополнительной крышкой
+                    p Количество:
+                        span 5 шт.
+            .products__modal_button
+                a(href='basket_step1.html') Перейти в корзину
+mixin scroll(data)
+    .products__main_scroll.orders__scroll
+        .products__main_scroll_pages
+            +icon('arrow','products-scroll icon__arrow_left')
+            ul
+                li 1
+                li 2
+                li 3
+                li 4
+                li 5
+                li ...
+                li 20
+            +icon('arrow','products-scroll icon__arrow_right')
+        .products__main_scroll_txt Показывать на странице
+            span 12
+            +icon('arrow','products-scroll icon__arrow_down')

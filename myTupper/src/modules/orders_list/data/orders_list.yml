@@ -1,0 +1,33 @@
+---
+    order:
+        line:
+            -
+                status: 'Требует оформления'
+                delivery: 'Самовызов'
+            -
+                status: 'Требует оформления'
+                delivery: 'Курьер'
+            -
+                status: 'Требует оформления'
+                delivery: 'Самовызов'
+            -
+                status: 'В доставке'
+                delivery: 'Самовызов'
+            -
+                status: 'Требует оформления'
+                delivery: 'Самовызов'
+            -
+                status: 'В доставке'
+                delivery: 'Курьер'
+            -
+                status: 'Требует оформления'
+                delivery: 'Самовызов'
+            -
+                status: 'В доставке'
+                delivery: 'Самовызов'
+            -
+                status: 'Требует оформления'
+                delivery: 'Самовызов'
+            -
+                status: 'В доставке'
+                delivery: 'Самовызов'

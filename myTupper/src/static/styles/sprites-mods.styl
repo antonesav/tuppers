@@ -1,0 +1,384 @@
+@require '../../css/partials/_params.styl'
+
+.icon
+	&__shunk-12,&__shunk-5step,&__shunk-5offer
+		color $main-color
+		font-size 65px
+		margin-bottom 10px
+	&__diamond
+		&_pcareer
+			color $main-color
+			font-size 30px
+	&__pdf-file
+		&_pformula
+			stroke $white-color
+			color $orange-color
+			font-size 21px
+	&__confirm-square
+		fill none
+		stroke red
+		font-size 20px
+	&__file
+		&_mirriage
+			color $pink-color
+			font-size 16px
+	&__double-arrow
+		fill none
+		stroke $main-color
+		&_transfer
+			font-size 26px
+	&__arrow-up
+		&_addcons-up
+			color #757575
+			font-size 14px
+		&_addcons-down
+			transform rotate(180 deg)
+			color $orange-color
+			font-size 14px
+	transition .3s all
+	&__apply-green
+		font-size 14px
+		fill none
+		stroke $orange-color
+		&_change
+			display none
+		&_confirm
+			display none
+			stroke-width 2px
+			font-size 11px
+			margin-bottom 3px
+	&__attention
+		color $main-color
+		&_confirm
+			color $red-color
+			font-size 64px
+		&_shunk
+			font-size 64px
+	&__account
+		font-size 20px
+		color $icon-color
+		&_header
+			display none
+	&__basket
+		font-size 20px
+	&__basket-2
+		font-size 20px
+		color $icon-color
+		cursor pointer
+		&_active
+			color $white-color
+			&:hover
+				color $black-color
+	&__logout
+		font-size 20px
+		color $icon-color
+		cursor pointer
+	&__search
+		font-size 20px
+		&_add-consult
+			color $pink-color
+		&_add-search
+			color $pink-color
+			font-size 16px
+	&__menu
+		font-size 20px
+	&__arrow
+		font-size 12px
+		color #999
+		&_calendar
+			transform rotate(0deg)
+			color $white-color
+			font-size 20px
+			&_down
+				transform rotate(90deg)
+				color $white-color
+				font-size 20px
+		&_delivery
+			transform rotate(0deg) !important
+			color #999999
+			font-size 16px
+			&_down
+				transform rotate(90deg)
+				color #999999
+				font-size 16px
+		&_pformula
+			transform rotate(0deg)
+			color $orange-color
+			font-size 16px
+			&_down
+				margin-left 20px
+				transform rotate(90deg)
+			&_right
+				transform rotate(0deg)
+				margin-left 20px
+				color #999999
+		&_shunk
+			&_down
+				transform rotate(90deg) !important
+				color $white-color !important
+				font-size 20px  !important
+			&_up
+				transform rotate(-90deg)
+				color $white-color  !important
+				font-size 20px  !important
+		&_active
+			color #979797
+			font-size 18px
+			&_down
+				transform rotate(90deg)
+		&_up
+			transform rotate(-90deg)
+			font-size 16px
+		&_down
+			transform rotate(90deg)
+			font-size 16px
+		&_slider
+			font-size 30px
+			cursor pointer
+			&:hover
+				color lighten($red-color, 15%)
+		&_left
+			transform rotate(180deg)
+			left 0
+		&_profile
+			&_down
+				transform rotate(90deg)
+				color $white-color !important
+				font-size 20px !important
+			&_up
+				transform rotate(-90deg)
+				color $white-color !important
+				font-size 20px !important
+		&_back
+			color #000
+		&_right
+			right 0
+			&_avangard
+				color $orange-color
+				cursor pointer
+		&_products-bottom
+			color $main-color
+		&_products-top
+			color $main-color
+		&_products-up,&_active-up
+			color $white-color !important
+			font-size 26px !important
+		&_products_result-bottom
+			color #999999
+
+	&__home
+		font-size 32px
+	&__close
+		color #979797
+		font-size 20px
+		&_basket
+			color $red-color
+			font-size 12px
+	&__phone
+		&_footer
+			margin-right 10px
+	&__mail
+		&_footer
+			margin-right 10px
+	&__address
+		&_footer
+			margin-right 10px
+	&__view-square
+		cursor pointer
+		&_products
+			color $main-color
+			font-size 22px
+			&:hover
+				color $main-color
+
+	&__view-table
+		cursor pointer
+		&_products
+			color #C4C4C4
+			font-size 22px
+			&:hover
+				color $main-color
+	&__filter-icon
+		cursor pointer
+		color #C4C4C4
+		font-size 22px
+		&:hover
+			color $main-color
+	&__editor
+		corsor pointer
+		color $main-color
+		z-index 10
+		&_products
+			font-size 39px
+		&_change_consult
+			font-size 16px
+			margin-left 5px
+		&:hover
+			color lighten($main-color, 50%)
+		&_profile_edit
+			font-size 32px
+	&__goods
+		&_slider
+			&_left,&_right
+				color $light-color
+				&:hover
+					color #999999 !important
+
+		&_left,&_right
+			color $light-color
+			&:hover
+				color #999999 !important
+	&__site, &__car, &__studio, &__stars
+		color $main-color
+	&__studio-modal
+		font-size 85px
+	&__select-arrow
+		font-size 6px
+		color #010101
+	&__car
+		&_active
+			font-size 16px
+	&__medal
+		color $orange-color
+		font-size 24px
+.icon
+	transition .3s all
+	&__account
+		font-size 20px
+		color $icon-color
+		&_header
+			display none
+	&__basket
+		font-size 20px
+	&__basket-2
+		font-size 20px
+		cursor pointer
+	&__logout
+		font-size 20px
+		color $icon-color
+		cursor pointer
+	&__search
+		font-size 20px
+		&_booklet-online-modal
+			cursor pointer
+			color $icon-color
+			&:hover
+				color $black-color
+	&__menu
+		font-size 20px
+	&__arrow
+		&_down
+			transform rotate(90deg)
+		&_slider
+			font-size 30px
+			cursor pointer
+			&:hover
+				color lighten($red-color, 15%)
+		&_left
+			transform rotate(180deg)
+			left 0
+		&_right
+			right 0
+		&_basket-back
+			color $orange-color
+		&_path
+			color $black-color
+		&_booklet-online
+			font-size 40px
+			opacity 0.7
+			cursor pointer
+			&:hover
+				opacity 1
+	&__small-arrow
+		fill none
+		stroke $black-color
+		font-size 10px
+		color $black-color
+	&__home
+		font-size 32px
+	&__close
+		color #979797
+		font-size 20px
+		&_basket
+			color $red-color
+			font-size 12px
+	&__phone
+		&_footer
+			margin-right 10px
+		&_basket-step-2
+			width 18px
+			color #36C73D
+	&__mail
+		&_footer
+			margin-right 10px
+		&_basket-step-2
+			width 18px
+			color #36C73D
+	&__address
+		&_footer
+			margin-right 10px
+		&_basket-step-2
+			width 18px
+			color #36C73D
+	&__refresh
+		cursor pointer
+		&_basket
+			color $main-color
+			font-size 18px
+	&__check
+		&_basket-step-2
+			font-size 12px
+			color $white-color
+			fill none
+			stroke $white-color
+			stroke-width 3px
+	&__book
+		font-size 36px
+		color $main-color
+		cursor pointer
+		&:hover
+			color darken($main-color, 10%)
+	&__print
+		font-size 20px
+		cursor pointer
+		&_booklet-online-modal
+			color $icon-color
+			&:hover
+				color $black-color
+	&__download
+		font-size 20px
+		cursor pointer
+		&_booklet-online-modal
+			color $icon-color
+			&:hover
+				color $black-color
+	&__share
+		font-size 20px
+		cursor pointer
+		&_booklet-online-modal
+			color $icon-color
+			&:hover
+				color $black-color
+
+
+@media screen and (min-width $view-port-medium)
+	.icon
+		&__arrow
+			&_menu
+				display none
+
+@media screen and (min-width $view-port-tablet)
+	.icon
+		&__account
+			cursor pointer
+			&:hover
+				color $black-color
+			&_header
+				display block
+		&__logout
+			&:hover
+				color $black-color
+		&__basket-2
+			&:hover
+				color $black-color
+	

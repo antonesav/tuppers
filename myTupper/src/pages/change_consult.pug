@@ -1,0 +1,155 @@
+extends ../layouts/default
+include ../modules/icon/icon
+include ../modules/add_consult/add_consult
+include ../modules/path/path
+
+block content
+    +path({title: ['Главная страница', 'Личный кабинет', 'Дополнительно', 'Изменить консультанта'], href: ['index.html']})
+    .addcons.view-port
+        .addcons__aside
+            ul
+                li
+                    a(href='add_consult.html') Добавить консультанта
+                li
+                    a.aside-active(href='change_consult.html') Изменить консультанта
+                li
+                    a(href='calendar.html') Календарь
+                li
+                    a(href='#') Условия сотрудничества
+                li
+                    a(href='transfer_group.html') Перевод в другую группу
+        .addcons__content
+
+            h1.big-title.standart-gap.addcons__title Изменить консультанта
+
+            .changecons__banner
+                p Информация по студии
+
+            .addcons__form_box
+                form.addcons__form.standart-gap
+                    .profile__info_form_item-total.addcons__item
+                        input.profile__info_form_input(type='text', name='consult')
+                        label.profile__info_form_label Уникальный номер
+                        .addcons__form_input_search
+                            +icon('search','add-consult')
+                    .profile__info_form_item-total.addcons__item
+                        input.profile__info_form_input(type='text', name='head', required)
+                        label.profile__info_form_label Номер руководителя*
+                        .addcons__form_input_search
+                            +icon('search','add-consult')
+                    .profile__info_form_item-total.addcons__item
+                        input.profile__info_form_input(type='text', name='invite', required)
+                        label.profile__info_form_label Кто пригласил в компанию*
+                    .profile__info_form_item-total.addcons__item
+                        input.profile__info_form_input(type='text', name='center', required)
+                        label.profile__info_form_label Центр*
+            .changecons__banner
+                p Личная информация
+
+            .addcons__form_box
+                form.addcons__form.standart-gap
+                    .profile__info_form_item-total.addcons__item
+                        input.profile__info_form_input(type='text', name='name')
+                        label.profile__info_form_label.changecons__label_center Имя
+                            +icon('editor','change_consult')
+                    .profile__info_form_item-total.addcons__item
+                        input.profile__info_form_input(type='text', name='secondname')
+                        label.profile__info_form_label.changecons__label_center Отчество
+                            +icon('editor','change_consult')
+                    .profile__info_form_item-total.addcons__item
+                        input.profile__info_form_input(type='text', name='surname')
+                        label.profile__info_form_label.changecons__label_center Фамилия
+                            +icon('editor','change_consult')
+                    .profile__info_form_item-total.addcons__item
+                        input.profile__info_form_input(type='email', name='mail', required)
+                        label.profile__info_form_label E-mail*
+                    .profile__info_form_item-total.addcons__item
+                        input.profile__info_form_input(type='tel', name='tel')
+                        label.profile__info_form_label.changecons__label_center Мобильный
+                            +icon('editor','change_consult')
+                    .profile__info_form_item-total.addcons__item
+                        select.active__form_input.active__form_select(name='birdth')
+                        label.active__form_label.changecons__label_center Дата рождения
+                            +icon('editor','change_consult')
+                        .active__form_input_arrow
+                            +icon('select-arrow')
+                    .profile__info_form_item-total.addcons__item
+                        input.profile__info_form_input(type='text', name='gender')
+                        label.profile__info_form_label Пол
+
+                    .profile__info_form_item-total.addcons__item
+                        input.profile__info_form_input(type='text', name='new_password')
+                        label.profile__info_form_label Новый пароль
+                    .profile__info_form_item-total.addcons__item
+                        input.profile__info_form_input(type='text', name='confirm_password')
+                        label.profile__info_form_label Подтверждение пароля
+                    .profile__info_form_item-total.addcons__item
+                        input.profile__info_form_input(type='text', name='week-reg')
+                        label.profile__info_form_label Неделя регистрации
+                    .profile__info_form_item-total.addcons__item
+                        input.profile__info_form_input(type='text', name='week-acquisition')
+                        label.profile__info_form_label Неделя приобретения набора успеха
+                    .profile__info_form_item-total.addcons__item
+                        input.profile__info_form_input(type='text', name='week-qualification')
+                        label.profile__info_form_label Неделя квалификации
+            .profile__info_callback.changecons__callback * Для изменение номера телефона, обратитесь в студию Tupperware.
+                .changecons__button
+                    p Сохранить
+
+        .addcons__modal
+            .addcons__modal_wrapper
+                .addcons__modal_header.standart-gap
+                    .addcons__modal_select
+                        p Показать записей:
+                        .addcons__modal_select_span
+                            span 5
+                            +icon('arrow','down')
+                    .addcons__modal_search
+                        input( type ='text', name ='search')
+                        +icon('search','add-search')
+                    .addcons__modal_close
+                        span
+                .addcons__modal_blocks
+                    +search_block(blocks)
+                .addcons__modal_lines
+                    .addcons__lines_header
+                        .addcons__lines_header_check
+                            input(type='checkbox')
+                        .addcons__lines_header_item
+                            p Код
+                            +icon('arrow-up' , 'addcons-up')
+                        .addcons__lines_header_item
+                            p Фамилия
+                            +icon('arrow-up' , 'addcons-up')
+                        .addcons__lines_header_item
+                            p Имя
+                            +icon('arrow-up' , 'addcons-up')
+                        .addcons__lines_header_item
+                            p Отчество
+                            +icon('arrow-up' , 'addcons-up')
+                        .addcons__lines_header_item
+                            p Телефон
+                            +icon('arrow-up' , 'addcons-up')
+                        .addcons__lines_header_item
+                            p Email
+                            +icon('arrow-up' , 'addcons-up')
+                        .addcons__lines_header_item
+                            p Руководитель
+                            +icon('arrow-up' , 'addcons-up')
+                    +search_list(lines)
+                .addcons__modal_footer
+                    .addcons__scroll
+                        p.addcons__scroll_p.standart-gap Записи с 1 по 5 из 176 записей
+                        .addcons__scroll_pages.standart-gap
+                            +icon('arrow','products-scroll icon__arrow_left')
+                            ul
+                                li 1
+                                li 2
+                                li 3
+                                li 4
+                                li 5
+                                li ...
+                                li 20
+                            +icon('arrow','products-scroll icon__arrow_right')
+                    .addcons__scroll_button
+                        a(href='') Выбрать

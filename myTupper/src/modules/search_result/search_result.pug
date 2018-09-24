@@ -1,0 +1,22 @@
+mixin search_results(data)
+    .results__main_catalog
+        each item in data
+            .results__main_catalog_item
+                a(href='goods.html')
+                    img.results__main_catalog_item_img(src=item.src)
+                .results__main_catalog_item_wrapper
+                    .results__main_catalog_item_wrapper-title
+                        span.results__main_catalog_item_vendor-code= item.vendor_code
+                        .results__main_catalog_item_title= item.title
+                    .results__main_catalog_item_box
+                        .results__main_catalog_item_box-price
+                            span.results__main_catalog_item_your-price Ваша цена
+                            span.results__main_catalog_item_price-color= item.price_color
+                        span.results__main_catalog_item_price Цена
+                            span.results__main_catalog_item_price= item.price
+                        .results__main_catalog_item_count
+                            .results__main_catalog_item_count_minus -
+                            .results__main_catalog_item_count_number 1
+                            .results__main_catalog_item_count_plus +
+                        .products__main_catalog_item_add-basket В корзину
+                        

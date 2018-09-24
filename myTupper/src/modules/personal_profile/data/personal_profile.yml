@@ -1,0 +1,8 @@
+---
+    personal:
+        -
+            ('site','profile')
+        -
+            ('car','profile')
+        -
+            ('studio','profile')

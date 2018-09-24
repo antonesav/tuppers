@@ -1,0 +1,110 @@
+extends ../layouts/default
+
+include ../modules/icon/icon
+include ../modules/path/path
+include ../modules/basket-box/basket-box
+
+block content
+	+path({title: ['Главная страница', 'Корзина. Шаг 1: Оформление заказа', 'Корзина. Шаг 2: Доставка'], href: ['index.html', 'basket_step1.html']})
+	.basket.view-port
+		h1.basket__title.basket__title_delivery Корзина. Шаг 2: Доставка
+		.basket__delivery
+			.basket__delivery_item.basket__delivery_item--1
+				.basket__delivery_title Служба доставки
+				.basket__delivery_block.basket__delivery_block_active
+					.basket__delivery_block_wrapper
+						p.basket__delivery_block_title Доставка в пункт самовывоза
+						p.basket__delivery_block_text Вы можете забрать свой заказ в одном из пунктов самовывоза
+					.basket__delivery_block_check
+						+icon('check', 'basket-step-2')
+				.basket__delivery_block
+					.basket__delivery_block_wrapper
+						p.basket__delivery_block_title Доставка курьером (300 руб.)
+						p.basket__delivery_block_text Мы доставим заказ по указанному Вами адресу (сроки доставки 3-5 рабочих дней)
+					.basket__delivery_block_check.basket__delivery_block_check_disabled
+						+icon('check', 'basket-step-2')
+			.basket__delivery_item.basket__delivery_item--2
+				.basket__delivery_title Адрес доставки
+				.basket__delivery_contacts
+					.basket__delivery_contacts_metro-wrapper
+						span.basket__delivery_contacts_metro м. Менделеевская Пункт выдачи Москва, Новослободская ул., д. 50/1, стр. 2
+						span.basket__delivery_contacts_metro_price 100 руб.
+					.basket__delivery_contacts_phone
+						+icon('phone', 'basket-step-2')
+						span.basket__delivery_contacts_phone_text +7 (495) 345-56-56
+					.basket__delivery_contacts_mail
+						+icon('mail', 'basket-step-2')
+						span.basket__delivery_contacts_mail_text info@tupperware.com
+					.basket__delivery_contacts_address
+						+icon('address', 'basket-step-2')
+						span.basket__delivery_contacts_address_text м. Менделеевская Пункт выдачи Москва, Новослободская ул., д. 50/1, стр. 2
+					.basket__delivery_contacts_time
+						span.basket__delivery_contacts_time_orange Режим работы:
+						span Пн. 10:00-20:00; Вт. 10:00-20:00; Ср. 10:00-20:00; Чт. 10:00-20:00; Пт. 10:00-20:00; Сб. 10:00-20:00; Вс. 10:00-20:00
+					.basket__delivery_contacts_how
+						span.basket__delivery_contacts_time_orange Как добраться:
+						span Из метро Менделеевская поворачиваете направо, идете прямо, никуда не сворачивая, пересекаете два светофора, ближайшая вывеска к двери магазин Ароматный Мир. Далее арка и металлическая дверь. На ней наклейка ОЗОН. Над дверью вывеска "настольные игры". Вход в магазин с улицы Новослободская
+					.basket__delivery_contacts_buttons-wrapper
+						.basket__delivery_contacts_button Свернуть
+						.basket__delivery_contacts_button
+							span.basket__delivery_contacts_button_text Назад к списку
+							+icon('arrow', 'basket-back')
+			.basket__delivery_item.basket__delivery_item--3
+				.basket__delivery_block.basket__delivery_block_title_only
+					.basket__delivery_title Оплата
+				.basket__delivery_block.basket__delivery_block_active
+					.basket__delivery_block_wrapper
+						p.basket__delivery_block_text_pay Оплата наличными при получении заказа
+					.basket__delivery_block_check.basket__delivery_block_check
+						+icon('check', 'basket-step-2')
+			.basket__container_delivery
+				.basket__container_top
+					.basket__box_delivery_good Название
+					.basket__box_delivery_code Код продаж
+					.basket__box_delivery_price Цена
+					.basket__box_delivery_count Количество
+					.basket__box_delivery_total Сумма
+				.basket__box-wrapper
+					.basket__box
+						.basket__box_delivery_good
+							.basket__box_delivery_good_text Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная
+						.basket__box_delivery_code СП3456
+						.basket__box_delivery_price 4 567 руб.
+						.basket__box_delivery_count 1 шт.
+						.basket__box_delivery_total 4 567 руб.
+				.basket__box-wrapper
+					.basket__box
+						.basket__box_delivery_good
+							.basket__box_delivery_good_text Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная
+						.basket__box_delivery_code СП3456
+						.basket__box_delivery_price 4 567 руб.
+						.basket__box_delivery_count 1 шт.
+						.basket__box_delivery_total 4 567 руб.
+				.basket__box-wrapper
+					.basket__box
+						.basket__box_delivery_good
+							.basket__box_delivery_good_text Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная
+						.basket__box_delivery_code СП3456
+						.basket__box_delivery_price 4 567 руб.
+						.basket__box_delivery_count 1 шт.
+						.basket__box_delivery_total 4 567 руб.
+				.basket__box-wrapper
+					.basket__box
+						.basket__box_delivery_good
+							.basket__box_delivery_good_text Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная
+						.basket__box_delivery_code СП3456
+						.basket__box_delivery_price 4 567 руб.
+						.basket__box_delivery_count 1 шт.
+						.basket__box_delivery_total 4 567 руб.
+
+			.basket__delivery_result
+				.basket__delivery_result_text
+					span Товаров на:
+					span 37 482 руб.
+				.basket__delivery_result_text
+					span Стоимость доставки
+					span 100 руб.
+				.basket__delivery_result_total
+					span Итого:
+					span 37 582 руб.
+				.basket__delivery_result_button Завершить оформление

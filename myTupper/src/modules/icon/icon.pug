@@ -1,0 +1,8 @@
+mixin icon($name, $mod)
+	if $mod
+		- mod = 'icon__' + $name + '_' + $mod || ''
+		svg(class='icon icon__' + $name + ' ' + mod)
+			use(xlink:href='images/icons/sprite.svg#' + $name)
+	else
+		svg(class='icon icon__' + $name)
+			use(xlink:href='images/icons/sprite.svg#' + $name)

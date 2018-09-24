@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="format-detection" content="address=no" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <!--link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic", rel="stylesheet")-->
+        <link rel="stylesheet" href="libs/slick/slick.css" />
+        <link rel="stylesheet" href="libs/slick/slick-theme.css" />
+        <link rel="stylesheet" href="css/style.css" /><script src="libs/jquery.min.js" defer="defer"></script><script src="libs/slick/slick.min.js" defer="defer"></script><script src="js/script.js" defer="defer"></script>
+        <!--script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")-->
+        <title>Tupperware</title>
+    </head>
+    <body>
+        <header class="header view-port">
+            <a class="header__logo" href="index.html">
+                <img class="header__logo_img" src="images/logo.svg" alt="Логотип" />
+            </a>
+            <div class="header__account"><svg class="icon icon__account icon__account_header"><use xlink:href="images/icons/sprite.svg#account"></use></svg>
+                <div class="header__account_text text-sm">Астахова Мария</div><svg class="icon icon__logout"><use xlink:href="images/icons/sprite.svg#logout"></use></svg></div>
+            <div class="header__menu"><svg class="icon icon__menu"><use xlink:href="images/icons/sprite.svg#menu"></use></svg></div>
+            <nav class="nav">
+                <div class="nav__home">
+                    <a class="nav__home_link" href="index.html"><svg class="icon icon__home"><use xlink:href="images/icons/sprite.svg#home"></use></svg>
+                        <div class="nav__underline"></div>
+                    </a>
+                    <div class="nav__close"><svg class="icon icon__close"><use xlink:href="images/icons/sprite.svg#close"></use></svg></div>
+                </div>
+                <ul class="nav__menu">
+                    <li class="nav__menu_item" data-item="menu" data-number="0">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Действующие предложения
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--1" data-number="0"></ul>
+                    </li>
+                    <li class="nav__menu_item" data-item="menu" data-number="1">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Изделия
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--2" data-number="1"></ul>
+                    </li>
+                    <li class="nav__menu_item" data-item="menu" data-number="2">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Программы
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--3" data-number="2"></ul>
+                    </li>
+                    <li class="nav__menu_item" data-item="menu" data-number="3">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Личный кабинет
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--4" data-number="3">
+                            <li class="nav__submenu_item" data-item="submenu" data-number="0">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Профиль</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="0"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="1">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Заказы </div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="1"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="2">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Отчеты</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="2">
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Оборот группы</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Еженедельный отчет</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Заказы консультанта</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Список инфолистов</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Продажи изделий</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Отчет по Авангарду</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Контактные данные консультантов</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Обороты счетов консультантов</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="3">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Обороты</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="3"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="4">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Дополнительно</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="4"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="5">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Недовложение и брак</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="5"></ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <form class="header__search" action="" method="POST">
+                <input class="header__search_input text-mid" type="text" name="search" /><svg class="icon icon__search"><use xlink:href="images/icons/sprite.svg#search"></use></svg></form>
+            <div class="header__basket">
+                <div class="header__basket_block"><svg class="icon icon__basket"><use xlink:href="images/icons/sprite.svg#basket"></use></svg>
+                    <span class="header__basket_number">15</span>
+                </div>
+                <div class="header__basket_text">
+                    <div class="header__basket_text_wrapper">
+                        <span class="header__basket_text_span">Оборот</span>
+                        <span class="header__basket_text_span">4 567 руб.</span>
+                    </div>
+                    <div class="header__basket_text_wrapper">
+                        <span class="header__basket_text_span">Стоимость</span>
+                        <span class="header__basket_text_span">3 567 руб.</span>
+                    </div>
+                    <div class="header__basket_text_wrapper">
+                        <span class="header__basket_text_span">Неделя</span>
+                        <span class="header__basket_text_span">2018/11</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="myslider view-port">
+            <div class="myslider__container">slider
+                <ul class="myslider__container_ul" id="myList">
+                    <li class="myslider__container_li">
+                        <img src="images/index_catalogs_1.jpg">
+                    </li>
+                    <li class="myslider__container_li">
+                        <img src="images/index_catalogs_2.jpg">
+                    </li>
+                    <li class="myslider__container_li">
+                        <img src="images/index_catalogs_3.jpg">
+                    </li>
+                    <li class="myslider__container_li">
+                        <img src="images/index_catalogs_4.jpg">
+                    </li>
+                </ul>
+                <div class="myslider__container_button">
+                    <button class="mybutton">button</button>
+                </div>
+            </div>
+        </div>
+        <footer class="footer view-port text-mid">
+            <a class="footer__logo" href="index.html">
+                <img class="footer__logo_img" src="images/logo.svg" alt="Логотип" />
+            </a>
+            <div class="footer__links">
+                <a class="footer__links_link" href="rules.html">Правила компании</a>
+                <a class="footer__links_link" href="delivery.html">Доставка и оплата</a>
+            </div>
+            <div class="footer__contacts">
+                <div class="footer__contacts_phone"><svg class="icon icon__phone icon__phone_footer"><use xlink:href="images/icons/sprite.svg#phone"></use></svg>
+                    <span>+7 (905) 599-82-28</span>
+                </div>
+                <div class="footer__contacts_mail"><svg class="icon icon__mail icon__mail_footer"><use xlink:href="images/icons/sprite.svg#mail"></use></svg>
+                    <span>570_akhpolova@tupperware.su</span>
+                </div>
+            </div>
+            <div class="footer__address"><svg class="icon icon__address icon__address_footer"><use xlink:href="images/icons/sprite.svg#address"></use></svg>
+                <span>Студия Tupperware</span>
+            </div>
+        </footer>
+    </body>
+</html>

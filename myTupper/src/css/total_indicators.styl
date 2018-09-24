@@ -1,0 +1,94 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+.indicators
+	font-family 'TupperPRO', sans-serif !important
+	&__underline
+		border-bottom 1px solid #787878
+		link(#787878)
+		&:hover
+			color $main-color
+			border-bottom 1px solid $main-color
+	&__progress
+		&_circle
+			transform rotate(-90deg)
+			position absolute
+			width 33px
+			height 33px
+			background-color $main-color
+			display block
+			text-align center
+			border-radius 50%
+			background-image url('../images/apply.png')
+			background-repeat no-repeat
+			background-position center
+			background-size 50%
+			bottom -13px
+			left 23%
+			&:nth-of-type(2)
+				left 48%
+				background-color #F0F1F5
+			&:nth-of-type(3)
+				left 73%
+				background-color #F0F1F5
+			&:nth-of-type(4)
+				left 98%
+				background-color #F0F1F5
+		&_text
+			transform rotate(-90deg)
+			position absolute
+			font-weight 300
+			font-size 20px
+			color #787878
+			bottom -90px
+			left 81%
+			&:nth-of-type(6)
+				left 8%
+				bottom 75px
+				color $main-color
+			&:nth-of-type(7)
+				left 30%
+				bottom -90px
+			&:nth-of-type(8)
+				left 63%
+				bottom 60px
+@media screen and (min-width $view-port-medium)
+	.indicators
+		&__progress
+			&_circle
+				transform rotate(0deg)
+			&_text
+				transform rotate(0deg)
+				bottom -45px
+				left 82%
+				&:nth-of-type(6)
+					left 9%
+					bottom 33px
+				&:nth-of-type(7)
+					left 32%
+					bottom -45px
+				&:nth-of-type(8)
+					left 62%
+					bottom 33px
+@media screen and (min-width $view-port-large)
+	.indicators
+		&__progress
+			&_text
+				font-size 24px
+				bottom -45px
+				left 84%
+				&:nth-of-type(6)
+					left 11%
+					bottom 33px
+				&:nth-of-type(7)
+					left 34%
+					bottom -45px
+				&:nth-of-type(8)
+					left 64%
+					bottom 33px
+@media screen and (min-width $view-port-tablet)
+	.indicators
+		&__progress
+			&_text
+				&:nth-of-type(7)
+					left 37%
+					bottom -45px

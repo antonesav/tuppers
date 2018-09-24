@@ -1,0 +1,17 @@
+---
+    order:
+        products:
+            -
+                src: 'images/catalog/products_catalog_4.png'
+                span: 'РП003'
+                title: 'Эко-бутылка "Фанат воды" (500 мл) квадратная...'
+                wrap: true
+            -
+                src: 'images/catalog/products_catalog_5.png'
+                span: 'РП003'
+                title: 'Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная'
+            -
+                src: 'images/catalog/products_catalog_8.png'
+                span: 'РП003'
+                title: 'Эко-бутылка "Фанат воды" (500 мл) квадратная...'
+                wrap: true

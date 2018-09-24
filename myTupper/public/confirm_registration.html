@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="format-detection" content="address=no" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <!--link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic", rel="stylesheet")-->
+        <link rel="stylesheet" href="libs/slick/slick.css" />
+        <link rel="stylesheet" href="libs/slick/slick-theme.css" />
+        <link rel="stylesheet" href="css/style.css" /><script src="libs/jquery.min.js" defer="defer"></script><script src="libs/slick/slick.min.js" defer="defer"></script><script src="js/script.js" defer="defer"></script>
+        <!--script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")-->
+        <title>Tupperware</title>
+    </head>
+    <body>
+        <header class="header view-port nonborder">
+            <a class="checkin__logo" href="index.html">
+                <img class="checkin__logo_img" src="images/logo.svg" alt="Логотип">
+            </a>
+            <div class="header__account"><svg class="icon icon__account icon__account_header"><use xlink:href="images/icons/sprite.svg#account"></use></svg>
+                <a class="header__link" href="#">Войти</a><svg class="icon icon__logout icon__logout_confirm"><use xlink:href="images/icons/sprite.svg#logout"></use></svg></div>
+        </header>
+        <div class="confirm view-port">
+            <h1 class="big-title standart-gap">Подтверждение регистрации</h1>
+            <div class="confirm__attention"><svg class="icon icon__attention icon__attention_confirm"><use xlink:href="images/icons/sprite.svg#attention"></use></svg>
+                <p class="confirm__attention_p">Необходимо согласиться с обработкой персональных данных</p>
+            </div>
+            <div class="confirm__content">
+                <p class="standart-gap">Настоящим даю свое согласие ООО «Тапервэр» (ОГРН 1037739064318; 125284, г. Москва, Ленинградский пр-т, д. 31А, стр. 1) на обработку своих персональных данных, включая сбор, систематизацию, накопление, хранение, уточнение (обновление, изменение),
+                    использование, распространение, передачу, в том числе трансграничную передачу персональных данных на территории любых иностранных государств, обезличивание, блокирование, уничтожение персональных данных. Согласие дается на обработку
+                    следующих персональных данных:</p>
+                <ul class="standart-gap">
+                    <li>
+                        <span>Фамилия, Имя и Отчество.</span>
+                    </li>
+                    <li>
+                        <span>Номер мобильного / городского телефона.</span>
+                    </li>
+                    <li>
+                        <span>Адрес электронной почты.</span>
+                    </li>
+                    <li>
+                        <span>Адрес места жительства.</span>
+                    </li>
+                    <li>
+                        <span>Дата рождения.</span>
+                    </li>
+                </ul>
+                <p class="standart-gap">Настоящее Согласие дается в следующих целях:</p>
+                <ul class="standart-gap">
+                    <li>
+                        <span>Организация доставки продукции ООО «Тапервэр» субъекту персональных данных.</span>
+                    </li>
+                    <li>
+                        <span>Проведение маркетинговых, статистических и иных исследований.</span>
+                    </li>
+                    <li>
+                        <span>Продвижения товаров, работ и услуг.</span>
+                    </li>
+                    <li>
+                        <span>Доведение до сведения субъекта персональных информации рекламного характера.</span>
+                    </li>
+                    <li>
+                        <span>Доведение до сведения субъекта персональных данных сведений о потребительских свойствах продукции ООО «Тапервэр».</span>
+                    </li>
+                </ul>
+                <p class="standart-gap">Настоящее Согласие на обработку персональных данных действует до момента его отзыва субъектом персональных данных. Отзыв настоящего Согласия осуществляется посредством направления электронного сообщения на emzh89@mail.ru с указанием фамилии,
+                    имени, номера мобильного телефона.</p>
+                <label class="confirm__checkbox standart-gap" for="confirm-checkbox">
+                    <input type="checkbox" id="confirm-checkbox">
+                    <div class="confirm__square"><svg class="icon icon__apply-green icon__apply-green_confirm"><use xlink:href="images/icons/sprite.svg#apply-green"></use></svg></div>
+                    <p>Подтверждение согласия</p>
+                </label>
+                <div class="confirm__button standart-gap">
+                    <a href="#">Подтвердить и продолжить</a>
+                </div>
+            </div>
+        </div>
+        <footer class="footer view-port text-mid">
+            <a class="footer__logo" href="index.html">
+                <img class="footer__logo_img" src="images/logo.svg" alt="Логотип" />
+            </a>
+            <div class="footer__links">
+                <a class="footer__links_link" href="rules.html">Правила компании</a>
+                <a class="footer__links_link" href="delivery.html">Доставка и оплата</a>
+            </div>
+            <div class="footer__contacts">
+                <div class="footer__contacts_phone"><svg class="icon icon__phone icon__phone_footer"><use xlink:href="images/icons/sprite.svg#phone"></use></svg>
+                    <span>+7 (905) 599-82-28</span>
+                </div>
+                <div class="footer__contacts_mail"><svg class="icon icon__mail icon__mail_footer"><use xlink:href="images/icons/sprite.svg#mail"></use></svg>
+                    <span>570_akhpolova@tupperware.su</span>
+                </div>
+            </div>
+            <div class="footer__address"><svg class="icon icon__address icon__address_footer"><use xlink:href="images/icons/sprite.svg#address"></use></svg>
+                <span>Студия Tupperware</span>
+            </div>
+        </footer>
+    </body>
+</html>

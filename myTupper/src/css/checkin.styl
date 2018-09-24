@@ -1,0 +1,151 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+
+
+.nonborder
+	border none
+
+.checkin
+	font-family 'TupperPRO', sans-serif !important
+	line-height 1.3
+	margin-top 40px
+	&__logo
+		width 100%
+		flex($jc: center, $ai: center)
+		padding 20px 0 15px
+		position relative
+		&_img
+			width 162px
+
+	&__title
+		font-size 28px
+		margin-bottom 25px
+
+	&__paragraph
+		line-height 1.5
+		margin-bottom 50px
+
+	&__wrapper
+		&-form,&-content
+			margin-bottom 50px
+
+		&_items
+			flex(row,space-between)
+		&_input
+			width 45%
+
+	&__form
+		width 100%
+
+		&_box
+			width 100%
+
+		&_item
+
+			position relative
+			margin-bottom 40px
+
+		&_input
+			font-family 'TupperPRO'
+			line-height 1.3
+			font-size 16px
+			padding 1px 5px
+			border 1px solid #cccccc
+			width 100%
+			height 40px
+			&:focus
+				border 1px solid $main-color
+				outline none
+
+			&_arrow
+				top 8px
+				right 5px
+				width 20px
+				height 20px
+				position absolute
+				pointer-events none
+				background-color $white-color
+
+		&_label
+			position absolute
+			top -25px
+
+		&_button
+			background-color $main-color
+			color $white-color
+			text-align center
+			font-weight 500
+			cursor pointer
+			padding 15px 0
+			&:hover
+				background-color darken($main-color,15%)
+
+	&__list
+
+		&_ul
+			list-style-type disc
+			margin-left 18px
+			& li
+				margin-bottom 20px
+				color #c4c4c4
+				& span
+					color $black-color
+
+	&__image
+		&_img
+			width 100%
+
+@media screen and (min-width $view-port-mob)
+	.checkin
+		&__logo
+			&_img
+				width 182px
+
+@media screen and (min-width $view-port-medium)
+	.checkin
+		&__form
+			flex(column,$ai: center)
+
+			&_box
+				width 80%
+
+		&__logo
+			&_img
+				width 202px
+
+
+@media screen and (min-width $view-port-tablet)
+	.header
+		padding-top 30px
+		border-bottom none
+
+	.checkin
+		&__logo
+			width 28%
+
+			&_img
+				width 100%
+
+		&__form
+			&_box
+				width 60%
+
+
+
+
+@media screen and (min-width $view-port-large)
+	.checkin
+		flex(row,space-between)
+
+		&__form
+			&_box
+				width 100%
+
+		&__wrapper-form
+			width 40%
+
+		&__wrapper-content
+			width 50%
+
+		&__list
+			margin-bottom 45px

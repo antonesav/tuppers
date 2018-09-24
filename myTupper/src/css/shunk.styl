@@ -1,0 +1,260 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+.shunk
+	line-height 1.3
+	font-family 'TupperPRO', sans-serif !important
+	&__index-bg
+		background-image url('../images/scale.jpg') !important
+	&__progress
+		margin 50px 0
+		flex(row,center,center)
+		&-wrapper
+			height 300px
+			width 275px
+			margin 0 auto
+		&_bar
+			transform rotate(90deg)
+			height 7px
+			width 90%
+			background-color #F0F1F5
+			border-radius 10px
+			position relative
+			margin-top 100px
+
+			&-fill
+				display block
+				height 7px
+				background-color $main-color
+				border-radius 10px
+				transition width 500ms ease-in-out
+
+		&_circle
+			transform rotate(-90deg)
+			position absolute
+			width 33px
+			height 33px
+			background-color $main-color
+			display block
+			text-align center
+			border-radius 50%
+			background-image url('../images/apply.png')
+			background-repeat no-repeat
+			background-position center
+			background-size 50%
+			bottom -13px
+			left 10%
+			&:nth-of-type(2)
+				left 30%
+				background-color $main-color
+			&:nth-of-type(3)
+				left 50%
+				background-color $main-color
+			&:nth-of-type(4)
+				left 70%
+				background-color #F0F1F5
+			&:nth-of-type(5)
+				left 90%
+				background-color #F0F1F5
+		&_text
+			transform rotate(-90deg)
+			white-space nowrap
+			position absolute
+			font-weight 300
+			font-size 20px
+			color #787878
+			bottom 50px
+			left 85%
+			&:nth-of-type(7)
+				left 5%
+				bottom 50px
+			&:nth-of-type(8)
+				left 25%
+				bottom -65px
+			&:nth-of-type(9)
+				left 45%
+				bottom 50px
+			&:nth-of-type(10)
+				left 65%
+				bottom -65px
+		&_attention
+			margin 25px 0
+			flex(column,space-between,center)
+			& span
+				margin-top 20px
+		&_block
+			background-color $main-color
+			flex(row,space-between,center)
+			color $white-color
+			padding 20px 10px
+			font-weight 500
+		&_scroll
+			&::-webkit-scrollbar
+				width 7px
+			&::-webkit-scrollbar-thumb
+				width 7px
+				height 20px
+				border-radius 5px
+				background-color $main-color
+	&__item
+		flex(column,center,center)
+		border 1px solid $light-color
+		&_wrapper
+			width 100%
+			padding 0 10px
+			flex(row,space-between)
+
+		&_img
+			width 70%
+			& img
+				width 100%
+
+		&_title
+			width 90%
+			flex(column,center,center)
+			text-align center
+
+			&_wrap
+				margin-top 15px
+			&_span
+
+				font-size 13px
+				color #787878
+			&_p
+				line-height 1.5
+				font-size 14px
+				color #424242
+		&_price
+			width 40%
+			flex(column)
+			margin 15px 0
+			&_pink
+				& span
+					color $red-color
+					font-size 18px
+			&_static
+				margin-top 10px
+				font-size 14px
+		& .light-color
+			color $icon-color
+			& .circle-color
+				border 1px solid $icon-color
+				&:hover
+					color $white-color
+					background-color $icon-color
+		&_count
+			flex(row,space-between,center)
+			font-size 20px
+			color $icon-color
+
+			&_number
+				margin 0 15px
+			&_minus, &_plus
+				border 1px solid $icon-color
+				border-radius 50%
+				height 28px
+				width 28px
+				flex(row,center,center)
+				cursor pointer
+				padding-bottom 2px
+				&:hover
+					background-color $icon-color
+					color $white-color
+		&_buttons
+			flex(column,space-between)
+			margin 15px 0
+			width 128px
+		&_button
+			background-color $icon-color
+			flex(row,center,center)
+			text-transform uppercase
+			color $white-color
+			cursor pointer
+			padding 10px 10px
+			font-size 12px
+			&:hover
+				background-color darken($icon-color, 15%)
+
+
+@media screen and (min-width $view-port-mob)
+	.shunk
+		&__item
+			&_img
+				width 60%
+
+@media screen and (min-width $view-port-mob)
+	.shunk
+		&__item
+			&_img
+				width 50%
+@media screen and (min-width $view-port-tablet)
+	.shunk
+		&__index
+			&_line
+				flex(row)
+				flex-wrap wrap
+			&_block
+				width 50%
+		&__progress
+			&-wrapper
+				width 100%
+				height 180px
+				margin 20px 0
+			&_bar
+				transform rotate(0deg)
+			&_circle
+				transform rotate(0deg)
+				left 18%
+				&:nth-of-type(2)
+					left 38%
+				&:nth-of-type(3)
+					left 58%
+				&:nth-of-type(4)
+					left 78%
+				&:nth-of-type(5)
+					left 98%
+			&_text
+				transform rotate(0deg)
+				bottom 45px
+				left 93%
+				&:nth-of-type(7)
+					left 13%
+					bottom 50px
+				&:nth-of-type(8)
+					left 33%
+					bottom -65px
+				&:nth-of-type(9)
+					left 53%
+					bottom 50px
+				&:nth-of-type(10)
+					left 73%
+					bottom -65px
+			&_attention
+				flex(row,$ai:center)
+				& span
+					margin 0 15px
+			&_scroll
+				max-height 575px
+				border 1px solid $light-color
+				border-top none
+			&_box
+				max-height 193px
+		&__item
+			border none
+			flex(row,space-between)
+			&_img
+				width 20%
+			&_title
+				flex(column,flex-start,flex-start)
+				text-align left
+				width 40%
+				margin 15px 0
+			&_wrapper
+				width 35%
+			&_buttons
+				justify-content flex-start
+			&_count
+				margin 15px 0
+
+		&__back
+			margin-top 25px
+			flex(row,flex-end,center)

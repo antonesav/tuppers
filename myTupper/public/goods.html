@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="format-detection" content="address=no" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <!--link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic", rel="stylesheet")-->
+        <link rel="stylesheet" href="libs/slick/slick.css" />
+        <link rel="stylesheet" href="libs/slick/slick-theme.css" />
+        <link rel="stylesheet" href="css/style.css" /><script src="libs/jquery.min.js" defer="defer"></script><script src="libs/slick/slick.min.js" defer="defer"></script><script src="js/script.js" defer="defer"></script>
+        <!--script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")-->
+        <title>Tupperware</title>
+    </head>
+    <body>
+        <header class="header view-port">
+            <a class="header__logo" href="index.html">
+                <img class="header__logo_img" src="images/logo.svg" alt="Логотип" />
+            </a>
+            <div class="header__account"><svg class="icon icon__account icon__account_header"><use xlink:href="images/icons/sprite.svg#account"></use></svg>
+                <div class="header__account_text text-sm">Астахова Мария</div><svg class="icon icon__logout"><use xlink:href="images/icons/sprite.svg#logout"></use></svg></div>
+            <div class="header__menu"><svg class="icon icon__menu"><use xlink:href="images/icons/sprite.svg#menu"></use></svg></div>
+            <nav class="nav">
+                <div class="nav__home">
+                    <a class="nav__home_link" href="index.html"><svg class="icon icon__home"><use xlink:href="images/icons/sprite.svg#home"></use></svg>
+                        <div class="nav__underline"></div>
+                    </a>
+                    <div class="nav__close"><svg class="icon icon__close"><use xlink:href="images/icons/sprite.svg#close"></use></svg></div>
+                </div>
+                <ul class="nav__menu">
+                    <li class="nav__menu_item" data-item="menu" data-number="0">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Действующие предложения
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--1" data-number="0"></ul>
+                    </li>
+                    <li class="nav__menu_item" data-item="menu" data-number="1">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Изделия
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--2" data-number="1"></ul>
+                    </li>
+                    <li class="nav__menu_item" data-item="menu" data-number="2">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Программы
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--3" data-number="2"></ul>
+                    </li>
+                    <li class="nav__menu_item" data-item="menu" data-number="3">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Личный кабинет
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--4" data-number="3">
+                            <li class="nav__submenu_item" data-item="submenu" data-number="0">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Профиль</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="0"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="1">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Заказы </div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="1"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="2">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Отчеты</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="2">
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Оборот группы</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Еженедельный отчет</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Заказы консультанта</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Список инфолистов</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Продажи изделий</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Отчет по Авангарду</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Контактные данные консультантов</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Обороты счетов консультантов</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="3">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Обороты</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="3"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="4">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Дополнительно</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="4"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="5">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Недовложение и брак</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="5"></ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <form class="header__search" action="" method="POST">
+                <input class="header__search_input text-mid" type="text" name="search" /><svg class="icon icon__search"><use xlink:href="images/icons/sprite.svg#search"></use></svg></form>
+            <div class="header__basket">
+                <div class="header__basket_block"><svg class="icon icon__basket"><use xlink:href="images/icons/sprite.svg#basket"></use></svg>
+                    <span class="header__basket_number">15</span>
+                </div>
+                <div class="header__basket_text">
+                    <div class="header__basket_text_wrapper">
+                        <span class="header__basket_text_span">Оборот</span>
+                        <span class="header__basket_text_span">4 567 руб.</span>
+                    </div>
+                    <div class="header__basket_text_wrapper">
+                        <span class="header__basket_text_span">Стоимость</span>
+                        <span class="header__basket_text_span">3 567 руб.</span>
+                    </div>
+                    <div class="header__basket_text_wrapper">
+                        <span class="header__basket_text_span">Неделя</span>
+                        <span class="header__basket_text_span">2018/11</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="path view-port">
+            <div class="path__content">
+                <a class="path__link" href="index.html">Главная страница</a>
+                <div class="path__separator"><svg class="icon icon__small-arrow icon__small-arrow_path"><use xlink:href="images/icons/sprite.svg#small-arrow"></use></svg></div>
+                <a class="path__link">Изделия</a>
+                <div class="path__separator"><svg class="icon icon__small-arrow icon__small-arrow_path"><use xlink:href="images/icons/sprite.svg#small-arrow"></use></svg></div>
+                <a class="path__link">Умное хранение и транспортировка</a>
+                <div class="path__separator"><svg class="icon icon__small-arrow icon__small-arrow_path"><use xlink:href="images/icons/sprite.svg#small-arrow"></use></svg></div>
+                <div class="path__link path__link_active">Эко-бутылка &quot;Фанат воды&quot;</div>
+            </div>
+        </div>
+        <div class="products__modal_wrapper">
+            <div class="products__modal">
+                <p class="products__modal_basket">Товар добавлен в корзину</p>
+                <div class="products__modal_close">&times;</div>
+                <div class="products__modal_title">
+                    <img src="images/catalog/products_catalog_7.png" />
+                    <div class="products__modal_title_description">
+                        <div class="products__modal_title_basket-icon">Корзина<svg class="icon icon__basket icon__basket_products"><use xlink:href="images/icons/sprite.svg#basket"></use></svg>
+                            <span>15</span>
+                        </div>
+                        <p>Емкость "МикроКук" (2,25 л) круглая с дополнительной крышкой</p>
+                        <p>Количество:
+                            <span>5 шт.</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="products__modal_button">
+                    <a href="basket_step1.html">Перейти в корзину</a>
+                </div>
+            </div>
+        </div>
+        <div class="goods view-port">
+            <div class="products__aside">
+                <div class="products__aside_nav">
+                    <ul class="products__aside_nav_list">
+                        <li>
+                            <a class="products__aside_nav_list_item" href="#">Все для выпечки</a>
+                        </li>
+                        <li>
+                            <a class="products__aside_nav_list_item" href="#">Микроволновая печь</a>
+                        </li>
+                        <li>
+                            <a class="products__aside_nav_list_item" href="#">Умные гаджеты</a>
+                        </li>
+                        <li>
+                            <a class="products__aside_nav_list_item" href="#">Сервировка</a>
+                        </li>
+                        <li>
+                            <a class="products__aside_nav_list_item" href="#">Всегда с собой</a>
+                        </li>
+                        <li>
+                            <a class="products__aside_nav_list_item aside-active" href="#">Умное хранение и транспортировка</a>
+                        </li>
+                        <li>
+                            <a class="products__aside_nav_list_item" href="#">Рецептурные буклеты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="goods_content">
+                <div class="goods__title"><svg class="icon icon__arrow icon__arrow_back icon__arrow_left"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg>
+                    <h1>Набор: Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная</h1>
+                </div>
+                <div class="goods__box">
+                    <div class="goods__wrapper">
+                        <div class="goods__slider_box"><svg class="icon icon__arrow icon__arrow_slider icon__arrow_left icon__goods_slider_left"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg>
+                            <div class="goods__slider">
+                                <div class="goods__slide goods__slide-item">
+                                    <img class="goods__slide_img" src="images/catalog/products_catalog_1.png" alt="">
+                                </div>
+                                <div class="goods__slide goods__slide-item">
+                                    <img class="goods__slide_img" src="images/catalog/products_catalog_2.png" alt="">
+                                </div>
+                                <div class="goods__slide goods__slide-item">
+                                    <img class="goods__slide_img" src="images/catalog/products_catalog_3.png" alt="">
+                                </div>
+                                <div class="goods__slide goods__slide-item">
+                                    <img class="goods__slide_img" src="images/catalog/products_catalog_4.png" alt="">
+                                </div>
+                                <div class="goods__slide goods__slide-item">
+                                    <img class="goods__slide_img" src="images/catalog/products_catalog_5.png" alt="">
+                                </div>
+                                <div class="goods__slide goods__slide-item">
+                                    <img class="goods__slide_img" src="images/catalog/products_catalog_6.png" alt="">
+                                </div>
+                            </div><svg class="icon icon__arrow icon__arrow_slider icon__arrow_right icon__goods_slider_right"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <div class="goods__slider-nav">
+                            <img class="goods__slider-nav_img" src="images/catalog/products_catalog_1.png" alt="">
+                            <img class="goods__slider-nav_img" src="images/catalog/products_catalog_2.png" alt="">
+                            <img class="goods__slider-nav_img" src="images/catalog/products_catalog_3.png" alt="">
+                            <img class="goods__slider-nav_img" src="images/catalog/products_catalog_4.png" alt="">
+                            <img class="goods__slider-nav_img" src="images/catalog/products_catalog_5.png" alt="">
+                            <img class="goods__slider-nav_img" src="images/catalog/products_catalog_6.png" alt="">
+                        </div>
+                    </div>
+                    <div class="goods__description">
+                        <div class="goods__description_selling">
+                            <div class="goods__description_selling-txt">
+                                <p>Код продаж</p>
+                                <p>Неделя начала</p>
+                                <p>Неделя окончания</p>
+                            </div>
+                            <div class="goods__description_selling-numbers">
+                                <span>СП2345</span>
+                                <span>2018/06</span>
+                                <span>2018/18</span>
+                            </div>
+                        </div>
+                        <div class="goods__description_wrapper">
+                            <div class="goods__description_price">
+                                <div class="goods__description_price-your">
+                                    <p>Ваша цена</p>
+                                    <span>5 999 р.</span>
+                                </div>
+                                <div class="goods__description_price-our">
+                                    <p>Цена</p>
+                                    <span>6 749 р.</span>
+                                </div>
+                            </div>
+                            <div class="goods__description_count">
+                                <div class="goods__description_count_minus">-</div>
+                                <div class="goods__description_count_number">1</div>
+                                <div class="goods__description_count_plus">+</div>
+                            </div>
+                            <div class="goods__description_button">В корзину</div>
+                        </div>
+                        <div class="goods__description_wrapper-hidden">
+                            <div class="goods__description_price-your">
+                                <p>Ваша цена</p>
+                                <span>1 р.</span>
+                            </div>
+                            <div class="goods__description_contains">Доступно при выполнении условий программы</div>
+                        </div>
+                    </div>
+                    <div class="products__main_button-up"><svg class="icon icon__arrow icon__arrow_products-up icon__arrow_up"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                </div>
+                <div class="goods__tabs">
+                    <ul>
+                        <li class="goods__tabs_description_tab">
+                            <div class="goods__tabs_arrow"></div>
+                            <p>Описание</p>
+                        </li>
+                        <li class="goods__tabs_description">
+                            <h2>Набор: Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная</h2>
+                            <h3>Краткая информация:</h3>
+                            <p>Готовьте овощи, пасту или рис на пару за считаные минуты в компактном изделии «МикроМиллениал».</p>
+                            <ul>Преимущества:
+                                <li>
+                                    <span>Инновационное изделие, которое позволяет удовлетворить вкусы и пожелания сразу нескольких членов семьи, используя всего 1 изделие.</span>
+                                </li>
+                                <li>
+                                    <span>Изделие идеально для городских жителей, для небольших семей, состоящих из 1-2 человек, для приготовления небольших порций блюд.</span>
+                                </li>
+                                <li>
+                                    <span>Это многофункциональное изделие - «три-в-одном» экономит не только денежные средства, но и свободное пространство в кухонном шкафу и микроволновой печи.</span>
+                                </li>
+                            </ul>
+                            <h3>Комплектация</h3>
+                            <p>Изделие состоит из основания, нижнего и верхнего лотков, прикрывающей крышки, крышки вставки и верхней крышки.</p>
+                            <ul>Рекомендации:
+                                <li>
+                                    <span>«Браво-Дилайт» можно использовать в микроволновой печи при температуре от 0 °C до 120 °C (350- 400 Вт).</span>
+                                </li>
+                                <li>
+                                    <span>Добавьте молока или воды при взбивании, чтобы блюдо получилось однородной консистенции.</span>
+                                </li>
+                                <li>
+                                    <span>Используйте не более 4 яиц и не менее 2.</span>
+                                </li>
+                                <li>
+                                    <span>Если вы добавляете в блюдо овощи, нарежьте их мелкими кубиками.</span>
+                                </li>
+                            </ul>
+                            <ul>Техническая информация
+                                <li>
+                                    <span>Для использования микроволновой печи.</span>
+                                </li>
+                                <li>
+                                    <span>Можно мыть в посудомоечной машине.</span>
+                                </li>
+                                <li>
+                                    <span>Нельзя использовать на открытом огне, в духовом шкафу, в морозильной камере, в режиме "Гриль".</span>
+                                </li>
+                                <li>
+                                    <span>Для хранения в холодильнике.</span>
+                                </li>
+                                <li>
+                                    <span>Нельзя использовать металлические кухонные принадлежности, которые могут повредить изделие.</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="goods__tabs_condition_tab">
+                            <div class="goods__tabs_arrow hidden"></div>
+                            <p>Условие</p>
+                        </li>
+                        <li class="goods__tabs_condition hidden"></li>
+                        <li class="goods__tabs_list_tab">
+                            <div class="goods__tabs_arrow hidden"></div>
+                            <p>Список изделий в наборе</p>
+                        </li>
+                        <li class="goods__tabs_list hidden">
+                            <ul>Список изделий в наборе:
+                                <li>
+                                    <span>«Браво-Дилайт» (430 мл) (Артикул: 11130343)</span>
+                                </li>
+                                <li>
+                                    <span>«Браво-Дилайт» (430 мл) (Артикул: 11130343)</span>
+                                </li>
+                                <li>
+                                    <span>«Браво-Дилайт» (430 мл) (Артикул: 11130343)</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="goods__views_wrapper-slider">Вы недавно просмотривали
+                    <div class="goods__views_wrapper"><svg class="icon icon__arrow icon__arrow_slider icon__arrow_left icon__goods_left"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg>
+                        <div class="goods__views">
+                            <a class="goods__view" href="goods.html">
+                                <img class="goods__view_img" src="images/leaders_of_sells_1.png" alt="">
+                                <p class="goods__view_price">1 920 р.</p>
+                                <p class="goods__view_text">Емкость "МикроКук" (2,25 л) круглая с дополнительной крышкой</p>
+                            </a>
+                            <a class="goods__view" href="goods.html">
+                                <img class="goods__view_img" src="images/leaders_of_sells_2.png" alt="">
+                                <p class="goods__view_price">1 920 р.</p>
+                                <p class="goods__view_text">Емкость "МикроКук" (2,25 л) круглая с дополнительной крышкой</p>
+                            </a>
+                            <a class="goods__view" href="goods.html">
+                                <img class="goods__view_img" src="images/leaders_of_sells_3.png" alt="">
+                                <p class="goods__view_price">1 920 р.</p>
+                                <p class="goods__view_text">Емкость "МикроКук" (2,25 л) круглая с дополнительной крышкой</p>
+                            </a>
+                            <a class="goods__view" href="goods.html">
+                                <img class="goods__view_img" src="images/leaders_of_sells_4.png" alt="">
+                                <p class="goods__view_price">1 920 р.</p>
+                                <p class="goods__view_text">Емкость "МикроКук" (2,25 л) круглая с дополнительной крышкой</p>
+                            </a>
+                        </div><svg class="icon icon__arrow icon__arrow_slider icon__arrow_right icon__goods_right"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer view-port text-mid">
+            <a class="footer__logo" href="index.html">
+                <img class="footer__logo_img" src="images/logo.svg" alt="Логотип" />
+            </a>
+            <div class="footer__links">
+                <a class="footer__links_link" href="rules.html">Правила компании</a>
+                <a class="footer__links_link" href="delivery.html">Доставка и оплата</a>
+            </div>
+            <div class="footer__contacts">
+                <div class="footer__contacts_phone"><svg class="icon icon__phone icon__phone_footer"><use xlink:href="images/icons/sprite.svg#phone"></use></svg>
+                    <span>+7 (905) 599-82-28</span>
+                </div>
+                <div class="footer__contacts_mail"><svg class="icon icon__mail icon__mail_footer"><use xlink:href="images/icons/sprite.svg#mail"></use></svg>
+                    <span>570_akhpolova@tupperware.su</span>
+                </div>
+            </div>
+            <div class="footer__address"><svg class="icon icon__address icon__address_footer"><use xlink:href="images/icons/sprite.svg#address"></use></svg>
+                <span>Студия Tupperware</span>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,226 @@
+extends ../layouts/default
+include ../modules/icon/icon
+include ../modules/path/path
+include ../modules/programm_file/programm_file
+
+block content
+    +path({title: ['Главная страница', 'Программы','Карьерные возможности'], href: ['index.html']})
+    .pcareer.view-port
+        .pformula__aside
+            ul
+                li
+                    a(href='#') Программа «Менеджер»
+                li
+                    a(href='#') Программа «Директор»
+                li
+                    a(href='#') Программа «Формула успеха»
+                li
+                    a(href='#') Программа «Авангард»
+                li
+                    a(href='#') Программа «Живые деньги»
+                li
+                    a(href='#') Программа ШУНК
+                li
+                    a(href='#') Программа ШУМ
+                li
+                    a(href='#').aside-active Карьерные возможности
+                li
+                    a(href='#') Буклеты «online»
+        .pcareer__content
+            h1.standart-gap.big-title Карьерные возможности
+            .pcareer__content_wrapper_manager.standart-gap
+                .pdirector__block_img
+                    img(src='images/career.jpg')
+                .pcareer__manager-desctop.standart-gap
+                    h2.standart-gap Менеджер Tupperware
+                    h3 Условия получения статуса
+                    ul.pdirector__block_ul
+                        li
+                            p 7 Рекрутов и более
+                        li
+                            p Объём продаж на уровне не менее 4 Квалификационных заказов в месяц продвижения или предшествующий месяц
+            .pcareer__content_wrapper.standart-gap
+                .pcareer__manager-mob.standart-gap
+                    h2.pcareer__manager_h2.standart-gap Менеджер Tupperware
+                        +icon('arrow','pformula_down')
+                .pcareer__manager_hidden.standart-gap
+                    .pcareer__manager_hidden-desctop
+                        h3 Условия получения статуса
+                        ul.pdirector__block_ul
+                            li
+                                p 7 Рекрутов и более
+                            li
+                                p Объём продаж на уровне не менее 4 Квалификационных заказов в месяц продвижения или предшествующий месяц
+
+                    .pcareer__manager_icons
+                        h3 Преимущества статуса
+                        .pcareer__manager_icons-wrapper
+                            .pcareer__manager_status.standart-gap
+                                .pcareer__manager_status-number
+                                    p 1
+                                        span %
+                                .pcareer__manager_status-p
+                                    p 1% от оборота группы – при условии 2 Рекрутов в группе (включая личных)
+                            .pcareer__manager_status.standart-gap
+                                .pcareer__manager_status-number
+                                    p 3
+                                        span %
+                                .pcareer__manager_status-p
+                                    p 3% от оборота группы – при условии 6 Квалификационных заказов от Консультантов группы
+
+                            .pcareer__manager_status.standart-gap
+                                .pcareer__manager_status-number
+                                    +icon('diamond','pcareer')
+                                .pcareer__manager_status-p
+                                    p Возможность принимать участие в программе для лучших менеджеров Tupperware - «Авангард»
+                            .pcareer__manager_status.standart-gap
+                                .pcareer__manager_status-number
+                                    p %
+                                .pcareer__manager_status-p
+                                    p Процент от оборота группы продвинутого Вами Менеджера в течение 3 месяцев после его продвижения (включая месяц продвижения). Процент зависит от Вашей личной комиссии, заработанной в соответствующем месяце – 3% или 4%.
+                    .pcareer__manager_gray
+                        h3 Преимущества статуса
+                        .pcareer__manager_gray_wrapper
+                            p Получение базовой комиссии 3% за работу с группой (размещение 6 заказов квалификационных Консультантами группы без учета личных заказов Менеджера) каждый месяц.
+                            p В календарном году у Менеджера есть 2 месяца (следующие не подряд), когда он по тем или иным причинам не выходит на 3% базовой комиссии, но его статус сохраняется.
+                        .pcareer__manager_gray_wrapper
+                            p В случае, если Менеджер не выполняет данные условия, он теряет свой статус. Его группа будет расформирована. Для восстановления статуса Лидеру необходимо будет вновь привести 7 Новых Консультантов, выполнивших квалификацию («возраст» каждого из них должен быть не более 52 недель с момента рекрутирования), и иметь личный объем продаж на уровне 4 квалификационных заказов в месяц продвижения или месяц ему предшествующий.
+            .pcareer__content_wrapper_director.standart-gap
+                .pcareer__manager_flex
+                    .pcareer__manager-desctop.standart-gap
+                        h2.standart-gap Директор Tupperware
+                        h3 Условия получения статуса
+                        ul.pdirector__block_ul
+                            li
+                                p Не менее 3 продвижений Новых Менеджеров за весь период работы
+                            li
+                                p Не менее 3 активно работающих дочерних групп на постоянной основе
+                    .pdirector__block_img.pcareer__img-desctop.standart-gap
+                        img(src='images/career-2.jpg')
+                .pcareer__manager-mob
+                    h2.pcareer__manager_h2.standart-gap Директор Tupperware
+                        +icon('arrow','pformula_down')
+
+                .pcareer__manager_hidden.standart-gap
+                    .pcareer__manager_hidden-desctop
+                        h3 Условия получения статуса
+                        ul.pdirector__block_ul
+                            li
+                                p Не менее 3 продвижений Новых Менеджеров за весь период работы
+                            li
+                                p Не менее 3 активно работающих дочерних групп на постоянной основе
+                    .pdirector__block_img.pcareer__block_img.standart-gap
+                        img(src='images/career-2.jpg')
+                    .pcareer__manager_icons
+                        h3 Преимущества статуса
+                        .pcareer__manager_icons-wrapper
+                            .pcareer__manager_status.standart-gap
+                                .pcareer__manager_status-number
+                                    p 3
+                                        span %
+                                .pcareer__manager_status-p
+                                    p 3% от оборота каждой дочерней группы, вышедшей на уровень продаж 12 Квалификационных заказов и выше, при условии получения 4% комиссии Менеджера в своей личной группе
+                            .pcareer__manager_status.standart-gap
+                                .pcareer__manager_status-number
+                                    p ₽
+                                .pcareer__manager_status-p
+                                    p Возможность принимать участие в программе «Живые деньги»
+                .pcareer__ladder.standart-gap
+                    .pcareer__ladder_mob
+                        img(src='images/career_ladder_mob.png')
+                    .pcareer__ladder_desctop
+                        img(src='images/career-ladder.jpg')
+                .pcareer__content_wrapper.standart-gap
+                    .pcareer__manager-desctop
+                        h2.standart-gap Схема расчета заработка
+                    .pcareer__manager-mob
+                        h2.pcareer__manager_h2.standart-gap Схема расчета заработка
+                            +icon('arrow','pformula_down')
+                    .pcareer__manager_hidden
+                        .pcareer__list.standart-gap
+                            .pcareer__list_block
+                                p Выплаты
+                                p Консультант
+                                p Новый менеджер
+                                p Менеджер
+                                p Директор
+                            .pcareer__list_box
+                                .pcareer__list_box_item
+                                    p Комиссия Консультанта - 25%
+                                        sup 1
+                                    p 24 000р.
+                                    p 24 000р.
+                                    p 24 000р.
+                                    p 24 000р.
+                                .pcareer__list_box_item
+                                    p Комиссия Менеджера - 4%
+                                        sup 2
+                                    p 12 800р.
+                                    p 12 800р.
+                                    p 12 800р.
+                                    p 12 800р.
+                                .pcareer__list_box_item
+                                    p Комиссия Директора - 3%
+                                        sup 3
+                                    p
+                                    p
+                                    p
+                                    p 19 200р.
+                                .pcareer__list_box_item
+                                    p Стоимость подарков за уровни продаж
+                                        sup 4
+                                    p 31 116р.
+                                    p 83 454р.
+                                    p 83 454р.
+                                    p 111 643р.
+                                .pcareer__list_box_item
+                                    p Стоимость подарков за рекрутирование
+                                    p 3 499р.
+                                    p 3 499р.
+                                    p 3 499р.
+                                    p 3 499р.
+                                .pcareer__list_box_item
+                                    p Выплаты программы "Авангард" (помимо комиссии)
+                                        sup 5
+                                    p
+                                    p 10 000 - 25 000р.
+                                    p 10 000 - 25 000р.
+                                    p 10 000 - 25 000р.
+                                .pcareer__list_box_item
+                                    p Бонус при личном продвижении
+                                    p
+                                    p 5 000р.
+                                    p
+                                    p 20 000р.
+                                .pcareer__list_box_item
+                                    p Бонус по Формуле Успеха 1 - 2 - 1/2
+                                    p
+                                    p 5 000р.
+                                    p 5 000р.
+                                    p 5 000р.
+                                .pcareer__list_box_item
+                                    p Бонус Директору за продвижение 4-го и последующих Новых Менеджеров
+                                    p
+                                    p
+                                    p
+                                    p 10 000р.
+                                .pcareer__list_box_item
+                                    p Бонус Директору при работе Дочки-Менеджера по Формуле Успеха
+                                    p
+                                    p
+                                    p
+                                    p 5 000 - 35 000р.
+                                .pcareer__list_box_item
+                                    p Итого:
+                                    p 58 615р.
+                                    p 143 753 - 158 753р.
+                                    p 138 753 - 153 753р.
+                                    p 221 142 - 266 142р.
+                        .pcareer__fotnote
+                            p #[sup 1] При условии достижения продаж на уровне 12 Квалифицированных заказов в период с 14 по 18 неделю.
+                            p #[sup 2] При условии выполнения цели группы и начисления комиссии менеджера
+                            p #[sup 3] При условии, что 2 дочерние группы достигли уровня продаж 40 Квалифицированных заказов в группе.
+                            p #[sup 4] При условии получения всех подарков
+                            p #[sup 5] Выплаты действующим членам клуба по программе “Авангард” начинаются при условии достижения 30 Квалифицированных заказов в группе и выше
+            +programm_file(programms.career)
+

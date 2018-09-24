@@ -1,0 +1,39 @@
+extends ../layouts/default
+include ../modules/icon/icon
+include ../modules/orders_list/orders_list
+include ../modules/catalog/catalog
+include ../modules/path/path
+
+block content
+    +path({title: ['Главная страница', 'Личный кабинет', 'Заказы', 'Сводная таблица'], href: ['index.html']})
+    .orders.view-port
+        .orders__list
+            h1.big-title.standart-gap Заказы группы. Сводная таблица
+            .orders__table
+                .orders__table_caption
+                    .orders__caption_item Дата
+                    .orders__caption_item Номер на сайте (в 1с)
+                    .orders__caption_item Статус
+                    .orders__caption_item Консультант
+                    .orders__caption_item Сумма
+                    .orders__caption_item Доставка
+                +order(order.line)
+            .orders__more
+                span Загрузить еще
+            +button-up()
+            +scroll()
+        .orders__aside
+            .orders__aside_nav
+                h2 Заказы
+                ul
+                    li
+                        a(href='active_order.html') Активные заказы
+                    li
+                        a(href='canceled_order.html') Отмененные заказы
+                    li
+                        a(href='done_order.html') Выполненные заказы
+            .orders__aside_current
+                h2 Заказы группы
+                ul
+                    li
+                        a.aside-active(href='orders_list.html') Сводная таблица

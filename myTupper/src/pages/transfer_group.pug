@@ -1,0 +1,178 @@
+extends ../layouts/default
+include ../modules/icon/icon
+include ../modules/add_consult/add_consult
+include ../modules/path/path
+
+block content
+    +path({title: ['Главная страница', 'Личный кабинет', 'Дополнительно', 'Перевод в другую группу'], href: ['index.html']})
+    .addcons.view-port
+        .addcons__aside
+            ul
+                li
+                    a(href='add_consult.html') Добавить консультанта
+                li
+                    a(href='change_consult.html') Изменить консультанта
+                li
+                    a(href='calendar.html') Календарь
+                li
+                    a(href='#') Условия сотрудничества
+                li
+                    a.aside-active(href='transfer_group.html') Перевод в другую группу
+        .addcons__content
+
+            h1.big-title.standart-gap.addcons__title Перевод в другую группу
+
+            .changecons__banner.standart-gap
+                p Из группы
+
+            .transfer__box
+                .transfer__form_wrapper
+                    .transfer__manager
+                        p Менеджеры
+                        .transfer__consult_search
+                            +icon('search','add-consult')
+                    .transfer__form
+                        .transfer__form_line
+                            .transfer__line_empty
+                                +icon('apply-green','change')
+                            .transfer__line_txt
+                                p (7778) Астатина Татьяна Вячеславовна
+                        .transfer__form_line
+                            .transfer__line_empty
+                                +icon('apply-green','change')
+                            .transfer__line_txt
+                                p (45678) Болдина Светлана Анатольевна
+                .transfer__form_wrapper
+                    .transfer__manager
+                        p Консультанты
+                        .transfer__consult_search
+                            +icon('search','add-consult')
+                    .transfer__form
+                        .transfer__form_line
+                            .transfer__line_empty
+                                +icon('apply-green','change')
+                            .transfer__line_txt
+                                p (7778) Астатина Татьяна Вячеславовна
+                        .transfer__form_line
+                            .transfer__line_empty
+                                +icon('apply-green','change')
+                            .transfer__line_txt
+                                p (45678) Болдина Светлана Анатольевна
+                        .transfer__form_line
+                            .transfer__line_empty
+                                +icon('apply-green','change')
+                            .transfer__line_txt
+                                p (7778) Астатина Татьяна Вячеславовна
+                        .transfer__form_line
+                            .transfer__line_empty
+                                +icon('apply-green','change')
+                            .transfer__line_txt
+                                p (45678) Болдина Светлана Анатольевна
+            .transfer__arrows.standart-gap
+                .transfer__arrows_item
+                    +icon('double-arrow','transfer')
+            .changecons__banner.standart-gap
+                p В группу
+            .transfer__box
+                .transfer__form_wrapper
+                    .transfer__manager
+                        p Менеджеры
+                        .transfer__consult_search
+                            +icon('search','add-consult')
+                    .transfer__form.mCustomScrollbar(data-mcs-theme="dark")
+                        .transfer__form_line
+                            .transfer__line_empty
+                                +icon('apply-green','change')
+                            .transfer__line_txt
+                                p (7778) Астатина Татьяна Вячеславовна
+                        .transfer__form_line
+                            .transfer__line_empty
+                                +icon('apply-green','change')
+                            .transfer__line_txt
+                                p (45678) Болдина Светлана Анатольевна
+                .transfer__form_wrapper
+                    .transfer__manager
+                        p Консультанты
+                        .transfer__consult_search
+                            +icon('search','add-consult')
+                    .transfer__form
+                        .transfer__form_line
+                            .transfer__line_empty
+                                +icon('apply-green','change')
+                            .transfer__line_txt
+                                p (7778) Астатина Татьяна Вячеславовна
+                        .transfer__form_line
+                            .transfer__line_empty
+                                +icon('apply-green','change')
+                            .transfer__line_txt
+                                p (45678) Болдина Светлана Анатольевна
+                        .transfer__form_line
+                            .transfer__line_empty
+                                +icon('apply-green','change')
+                            .transfer__line_txt
+                                p (7778) Астатина Татьяна Вячеславовна
+                        .transfer__form_line
+                            .transfer__line_empty
+                                +icon('apply-green','change')
+                            .transfer__line_txt
+                                p (45678) Болдина Светлана Анатольевна
+            .transfer__button
+                p Перевести
+
+        .addcons__modal
+            .addcons__modal_wrapper
+                .addcons__modal_header.standart-gap
+                    .addcons__modal_select
+                        p Показать записей:
+                        .addcons__modal_select_span
+                            span 5
+                            +icon('arrow','down')
+                    .addcons__modal_search
+                        input( type ='text', name ='search')
+                        +icon('search','add-search')
+                    .addcons__modal_close
+                        span
+                .addcons__modal_blocks
+                    +search_block(blocks)
+                .addcons__modal_lines
+                    .addcons__lines_header
+                        .addcons__lines_header_check
+                            input(type='checkbox')
+                        .addcons__lines_header_item
+                            p Код
+                            +icon('arrow-up' , 'addcons-up')
+                        .addcons__lines_header_item
+                            p Фамилия
+                            +icon('arrow-up' , 'addcons-up')
+                        .addcons__lines_header_item
+                            p Имя
+                            +icon('arrow-up' , 'addcons-up')
+                        .addcons__lines_header_item
+                            p Отчество
+                            +icon('arrow-up' , 'addcons-up')
+                        .addcons__lines_header_item
+                            p Телефон
+                            +icon('arrow-up' , 'addcons-up')
+                        .addcons__lines_header_item
+                            p Email
+                            +icon('arrow-up' , 'addcons-up')
+                        .addcons__lines_header_item
+                            p Руководитель
+                            +icon('arrow-up' , 'addcons-up')
+                    +search_list(lines)
+                .addcons__modal_footer
+                    .addcons__scroll
+                        p.addcons__scroll_p.standart-gap Записи с 1 по 5 из 176 записей
+                        .addcons__scroll_pages.standart-gap
+                            +icon('arrow','products-scroll icon__arrow_left')
+                            ul
+                                li 1
+                                li 2
+                                li 3
+                                li 4
+                                li 5
+                                li ...
+                                li 20
+                            +icon('arrow','products-scroll icon__arrow_right')
+                    .addcons__scroll_button
+                        a(href='') Выбрать

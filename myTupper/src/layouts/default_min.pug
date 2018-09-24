@@ -1,0 +1,11 @@
+include ../modules/head/head
+
+doctype html
+html(lang='ru')
+    head
+        +head({title: 'Tupperware'})
+    body
+        header.header.view-port.nonborder
+            a.checkin__logo(href='index.html')
+                img.checkin__logo_img(src='images/logo.svg', alt='Логотип')
+        block content

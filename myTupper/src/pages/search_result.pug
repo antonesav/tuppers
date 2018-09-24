@@ -1,0 +1,54 @@
+extends ../layouts/default
+include ../modules/icon/icon
+include ../modules/search_result/search_result
+include ../modules/catalog/catalog
+include ../modules/path/path
+
+block content
+    +path({title: ['Главная страница', 'Результаты поиска для: "эко-бутылка"'], href: ['index.html']})
+    .results.view-port
+        +add-basket()
+        h1.big-title.standart-gap Показаны результаты поиска для "эко-бутылка"
+        .results__settings.standart-gap
+            .results__settings_result
+                .results__settings_result_txt 45 товаров найдено
+                .results__settings_result_sorting Сортировка:
+                    ul
+                        li По названию
+                        li По коду продаж
+                        li По цене
+                    +icon('arrow','products_result-bottom icon__arrow_down')
+                .products__settings_view_arrows
+                            .products__settings_view_arrows_arrow-bottom
+                                +icon('arrow','products-bottom icon__arrow_down')
+                            .products__settings_view_arrows_arrow-top
+                                +icon('arrow','products-top icon__arrow_up')
+        .products__main
+
+            +search_results(search.results)
+            
+        .active__up
+                +icon('arrow','active-up icon__arrow_up')
+        .results__main_scroll
+            .results__main_scroll_pages
+                +icon('arrow','products-scroll icon__arrow_left')
+                ul
+                    li 1
+                    li 2
+                    li 3
+                    li 4
+                    li 5
+                    li ...
+                    li 20
+                +icon('arrow','products-scroll icon__arrow_right')
+            .results__main_scroll_txt Показывать на странице
+                span 12
+                +icon('arrow','products-scroll icon__arrow_down')
+
+
+
+
+
+
+
+

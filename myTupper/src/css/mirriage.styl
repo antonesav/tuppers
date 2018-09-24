@@ -1,0 +1,78 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+
+.mirriage
+	line-height 1.3
+	font-family 'TupperPRO', sans-serif !important
+	&__background
+		bg('../images/mirriage.jpg')
+		background-size contain
+		height 170px
+	&__comment
+		resize none
+		overflow auto !important
+		min-height 100px
+		&_block
+			padding-top 9px
+			line-height 16px
+	&__file
+		top 10px
+		right 5px
+		width 20px
+		height 20px
+		cursor pointer
+		position absolute
+		background-color $white-color
+		&:hover .icon__file_mirriage
+			color darken($pink-color, 15%)
+		&_hide
+			display none
+	&__button
+		flex(row,center,center)
+		& a
+			font-size 12px
+			font-weight 500
+			link($white-color)
+			padding 10px 30px
+			text-transform uppercase
+			background-color $main-color
+			&:hover
+				background-color darken($main-color,15%)
+
+@media screen and (min-width $view-port-medium)
+	.mirriage
+		&__form
+			width 60%
+			margin 0 auto 30px auto
+
+@media screen and (min-width $view-port-tablet)
+	.mirriage
+		&__box
+			flex(row,space-between,center)
+		&__image
+			width 35%
+			flex(row,center,center)
+		&__background
+			width 100%
+		&__form
+			width 60%
+			margin 0 auto 30px auto
+			&_wrapper
+				width 60%
+		&__button
+			flex(row,flex-end)
+
+@media screen and (min-width $view-port-large)
+	.mirriage
+		&__form
+			margin 0
+			margin-bottom 30px
+			flex(row,space-between,center)
+			flex-wrap wrap
+			width 100%
+		&__item
+			width 48% !important
+		&__comment
+			min-height 55px
+			&_block
+				width 100% !important

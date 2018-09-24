@@ -1,0 +1,47 @@
+@require '_params.styl'
+
+flex($fd = row, $jc = flex-start, $ai = stretch)
+	display flex
+	flex-direction $fd
+	justify-content $jc
+	align-items $ai
+	
+bg($url, $repeat = no-repeat)
+	background-image url($url)
+	background-repeat $repeat
+	background-size cover
+	background-position center
+	
+box($elements = false, $margin = false, $last_element = false, $alone = false)
+	if ($elements != false)
+		$width = (100% - ($margin * ($elements - 1))) / $elements
+		width $width
+	if ($last_element != false)
+		&:nth-child({$last_element}{'n'})
+			margin-right $margin
+	if ($margin != false)
+		margin-right $margin
+		&:nth-child({$elements}{'n'})
+			margin-right 0
+	if ($alone != false)
+		margin-right auto
+		margin-left auto
+		&:nth-child(n)
+			margin-right auto
+			
+link($color)
+	color $color
+	text-decoration none
+	&:link, &:visited, &:active
+		color $color
+		
+underline($height, $bot, $bg, $op = 0)
+	position absolute
+	background-color $bg
+	bottom $bot
+	left 0
+	right 0
+	height $height
+	display inline-block
+	opacity $op
+	transition .3s all

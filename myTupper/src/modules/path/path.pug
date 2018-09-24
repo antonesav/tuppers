@@ -1,0 +1,12 @@
+include ../icon/icon
+
+mixin path(data)
+	.path.view-port
+		.path__content
+			each item, index in data.title
+				if (index === data.title.length - 1)
+					.path__link.path__link_active= item
+				else
+					a.path__link(href= data.href[index])= item
+					.path__separator
+						+icon('small-arrow', 'path', ['fill', 'none'])

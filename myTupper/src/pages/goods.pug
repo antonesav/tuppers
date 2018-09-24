@@ -1,0 +1,177 @@
+extends ../layouts/default
+include ../modules/icon/icon
+include ../modules/goods/goods
+include ../modules/catalog/catalog
+include ../modules/path/path
+
+block content
+    +path({title: ['Главная страница', 'Изделия', 'Умное хранение и транспортировка', 'Эко-бутылка "Фанат воды"'], href: ['index.html']})
+    +add-basket
+    .goods.view-port
+        .products__aside
+            .products__aside_nav
+                ul.products__aside_nav_list
+                    li
+                        a(href='#').products__aside_nav_list_item Все для выпечки
+                    li
+                        a(href='#').products__aside_nav_list_item Микроволновая печь
+                    li
+                        a(href='#').products__aside_nav_list_item Умные гаджеты
+                    li
+                        a(href='#').products__aside_nav_list_item Сервировка
+                    li
+                        a(href='#').products__aside_nav_list_item Всегда с собой
+                    li
+                        a(href='#').products__aside_nav_list_item.aside-active Умное хранение и транспортировка
+                    li
+                        a(href='#').products__aside_nav_list_item Рецептурные буклеты
+        .goods_content
+            .goods__title
+                +icon('arrow', 'back icon__arrow_left').goods__back
+                h1 Набор: Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная
+            .goods__box
+                .goods__wrapper
+                    .goods__slider_box
+                        +icon('arrow', 'slider icon__arrow_left icon__goods_slider_left')
+                        .goods__slider
+
+                            .goods__slide.goods__slide-item
+                                img.goods__slide_img(src='images/catalog/products_catalog_1.png', alt='')
+
+                            .goods__slide.goods__slide-item
+                                img.goods__slide_img(src='images/catalog/products_catalog_2.png', alt='')
+
+                            .goods__slide.goods__slide-item
+                                img.goods__slide_img(src='images/catalog/products_catalog_3.png', alt='')
+
+                            .goods__slide.goods__slide-item
+                                img.goods__slide_img(src='images/catalog/products_catalog_4.png', alt='')
+
+                            .goods__slide.goods__slide-item
+                                img.goods__slide_img(src='images/catalog/products_catalog_5.png', alt='')
+
+                            .goods__slide.goods__slide-item
+                                img.goods__slide_img(src='images/catalog/products_catalog_6.png', alt='')
+
+                        +icon('arrow', 'slider icon__arrow_right icon__goods_slider_right')
+                    .goods__slider-nav
+
+                        img.goods__slider-nav_img(src='images/catalog/products_catalog_1.png', alt='')
+
+                        img.goods__slider-nav_img(src='images/catalog/products_catalog_2.png', alt='')
+
+                        img.goods__slider-nav_img(src='images/catalog/products_catalog_3.png', alt='')
+
+                        img.goods__slider-nav_img(src='images/catalog/products_catalog_4.png', alt='')
+
+                        img.goods__slider-nav_img(src='images/catalog/products_catalog_5.png', alt='')
+
+                        img.goods__slider-nav_img(src='images/catalog/products_catalog_6.png', alt='')
+
+                .goods__description
+                            .goods__description_selling
+                                .goods__description_selling-txt
+                                    p Код продаж
+                                    p Неделя начала
+                                    p Неделя окончания
+                                .goods__description_selling-numbers
+                                    span СП2345
+                                    span 2018/06
+                                    span 2018/18
+                            .goods__description_wrapper
+                                .goods__description_price
+                                    .goods__description_price-your
+                                        p Ваша цена
+                                        span 5 999 р.
+                                    .goods__description_price-our
+                                        p Цена
+                                        span 6 749 р.
+                                .goods__description_count
+                                    .goods__description_count_minus -
+                                    .goods__description_count_number 1
+                                    .goods__description_count_plus +
+                                .goods__description_button В корзину
+                            .goods__description_wrapper-hidden
+                                .goods__description_price-your
+                                    p Ваша цена
+                                    span 1 р.
+                                .goods__description_contains Доступно при выполнении условий программы
+                +button-up()
+            .goods__tabs
+                ul
+                    li.goods__tabs_description_tab
+                        .goods__tabs_arrow
+                        p Описание
+                    li.goods__tabs_description
+                        h2 Набор: Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная
+                        h3 Краткая информация:
+                        p Готовьте овощи, пасту или рис на пару за считаные минуты в компактном изделии «МикроМиллениал».
+                        ul Преимущества:
+                            li
+                                span Инновационное изделие, которое позволяет удовлетворить вкусы и пожелания сразу нескольких членов семьи, используя всего 1 изделие.
+                            li
+                                span Изделие идеально для городских жителей, для небольших семей, состоящих из 1-2 человек, для приготовления небольших порций блюд.
+                            li
+                                span Это многофункциональное изделие - «три-в-одном» экономит не только денежные средства, но и свободное пространство в кухонном шкафу и микроволновой печи.
+                        h3 Комплектация
+                        p Изделие состоит из основания, нижнего и верхнего лотков, прикрывающей крышки, крышки вставки и верхней крышки.
+                        ul Рекомендации:
+                            li
+                                span «Браво-Дилайт» можно использовать в микроволновой печи при температуре от 0 °C до 120 °C (350- 400 Вт).
+                            li
+                                span Добавьте молока или воды при взбивании, чтобы блюдо получилось однородной консистенции.
+                            li
+                                span Используйте не более 4 яиц и не менее 2.
+                            li
+                                span Если вы добавляете в блюдо овощи, нарежьте их мелкими кубиками.
+                        ul Техническая информация
+                            li
+                                span Для использования микроволновой печи.
+                            li
+                                span Можно мыть в посудомоечной машине.
+                            li
+                                span Нельзя использовать на открытом огне, в духовом шкафу, в морозильной камере, в режиме "Гриль".
+                            li
+                                span Для хранения в холодильнике.
+                            li
+                                span Нельзя использовать металлические кухонные принадлежности, которые могут повредить изделие.
+                
+                
+                    li.goods__tabs_condition_tab
+                        .goods__tabs_arrow.hidden
+                        p Условие
+                    li.goods__tabs_condition.hidden
+                
+                
+                    li.goods__tabs_list_tab
+                        .goods__tabs_arrow.hidden
+                        p Список изделий в наборе
+                    li.goods__tabs_list.hidden
+                        ul Список изделий в наборе:
+                            li
+                                span «Браво-Дилайт» (430 мл) (Артикул: 11130343)
+                            li
+                                span «Браво-Дилайт» (430 мл) (Артикул: 11130343)
+                            li
+                                span «Браво-Дилайт» (430 мл) (Артикул: 11130343)
+            .goods__views_wrapper-slider Вы недавно просмотривали
+                .goods__views_wrapper
+                    +icon('arrow', 'slider icon__arrow_left icon__goods_left')
+                    .goods__views
+                        a(href='goods.html').goods__view
+                            img.goods__view_img(src='images/leaders_of_sells_1.png', alt='')
+                            p.goods__view_price 1 920 р.
+                            p.goods__view_text Емкость "МикроКук" (2,25 л) круглая с дополнительной крышкой
+                        a(href='goods.html').goods__view
+                            img.goods__view_img(src='images/leaders_of_sells_2.png', alt='')
+                            p.goods__view_price 1 920 р.
+                            p.goods__view_text Емкость "МикроКук" (2,25 л) круглая с дополнительной крышкой
+                        a(href='goods.html').goods__view
+                            img.goods__view_img(src='images/leaders_of_sells_3.png', alt='')
+                            p.goods__view_price 1 920 р.
+                            p.goods__view_text Емкость "МикроКук" (2,25 л) круглая с дополнительной крышкой
+                        a(href='goods.html').goods__view
+                            img.goods__view_img(src='images/leaders_of_sells_4.png', alt='')
+                            p.goods__view_price 1 920 р.
+                            p.goods__view_text Емкость "МикроКук" (2,25 л) круглая с дополнительной крышкой
+                    +icon('arrow', 'slider icon__arrow_right icon__goods_right')

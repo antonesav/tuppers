@@ -1,0 +1,70 @@
+extends ../layouts/default
+include ../modules/icon/icon
+include ../modules/delivery/delivery
+include ../modules/path/path
+include ../modules/programm_file/programm_file
+
+block content
+    +path({title: ['Главная страница', 'Программы','Программа "Формула успеха"'], href: ['index.html']})
+    .pformula.view-port
+        .pformula__aside
+            ul
+                li
+                    a(href='#') Программа «Менеджер»
+                li
+                    a(href='#') Программа «Директор»
+                li
+                    a(href='#').aside-active Программа «Формула успеха»
+                li
+                    a(href='#') Программа «Авангард»
+                li
+                    a(href='#') Программа «Живые деньги»
+                li
+                    a(href='#') Программа ШУНК
+                li
+                    a(href='#') Программа ШУМ
+                li
+                    a(href='#') Карьерные возможности
+                li
+                    a(href='#') Буклеты «online»
+
+        .pformula__content
+            h1.big-title.standart-gap Формула Успеха (1-2-1/2) программа для Менеджеров и Директоров
+            .pformula__wrapper.standart-gap
+                .pformula__text
+                    .pformula__text_item.standart-gap
+                        img(src='images/plus-one.png')
+                        p 1 и более личных квалификационных заказов Менеджера на каждой неделе отчетного месяца
+                    .pformula__text_item.standart-gap
+                        img(src='images/plus-two.png')
+                        p 2 и более Консультантов в группе, разместивших по квалификационному заказу в рамках одной недели (4 или 5 в месяц);
+                .pformula__image
+                    img(src='images/pformula.jpg')
+            .pformula__wrapper.standart-gap
+                .pformula__text_item.standart-gap.pformula__text
+                    img(src='images/half.png')
+                    p 2 и более Новых Консультантов, разместивших в отчетном месяце суммарно по квалификационному заказу или более:
+                .pformula__text_item.standart-gap.pformula__text
+                    ul
+                        li
+                            span Все заказы Новых Консультантов, пришедших в отчетном месяце, не учитываются для расчета второй части формулы в отчетном месяце независимо от их размера;
+                        li
+                            span Все заказы Консультанта, размещенные в следующем месяце после месяца его регистрации, учитываются во второй части формулы, независимо от объема заказов, сделанных в месяц регистрации.
+            .pformula__grey.standart-gap
+                h3 Рассмотрим пример
+                p Если Новый Консультант пришел в течение месяца и не разместил квалификационный заказ (т.е. не выполнил условие третьей части формулы) – его заказы в следующем месяце будут засчитаны в выполнение условий второй части формулы и не будут учитываться в выполнение третьей ее части.
+            .pformula__wrapper-reverse.standart-gap
+                .pformula__hidden_h3.standart-gap
+                    h3 Бонусы и сроки
+                    +icon('arrow','pformula_down')
+                .pformula__hidden_block
+                    .pformula__reverse_txt.standart-gap.pformula__text
+                        h3.pformula__reverse_h3 Бонусы и сроки
+                        p Бонус за выполнение Формулы Успеха (в течение месяца): 5 000 рублей. Программа проводится каждый месяц.В данном случае в тексте программы под месяцами и неделям подразумеваются месяцы и недели внутреннего календаря Tupperware, а не календарные.
+                    .pformula__reverse_number.pformula__text
+                        span 5000 руб.
+            +programm_file(programms.formula)
+
+
+
+

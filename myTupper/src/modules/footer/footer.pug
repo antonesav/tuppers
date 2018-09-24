@@ -1,0 +1,19 @@
+include ../icon/icon
+
+mixin footer()
+	footer.footer.view-port.text-mid
+		a.footer__logo(href='index.html')
+			img.footer__logo_img(src='images/logo.svg', alt='Логотип')
+		.footer__links
+			a.footer__links_link(href='rules.html') Правила компании
+			a.footer__links_link(href='delivery.html') Доставка и оплата
+		.footer__contacts
+			.footer__contacts_phone
+				+icon('phone', 'footer')
+				span +7 (905) 599-82-28
+			.footer__contacts_mail
+				+icon('mail', 'footer')
+				span 570_akhpolova@tupperware.su
+		.footer__address
+			+icon('address', 'footer')
+			span Студия Tupperware

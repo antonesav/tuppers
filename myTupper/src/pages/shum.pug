@@ -1,0 +1,81 @@
+extends ../layouts/default
+include ../modules/icon/icon
+include ../modules/shunk/shunk
+include ../modules/path/path
+
+block content
+    +path({title: ['Главная страница', 'Личный кабинет', 'Обороты', 'ШУМ'], href: ['index.html']})
+    .avangard.view-port
+        .avangard__aside
+            ul
+                li
+                    a(href='avangard.html') Авангард
+                li
+                    a(href='shunk.html') ШУНК
+                li
+                    a.aside-active(href='shum.html') ШУМ
+                li
+                    a(href='total_indicators.html') Общие показатели
+        .avangard__content
+            h1.big-title ШУМ
+            .shum__index-bg.avangard__index
+                .avangard__index_line
+                    .avangard__index_block
+                        .avangard__index_title
+                            p Квалификационные заказы
+                        .avangard__index_marks
+                            span.avangard__index_green 31 к/з
+                            p.avangard__index_large 249 000 / 8 000 = 31.125
+                    .avangard__index_block
+                        .avangard__index_title
+                            p Оборот за программу
+                        .avangard__index_marks
+                            p.avangard__index_green 249 000 руб.
+                    .avangard__index_block
+                        .avangard__index_title
+                            p Уровень
+                        .avangard__index_marks
+                            p.avangard__index_green Шаг 3
+                    .avangard__index_block
+                        .avangard__index_title
+                            p До следующего уровня в этом месяце не хватает:
+                        .avangard__index_marks
+                            span.avangard__index_grey + 71 000 руб.
+                    .avangard__index_block
+                        .avangard__index_title
+                            p Количество рекрутов
+                        .avangard__index_marks
+                            p.avangard__index_green 4 чел.
+                    .avangard__index_block
+                        .avangard__index_title
+                            p До следующего уровня в этом месяце не хватает:
+                        .avangard__index_marks
+                            span.avangard__index_grey + 2 чел.
+            .shunk__progress-wrapper
+                .shunk__progress
+                    .shunk__progress_bar
+                        .shunk__progress_bar-fill(style='width:60%')
+                        .shunk__progress_circle
+                        .shunk__progress_circle
+                        .shunk__progress_circle
+                        .shunk__progress_circle
+                        .shunk__progress_circle
+                        .shunk__progress_text Шаг 1
+                        .shunk__progress_text Шаг 2
+                        .shunk__progress_text Шаг 3
+                        .shunk__progress_text Шаг 4
+                        .shunk__progress_text Шаг 5
+            .shunk__progress_attention
+                +icon('attention','shunk')
+                span Для получения подарков программы, пожалуйста, оформите заказ
+            .shunk__progress_items
+                .shunk__progress_block-wrapper
+                    .shunk__progress_block
+                        p Потенциально доступные
+                        +icon('arrow','shunk_up')
+                .shunk__progress_scroll
+                    +shunk_items(items)
+            .avangard__back
+                a(href='#') К описанию программы
+                    +icon('arrow','right_avangard')
+

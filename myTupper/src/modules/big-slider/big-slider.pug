@@ -1,0 +1,10 @@
+mixin big-slider(data)
+	.big-slider
+		each item, index in data
+			.big-slider__slide(class='big-slider__slide--' + (index + 1))
+				.big-slider__content.view-port
+					.big-slider__title= item.title
+					a.big-slider__link(href='#')
+						span= item.link
+						.big-slider__underline
+					p.big-slider__text.text-mid-plus= item.text

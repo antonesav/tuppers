@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="format-detection" content="address=no" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <!--link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic", rel="stylesheet")-->
+        <link rel="stylesheet" href="libs/slick/slick.css" />
+        <link rel="stylesheet" href="libs/slick/slick-theme.css" />
+        <link rel="stylesheet" href="css/style.css" /><script src="libs/jquery.min.js" defer="defer"></script><script src="libs/slick/slick.min.js" defer="defer"></script><script src="js/script.js" defer="defer"></script>
+        <!--script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")-->
+        <title>Tupperware</title>
+    </head>
+    <body>
+        <header class="header view-port">
+            <a class="header__logo" href="index.html">
+                <img class="header__logo_img" src="images/logo.svg" alt="Логотип" />
+            </a>
+            <div class="header__account"><svg class="icon icon__account icon__account_header"><use xlink:href="images/icons/sprite.svg#account"></use></svg>
+                <div class="header__account_text text-sm">Астахова Мария</div><svg class="icon icon__logout"><use xlink:href="images/icons/sprite.svg#logout"></use></svg></div>
+            <div class="header__menu"><svg class="icon icon__menu"><use xlink:href="images/icons/sprite.svg#menu"></use></svg></div>
+            <nav class="nav">
+                <div class="nav__home">
+                    <a class="nav__home_link" href="index.html"><svg class="icon icon__home"><use xlink:href="images/icons/sprite.svg#home"></use></svg>
+                        <div class="nav__underline"></div>
+                    </a>
+                    <div class="nav__close"><svg class="icon icon__close"><use xlink:href="images/icons/sprite.svg#close"></use></svg></div>
+                </div>
+                <ul class="nav__menu">
+                    <li class="nav__menu_item" data-item="menu" data-number="0">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Действующие предложения
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--1" data-number="0"></ul>
+                    </li>
+                    <li class="nav__menu_item" data-item="menu" data-number="1">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Изделия
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--2" data-number="1"></ul>
+                    </li>
+                    <li class="nav__menu_item" data-item="menu" data-number="2">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Программы
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--3" data-number="2"></ul>
+                    </li>
+                    <li class="nav__menu_item" data-item="menu" data-number="3">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Личный кабинет
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--4" data-number="3">
+                            <li class="nav__submenu_item" data-item="submenu" data-number="0">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Профиль</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="0"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="1">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Заказы </div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="1"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="2">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Отчеты</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="2">
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Оборот группы</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Еженедельный отчет</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Заказы консультанта</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Список инфолистов</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Продажи изделий</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Отчет по Авангарду</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Контактные данные консультантов</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Обороты счетов консультантов</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="3">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Обороты</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="3"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="4">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Дополнительно</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="4"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="5">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Недовложение и брак</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="5"></ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <form class="header__search" action="" method="POST">
+                <input class="header__search_input text-mid" type="text" name="search" /><svg class="icon icon__search"><use xlink:href="images/icons/sprite.svg#search"></use></svg></form>
+            <div class="header__basket">
+                <div class="header__basket_block"><svg class="icon icon__basket"><use xlink:href="images/icons/sprite.svg#basket"></use></svg>
+                    <span class="header__basket_number">15</span>
+                </div>
+                <div class="header__basket_text">
+                    <div class="header__basket_text_wrapper">
+                        <span class="header__basket_text_span">Оборот</span>
+                        <span class="header__basket_text_span">4 567 руб.</span>
+                    </div>
+                    <div class="header__basket_text_wrapper">
+                        <span class="header__basket_text_span">Стоимость</span>
+                        <span class="header__basket_text_span">3 567 руб.</span>
+                    </div>
+                    <div class="header__basket_text_wrapper">
+                        <span class="header__basket_text_span">Неделя</span>
+                        <span class="header__basket_text_span">2018/11</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="path view-port">
+            <div class="path__content">
+                <a class="path__link" href="index.html">Главная страница</a>
+                <div class="path__separator"><svg class="icon icon__small-arrow icon__small-arrow_path"><use xlink:href="images/icons/sprite.svg#small-arrow"></use></svg></div>
+                <a class="path__link" href="basket_step1.html">Корзина. Шаг 1: Оформление заказа</a>
+                <div class="path__separator"><svg class="icon icon__small-arrow icon__small-arrow_path"><use xlink:href="images/icons/sprite.svg#small-arrow"></use></svg></div>
+                <div class="path__link path__link_active">Корзина. Шаг 2: Доставка</div>
+            </div>
+        </div>
+        <div class="basket view-port">
+            <h1 class="basket__title basket__title_delivery">Корзина. Шаг 2: Доставка</h1>
+            <div class="basket__delivery">
+                <div class="basket__delivery_item basket__delivery_item--1">
+                    <div class="basket__delivery_title">Служба доставки</div>
+                    <div class="basket__delivery_block basket__delivery_block_active">
+                        <div class="basket__delivery_block_wrapper">
+                            <p class="basket__delivery_block_title">Доставка в пункт самовывоза</p>
+                            <p class="basket__delivery_block_text">Вы можете забрать свой заказ в одном из пунктов самовывоза</p>
+                        </div>
+                        <div class="basket__delivery_block_check"><svg class="icon icon__check icon__check_basket-step-2"><use xlink:href="images/icons/sprite.svg#check"></use></svg></div>
+                    </div>
+                    <div class="basket__delivery_block">
+                        <div class="basket__delivery_block_wrapper">
+                            <p class="basket__delivery_block_title">Доставка курьером (300 руб.)</p>
+                            <p class="basket__delivery_block_text">Мы доставим заказ по указанному Вами адресу (сроки доставки 3-5 рабочих дней)</p>
+                        </div>
+                        <div class="basket__delivery_block_check basket__delivery_block_check_disabled"><svg class="icon icon__check icon__check_basket-step-2"><use xlink:href="images/icons/sprite.svg#check"></use></svg></div>
+                    </div>
+                </div>
+                <div class="basket__delivery_item basket__delivery_item--2">
+                    <div class="basket__delivery_title">Адрес доставки</div>
+                    <div class="basket__delivery_contacts">
+                        <div class="basket__delivery_contacts_metro-wrapper">
+                            <span class="basket__delivery_contacts_metro">м. Менделеевская Пункт выдачи Москва, Новослободская ул., д. 50/1, стр. 2</span>
+                            <span class="basket__delivery_contacts_metro_price">100 руб.</span>
+                        </div>
+                        <div class="basket__delivery_contacts_phone"><svg class="icon icon__phone icon__phone_basket-step-2"><use xlink:href="images/icons/sprite.svg#phone"></use></svg>
+                            <span class="basket__delivery_contacts_phone_text">+7 (495) 345-56-56</span>
+                        </div>
+                        <div class="basket__delivery_contacts_mail"><svg class="icon icon__mail icon__mail_basket-step-2"><use xlink:href="images/icons/sprite.svg#mail"></use></svg>
+                            <span class="basket__delivery_contacts_mail_text">info@tupperware.com</span>
+                        </div>
+                        <div class="basket__delivery_contacts_address"><svg class="icon icon__address icon__address_basket-step-2"><use xlink:href="images/icons/sprite.svg#address"></use></svg>
+                            <span class="basket__delivery_contacts_address_text">м. Менделеевская Пункт выдачи Москва, Новослободская ул., д. 50/1, стр. 2</span>
+                        </div>
+                        <div class="basket__delivery_contacts_time">
+                            <span class="basket__delivery_contacts_time_orange">Режим работы:</span>
+                            <span>Пн. 10:00-20:00; Вт. 10:00-20:00; Ср. 10:00-20:00; Чт. 10:00-20:00; Пт. 10:00-20:00; Сб. 10:00-20:00; Вс. 10:00-20:00</span>
+                        </div>
+                        <div class="basket__delivery_contacts_how">
+                            <span class="basket__delivery_contacts_time_orange">Как добраться:</span>
+                            <span>Из метро Менделеевская поворачиваете направо, идете прямо, никуда не сворачивая, пересекаете два светофора, ближайшая вывеска к двери магазин Ароматный Мир. Далее арка и металлическая дверь. На ней наклейка ОЗОН. Над дверью
+                                вывеска "настольные игры". Вход в магазин с улицы Новослободская</span>
+                        </div>
+                        <div class="basket__delivery_contacts_buttons-wrapper">
+                            <div class="basket__delivery_contacts_button">Свернуть</div>
+                            <div class="basket__delivery_contacts_button">
+                                <span class="basket__delivery_contacts_button_text">Назад к списку</span><svg class="icon icon__arrow icon__arrow_basket-back"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket__delivery_item basket__delivery_item--3">
+                    <div class="basket__delivery_block basket__delivery_block_title_only">
+                        <div class="basket__delivery_title">Оплата</div>
+                    </div>
+                    <div class="basket__delivery_block basket__delivery_block_active">
+                        <div class="basket__delivery_block_wrapper">
+                            <p class="basket__delivery_block_text_pay">Оплата наличными при получении заказа</p>
+                        </div>
+                        <div class="basket__delivery_block_check basket__delivery_block_check"><svg class="icon icon__check icon__check_basket-step-2"><use xlink:href="images/icons/sprite.svg#check"></use></svg></div>
+                    </div>
+                </div>
+                <div class="basket__container_delivery">
+                    <div class="basket__container_top">
+                        <div class="basket__box_delivery_good">Название</div>
+                        <div class="basket__box_delivery_code">Код продаж</div>
+                        <div class="basket__box_delivery_price">Цена</div>
+                        <div class="basket__box_delivery_count">Количество</div>
+                        <div class="basket__box_delivery_total">Сумма</div>
+                    </div>
+                    <div class="basket__box-wrapper">
+                        <div class="basket__box">
+                            <div class="basket__box_delivery_good">
+                                <div class="basket__box_delivery_good_text">Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная</div>
+                            </div>
+                            <div class="basket__box_delivery_code">СП3456</div>
+                            <div class="basket__box_delivery_price">4 567 руб.</div>
+                            <div class="basket__box_delivery_count">1 шт.</div>
+                            <div class="basket__box_delivery_total">4 567 руб.</div>
+                        </div>
+                    </div>
+                    <div class="basket__box-wrapper">
+                        <div class="basket__box">
+                            <div class="basket__box_delivery_good">
+                                <div class="basket__box_delivery_good_text">Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная</div>
+                            </div>
+                            <div class="basket__box_delivery_code">СП3456</div>
+                            <div class="basket__box_delivery_price">4 567 руб.</div>
+                            <div class="basket__box_delivery_count">1 шт.</div>
+                            <div class="basket__box_delivery_total">4 567 руб.</div>
+                        </div>
+                    </div>
+                    <div class="basket__box-wrapper">
+                        <div class="basket__box">
+                            <div class="basket__box_delivery_good">
+                                <div class="basket__box_delivery_good_text">Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная</div>
+                            </div>
+                            <div class="basket__box_delivery_code">СП3456</div>
+                            <div class="basket__box_delivery_price">4 567 руб.</div>
+                            <div class="basket__box_delivery_count">1 шт.</div>
+                            <div class="basket__box_delivery_total">4 567 руб.</div>
+                        </div>
+                    </div>
+                    <div class="basket__box-wrapper">
+                        <div class="basket__box">
+                            <div class="basket__box_delivery_good">
+                                <div class="basket__box_delivery_good_text">Эко-бутылка "Фанат воды" (500 мл) квадратная +Эко-бутылка "Секрет внутри" (500 мл) квадратная</div>
+                            </div>
+                            <div class="basket__box_delivery_code">СП3456</div>
+                            <div class="basket__box_delivery_price">4 567 руб.</div>
+                            <div class="basket__box_delivery_count">1 шт.</div>
+                            <div class="basket__box_delivery_total">4 567 руб.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket__delivery_result">
+                    <div class="basket__delivery_result_text">
+                        <span>Товаров на:</span>
+                        <span>37 482 руб.</span>
+                    </div>
+                    <div class="basket__delivery_result_text">
+                        <span>Стоимость доставки</span>
+                        <span>100 руб.</span>
+                    </div>
+                    <div class="basket__delivery_result_total">
+                        <span>Итого:</span>
+                        <span>37 582 руб.</span>
+                    </div>
+                    <div class="basket__delivery_result_button">Завершить оформление</div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer view-port text-mid">
+            <a class="footer__logo" href="index.html">
+                <img class="footer__logo_img" src="images/logo.svg" alt="Логотип" />
+            </a>
+            <div class="footer__links">
+                <a class="footer__links_link" href="rules.html">Правила компании</a>
+                <a class="footer__links_link" href="delivery.html">Доставка и оплата</a>
+            </div>
+            <div class="footer__contacts">
+                <div class="footer__contacts_phone"><svg class="icon icon__phone icon__phone_footer"><use xlink:href="images/icons/sprite.svg#phone"></use></svg>
+                    <span>+7 (905) 599-82-28</span>
+                </div>
+                <div class="footer__contacts_mail"><svg class="icon icon__mail icon__mail_footer"><use xlink:href="images/icons/sprite.svg#mail"></use></svg>
+                    <span>570_akhpolova@tupperware.su</span>
+                </div>
+            </div>
+            <div class="footer__address"><svg class="icon icon__address icon__address_footer"><use xlink:href="images/icons/sprite.svg#address"></use></svg>
+                <span>Студия Tupperware</span>
+            </div>
+        </footer>
+    </body>
+</html>

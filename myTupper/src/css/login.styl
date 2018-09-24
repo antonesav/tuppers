@@ -1,0 +1,215 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+
+.login
+	font-family 'TupperPRO', sans-serif !important
+	line-height 1.3
+	margin-top 40px
+
+	&__title
+		font-size 28px
+		margin-bottom 45px
+
+	&__wrapper
+		&-form
+			margin-bottom 50px
+		&-image
+			display none
+			width 70%
+			height 80%
+			position absolute
+			right 0
+			bottom 0
+			//bg('../images/login.jpg')
+			background-image url('../images/login.jpg')
+			background-position center
+			background-repeat no-repeat
+			background-size 100% 100%
+			z-index -10
+	&__paragraph
+		line-height 1.5
+		margin-bottom 50px
+
+	&__form
+		width 100%
+
+		&_box
+			//flex(column,$ai: center)
+			width 100%
+
+		&_item
+
+			position relative
+			margin-bottom 40px
+
+		&_input
+			font-family 'TupperPRO'
+			line-height 1.3
+			font-size 16px
+			padding 1px 5px
+			border 1px solid #cccccc
+			width 100%
+			height 40px
+			&:focus
+				border 1px solid $main-color
+				outline none
+
+		&_label
+			position absolute
+			top -25px
+
+		&_button
+			background-color $main-color
+			color $white-color
+			text-align center
+			font-weight 500
+			cursor pointer
+			padding 15px 0
+			margin-bottom 40px
+			&:hover
+				background-color darken($main-color,15%)
+		&_links
+			flex(column,$ai: center)
+			&_consult,&_password
+				margin-bottom 20px
+				& a
+					letter-spacing 0.4px
+					link($main-color)
+					&:hover
+						color $orange-color
+
+	&__modal
+		line-height 1.3
+		position fixed
+		font-family 'TupperPRO'
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		background-color rgba(0,0,0,0.6)
+		z-index 100
+		display none
+
+
+		&_message
+			width 90%
+			position absolute
+			top 30%
+			left 5%
+
+			&_banner
+				text-transform uppercase
+				color $white-color
+				font-size 18px
+				font-weight 500
+				background-color $red-color
+				width 100%
+				text-align center
+				padding 27px 0
+
+			&_close
+				top 5px
+				right -4px
+				height 22px
+				padding 12px
+				cursor pointer
+				position absolute
+				&:hover
+					& span
+						background-color $light-color
+						&:after
+							background-color $light-color
+
+				& span
+					height 2px
+					width 22px
+					display block
+					transform rotate(45deg)
+					background-color $white-color
+					&:after
+						content ''
+						height 2px
+						width 22px
+						display block
+						transform rotate(-90deg)
+						background-color $white-color
+
+			&_text
+				padding 15px 0
+				width 100%
+				background-color $white-color
+				flex(column,space-between,center)
+
+				& p
+					text-align center
+					width 80%
+
+		&_password
+			margin-top 20px
+			& a
+				letter-spacing 0.4px
+				link($main-color)
+				&:hover
+					color $orange-color
+
+@media screen and (min-width $view-port-mob)
+	.login
+		&__form
+			flex(column,$ai: center)
+			&_box
+				width 80%
+
+		&__modal
+			&_message
+				width 60%
+				top 30%
+				left 20%
+
+@media screen and (min-width $view-port-medium)
+	.login
+		&__form
+			&_box
+				width 60%
+
+
+@media screen and (min-width $view-port-tablet)
+	.login
+		&__form
+			&_box
+				width 50%
+
+		&__modal
+			&_message
+				width 50%
+				top 30%
+				left 25%
+
+@media screen and (min-width $view-port-tablet)
+	.login
+		&__form
+			&_box
+				width 40%
+		//&__wrapper-form
+		//	width 28%
+
+@media screen and (min-width $view-port-large)
+	.login
+		&__form
+			&_box
+				width 100%
+		&__wrapper-form
+			width 28%
+		&__wrapper-image
+			display block
+
+@media screen and (min-width $view-port-xl)
+	.login
+		&__wrapper-image
+			width 65%
+
+		&__modal
+			&_message
+				width 35%
+				top 30%
+				left 33%
+

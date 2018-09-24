@@ -1,0 +1,315 @@
+extends ../layouts/default
+include ../modules/icon/icon
+include ../modules/path/path
+include ../modules/programm_file/programm_file
+
+block content
+    +path({title: ['Главная страница', 'Программы','Программа ШУНК'], href: ['index.html']})
+    .pshunk.view-port
+        .pformula__aside
+            ul
+                li
+                    a(href='#') Программа «Менеджер»
+                li
+                    a(href='#') Программа «Директор»
+                li
+                    a(href='#') Программа «Формула успеха»
+                li
+                    a(href='#') Программа «Авангард»
+                li
+                    a(href='#') Программа «Живые деньги»
+                li
+                    a(href='#').aside-active Программа ШУНК
+                li
+                    a(href='#') Программа ШУМ
+                li
+                    a(href='#') Карьерные возможности
+                li
+                    a(href='#') Буклеты «online»
+        .pshunk__content
+
+            // FLEX-ROW ON TABLE OR LARGE
+            .pshunk__h1.standart-gap
+                h1.big-title.lower-gap Шаги Успеха Нового Консультанта
+                .pshunk__next
+                    a(href='programm_shunk_steps.html')
+                        p Перейти к доступным изделиям
+                        +icon('arrow','pformula')
+
+            // IMAGE-BLOCK-FLEX ON 650 PX
+            .pshunk__flex_row.standart-gap
+                .pshunk__image.lower-gap
+                    img(src='images/shunk-1.jpg')
+                .pshunk__image_text
+                    h3.lower-gap Шаги успеха нового консультанта
+                    p.lower-gap Становитесь участником программы ШУНК - соберите свой расширенный набор самых популярных изделий из Каталога по суперцене!
+                    .pshunk__image_icons
+                        .pshunk__image_icon
+                            +icon('shunk-12','shunk')
+                            p Недель
+                        .pshunk__image_icon
+                            +icon('shunk-5step','shunk')
+                            p Шагов
+                        .pshunk__image_icon
+                            +icon('shunk-5offer','shunk')
+                            p Предложений
+
+            //----------FIRST STEP--------------
+            // DESCTOP VERSION H2
+            .pshunk__desktop_h2.standart-gap
+                p #[span ШАГ 1] Размещение 1 квалификационного заказа*
+
+            // MOBILE VERSION H2 ++++ BUTTON ++++
+            .pshunk__mobile_h2.standart-gap
+                p ШАГ 1
+                +icon('arrow','pformula_down')
+
+            // HIDDEN BLOCKS ACCORDEON
+            .pshunk__hidden.standart-gap
+                .pshunk__mobile_h3.lower-gap
+                    h3 Размещение 1 квалификационного заказа*
+
+                // FLEX_ROW ON DESKTOP
+                .pshunk__hidden_row
+                    .pshunk__image.pshunk__image_relative.lower-gap
+                        img(src='images/shunk-2.jpg')
+
+                        // ABSOLUTE BLOCK ON IMAGE
+                        .pshunk__image_relative-block
+                            p Суперцена
+                            span 1 499 руб.
+                    .pshunk__step
+                        span.pshunk__step_span РК028
+                        .pshunk__step_row.lower-gap
+                            p Стартовый Набор Успеха:
+                            span 1 499р.
+                        ul.pshunk__step_ul.lower-gap
+                            li
+                                p “Браво-Дилайт” (430 мл)
+                            li
+                                p Замесочное блюдо (3л)
+                            li
+                                p Силиконовый скребок малый
+                            li
+                                p Гид по изделиям
+                        .pshunk__step_footnote
+                            p *Приобретение Стартового Набора Успеха не является обязательным условием для прохождения следующих шагов
+
+            //----------SECOND STEP--------------
+            // DESCTOP VERSION H2
+            .pshunk__desktop_h2.standart-gap
+                p #[span ШАГ 2] Размещение 2 квалификационных заказов**
+
+            // MOBILE VERSION H2 ++++ BUTTON ++++
+            .pshunk__mobile_h2.standart-gap
+                p ШАГ 2
+                +icon('arrow','pformula_down')
+
+            // HIDDEN BLOCKS ACCORDEON
+            .pshunk__hidden.standart-gap
+                .pshunk__mobile_h3.lower-gap
+                    h3 Размещение 2 квалификационных заказов**
+
+                // FLEX_ROW ON DESKTOP
+                .pshunk__hidden_row
+                    .pshunk__image.pshunk__image_relative.lower-gap
+                        img(src='images/shunk-3.jpg')
+
+                        // ABSOLUTE BLOCK ON IMAGE
+                        .pshunk__image_relative-block
+                            span - 50% от
+                            p Стандартной цены
+                    .pshunk__step
+                        span.pshunk__step_span РК029
+                        .pshunk__step_row.lower-gap
+                            p Кувшин “Очарование” (2,1 л)
+                            span 599р.
+                        .pshunk__step_plus.lower-gap
+                            span
+                        .pshunk__step_description.lower-gap
+                            p Рецептурный буклет “20 лучших рецептов” - сборник простых и популярных рецептов, приготовленных с помощью изделий Tupperware!
+                        .pshunk__step_mini.lower-gap
+                            img(src='images/shunk-mini.jpg')
+                        .pshunk__step_footnote
+                            p ** Специальными предложениями Консультант может воспользоваться в течение 12 недель в рамках прохождения программы. Объем заказов суммируется на протяжении всей программы и не привязан к конкретной неделе. Каждое следующее РК становится доступным при покупке предыдущего РК и прохождении соответствующего обучения. РК не входят в оборот Консультанта
+
+            //----------THREE STEP--------------
+            // DESCTOP VERSION H2
+            .pshunk__desktop_h2.standart-gap
+                p #[span ШАГ 3] Размещение 3 квалификационных заказов**
+
+            // MOBILE VERSION H2 ++++ BUTTON ++++
+            .pshunk__mobile_h2.standart-gap
+                p ШАГ 3
+                +icon('arrow','pformula_down')
+
+            // HIDDEN BLOCKS ACCORDEON
+            .pshunk__hidden.standart-gap
+                .pshunk__mobile_h3.lower-gap
+                    h3 Размещение 3 квалификационных заказов**
+
+                // FLEX_ROW ON DESKTOP
+                .pshunk__hidden_row
+                    .pshunk__image.pshunk__image_relative.lower-gap
+                        img(src='images/shunk-4.jpg')
+
+                        // ABSOLUTE BLOCK ON IMAGE
+                        .pshunk__image_relative-block
+                            span - 54% от
+                            p Стандартной цены
+                    .pshunk__step
+                        span.pshunk__step_span РК030
+                        .pshunk__step_row.lower-gap
+                            p Набор “Поварёнок”
+                            span 599р.
+                        .pshunk__step_footnote
+                            p ** Специальными предложениями Консультант может воспользоваться в течение 12 недель в рамках прохождения программы. Объем заказов суммируется на протяжении всей программы и не привязан к конкретной неделе. Каждое следующее РК становится доступным при покупке предыдущего РК и прохождении соответствующего обучения. РК не входят в оборот Консультанта
+
+            //----------FOUR STEP--------------
+            // DESCTOP VERSION H2
+            .pshunk__desktop_h2.standart-gap
+                p #[span ШАГ 4] Размещение 4 квалификационных заказов**
+
+            // MOBILE VERSION H2 ++++ BUTTON ++++
+            .pshunk__mobile_h2.standart-gap
+                p ШАГ 4
+                +icon('arrow','pformula_down')
+
+            // HIDDEN BLOCKS ACCORDEON
+            .pshunk__hidden.standart-gap
+                .pshunk__mobile_h3.lower-gap
+                    h3 Размещение 4 квалификационных заказов**
+
+                // FLEX_ROW ON DESKTOP
+                .pshunk__hidden_row
+                    .pshunk__image.pshunk__image_relative.lower-gap
+                        img(src='images/shunk-5.jpg')
+
+                        // ABSOLUTE BLOCK ON IMAGE
+                        .pshunk__image_relative-block
+                            span - 43% от
+                            p Стандартной цены
+                    .pshunk__step
+                        span.pshunk__step_span РК031
+                        .pshunk__step_row.lower-gap
+                            p Шейкер (600 мл)
+                            span 599р.
+                        .pshunk__step_footnote
+                            p ** Специальными предложениями Консультант может воспользоваться в течение 12 недель в рамках прохождения программы. Объем заказов суммируется на протяжении всей программы и не привязан к конкретной неделе. Каждое следующее РК становится доступным при покупке предыдущего РК и прохождении соответствующего обучения. РК не входят в оборот Консультанта
+
+            //----------FOUR STEP--------------
+            // DESCTOP VERSION H2
+            .pshunk__desktop_h2.standart-gap
+                p #[span ШАГ 5] Размещение 5 квалификационных заказов**
+
+            // MOBILE VERSION H2 ++++ BUTTON ++++
+            .pshunk__mobile_h2.standart-gap
+                p ШАГ 5
+                +icon('arrow','pformula_down')
+
+            // HIDDEN BLOCKS ACCORDEON
+            .pshunk__hidden.standart-gap
+                .pshunk__mobile_h3.lower-gap
+                    h3 Размещение 5 квалификационных заказов**
+
+                // FLEX_ROW ON DESKTOP
+                .pshunk__hidden_row
+                    .pshunk__image.pshunk__image_relative.lower-gap
+                        img(src='images/shunk-6.jpg')
+
+                        // ABSOLUTE BLOCK ON IMAGE
+                        .pshunk__image_relative-block
+                            span - 43% от
+                            p Стандартной цены
+                    .pshunk__step
+                        span.pshunk__step_span РК032
+                        .pshunk__step_row.lower-gap
+                            p Измельчитель “Турбо” (300 мл)
+                            span 599р.
+                        .pshunk__step_footnote
+                            p ** Специальными предложениями Консультант может воспользоваться в течение 12 недель в рамках прохождения программы. Объем заказов суммируется на протяжении всей программы и не привязан к конкретной неделе. Каждое следующее РК становится доступным при покупке предыдущего РК и прохождении соответствующего обучения. РК не входят в оборот Консультанта
+
+            // TRAINING
+            h2.pshunk__training.big-title.standart-gap Обучение и Тренинги
+
+            //----------TRAINING 1-4 --------------
+            // DESCTOP VERSION H2
+            .pshunk__border
+                .pshunk__desktop_h2.standart-gap
+                    span 1 - 4 недели программы
+
+                // MOBILE VERSION H2 ++++ BUTTON ++++
+                .pshunk__mobile_h2.lower-gap
+                    p 1 - 4 недели программы
+                    +icon('arrow','pformula_down')
+
+                // HIDDEN BLOCKS ACCORDEON ROW ON DESKTOP
+                .pshunk__hidden_step.standart-gap
+                    ul.pshunk__step_ul.lower-gap
+                        li
+                            p Обучение “Волшебный список”
+                        li
+                            p Тренинг по хранению
+
+                    // TRAINING BLOCK ROW
+                    .pshunk__training_row
+                        .pshunk__training_box
+                            p.lower-gap Мы рекомендуем:
+                            a(href='#') Гид по заморозке
+                        .pshunk__training_box
+                            img(src='images/shunk-mini.jpg')
+
+            //----------TRAINING 5-8 --------------
+            // DESCTOP VERSION H2
+            .pshunk__border
+                .pshunk__desktop_h2.standart-gap
+                    span 5 - 8 недели программы
+
+                // MOBILE VERSION H2 ++++ BUTTON ++++
+                .pshunk__mobile_h2.lower-gap
+                    p 5 - 8 недели программы
+                    +icon('arrow','pformula_down')
+
+                // HIDDEN BLOCKS ACCORDEON ROW ON DESKTOP
+                .pshunk__hidden_step.standart-gap
+                    ul.pshunk__step_ul.lower-gap
+                        li
+                            p Обучение “Презентация Tupperware. Часть 1”
+                        li
+                            p Тренинг по приготовлению в микроволновой печи
+
+                    // TRAINING BLOCK ROW
+                    .pshunk__training_row
+                        .pshunk__training_box
+                            p.lower-gap Мы рекомендуем:
+                            a(href='#') Гид по микроволновой печи
+                        .pshunk__training_box
+                            img(src='images/shunk-mini.jpg')
+
+            //----------TRAINING 9-12 --------------
+            // DESCTOP VERSION H2
+            .pshunk__border_none
+                .pshunk__desktop_h2.standart-gap
+                    span 9-12 недели программы
+
+                // MOBILE VERSION H2 ++++ BUTTON ++++
+                .pshunk__mobile_h2.lower-gap
+                    p 9-12 недели программы
+                    +icon('arrow','pformula_down')
+
+                // HIDDEN BLOCKS ACCORDEON ROW ON DESKTOP
+                .pshunk__hidden_step.standart-gap
+                    ul.pshunk__step_ul.lower-gap
+                        li
+                            p Обучение “Презентация Tupperware. Часть 2”
+                        li
+                            p Тренинг по тзделиям из коллекции “Микс”
+
+                    // TRAINING BLOCK ROW
+                    .pshunk__training_row
+                        .pshunk__training_box
+                            p.lower-gap Мы рекомендуем:
+                            a(href='#') Рецептурный буклет “Коллекция “Микс”
+                        .pshunk__training_box
+                            img(src='images/shunk-mini.jpg')
+            +programm_file(programms.shunk)

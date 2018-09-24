@@ -1,0 +1,81 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+
+.rules
+	line-height 1.3
+	font-family 'TupperPRO', sans-serif !important
+	&__ul
+		//flex(row)
+		display none
+		& li
+			border-bottom 48px solid $main-color
+			border-right 50px solid transparent
+			position relative
+			margin-bottom 1px
+			color $white-color
+			cursor pointer
+			height 0
+			width 100%
+			& span
+				width 100%
+				position absolute
+				top 15px
+				left 30px
+	&__arrow
+		display none
+		position absolute
+		width 20px
+		height 0
+		border-top 13px solid $main-color
+		border-left 13px solid transparent
+		border-right 13px solid transparent
+		top 47px
+		left 30px
+	&__active
+		display block
+	&__blocks
+		//display none
+		&_content
+			padding 20px
+			background-color $fill-color
+		&_ul
+			& li
+				margin-bottom 15px
+		&_tab
+			border-bottom 48px solid $main-color
+			border-right 50px solid transparent
+			position relative
+			margin-bottom 1px
+			color $white-color
+			cursor pointer
+			height 0
+			width 100%
+			& span
+				width 100%
+				position absolute
+				top 15px
+				left 30px
+			&_arrow
+				position absolute
+				width 20px
+				height 0
+				border-top 13px solid $main-color
+				border-left 13px solid transparent
+				border-right 13px solid transparent
+				top 47px
+				left 30px
+
+@media screen and (min-width $view-port-tablet)
+	.rules
+		&__ul
+			flex(row)
+			& li
+				width 25%
+		&__blocks
+			&_tab
+				display none
+			&_content
+				padding 50px 100px
+				display none
+				&:nth-of-type(2)
+					display block

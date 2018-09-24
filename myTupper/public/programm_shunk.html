@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="format-detection" content="address=no" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <!--link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic", rel="stylesheet")-->
+        <link rel="stylesheet" href="libs/slick/slick.css" />
+        <link rel="stylesheet" href="libs/slick/slick-theme.css" />
+        <link rel="stylesheet" href="css/style.css" /><script src="libs/jquery.min.js" defer="defer"></script><script src="libs/slick/slick.min.js" defer="defer"></script><script src="js/script.js" defer="defer"></script>
+        <!--script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")-->
+        <title>Tupperware</title>
+    </head>
+    <body>
+        <header class="header view-port">
+            <a class="header__logo" href="index.html">
+                <img class="header__logo_img" src="images/logo.svg" alt="Логотип" />
+            </a>
+            <div class="header__account"><svg class="icon icon__account icon__account_header"><use xlink:href="images/icons/sprite.svg#account"></use></svg>
+                <div class="header__account_text text-sm">Астахова Мария</div><svg class="icon icon__logout"><use xlink:href="images/icons/sprite.svg#logout"></use></svg></div>
+            <div class="header__menu"><svg class="icon icon__menu"><use xlink:href="images/icons/sprite.svg#menu"></use></svg></div>
+            <nav class="nav">
+                <div class="nav__home">
+                    <a class="nav__home_link" href="index.html"><svg class="icon icon__home"><use xlink:href="images/icons/sprite.svg#home"></use></svg>
+                        <div class="nav__underline"></div>
+                    </a>
+                    <div class="nav__close"><svg class="icon icon__close"><use xlink:href="images/icons/sprite.svg#close"></use></svg></div>
+                </div>
+                <ul class="nav__menu">
+                    <li class="nav__menu_item" data-item="menu" data-number="0">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Действующие предложения
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--1" data-number="0"></ul>
+                    </li>
+                    <li class="nav__menu_item" data-item="menu" data-number="1">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Изделия
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--2" data-number="1"></ul>
+                    </li>
+                    <li class="nav__menu_item" data-item="menu" data-number="2">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Программы
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--3" data-number="2"></ul>
+                    </li>
+                    <li class="nav__menu_item" data-item="menu" data-number="3">
+                        <div class="nav__menu_item_wrapper">
+                            <div class="nav__menu_item_text">Личный кабинет
+                                <div class="nav__underline"></div>
+                            </div><svg class="icon icon__arrow icon__arrow_menu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                        <ul class="nav__submenu hidden nav__submenu--4" data-number="3">
+                            <li class="nav__submenu_item" data-item="submenu" data-number="0">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Профиль</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="0"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="1">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Заказы </div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="1"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="2">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Отчеты</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="2">
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Оборот группы</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Еженедельный отчет</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Заказы консультанта</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Список инфолистов</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Продажи изделий</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Отчет по Авангарду</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Контактные данные консультантов</a>
+                                    </li>
+                                    <li class="nav__deepmenu_item" data-item="deepmenu">
+                                        <a class="nav__deepmenu_item_text" href="#">Обороты счетов консультантов</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="3">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Обороты</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="3"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="4">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Дополнительно</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="4"></ul>
+                            </li>
+                            <li class="nav__submenu_item" data-item="submenu" data-number="5">
+                                <div class="nav__submenu_item_wrapper">
+                                    <div class="nav__submenu_item_text">Недовложение и брак</div><svg class="icon icon__arrow icon__arrow_submenu"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                                <ul class="nav__deepmenu hidden" data-number="5"></ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <form class="header__search" action="" method="POST">
+                <input class="header__search_input text-mid" type="text" name="search" /><svg class="icon icon__search"><use xlink:href="images/icons/sprite.svg#search"></use></svg></form>
+            <div class="header__basket">
+                <div class="header__basket_block"><svg class="icon icon__basket"><use xlink:href="images/icons/sprite.svg#basket"></use></svg>
+                    <span class="header__basket_number">15</span>
+                </div>
+                <div class="header__basket_text">
+                    <div class="header__basket_text_wrapper">
+                        <span class="header__basket_text_span">Оборот</span>
+                        <span class="header__basket_text_span">4 567 руб.</span>
+                    </div>
+                    <div class="header__basket_text_wrapper">
+                        <span class="header__basket_text_span">Стоимость</span>
+                        <span class="header__basket_text_span">3 567 руб.</span>
+                    </div>
+                    <div class="header__basket_text_wrapper">
+                        <span class="header__basket_text_span">Неделя</span>
+                        <span class="header__basket_text_span">2018/11</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="path view-port">
+            <div class="path__content">
+                <a class="path__link" href="index.html">Главная страница</a>
+                <div class="path__separator"><svg class="icon icon__small-arrow icon__small-arrow_path"><use xlink:href="images/icons/sprite.svg#small-arrow"></use></svg></div>
+                <a class="path__link">Программы</a>
+                <div class="path__separator"><svg class="icon icon__small-arrow icon__small-arrow_path"><use xlink:href="images/icons/sprite.svg#small-arrow"></use></svg></div>
+                <div class="path__link path__link_active">Программа ШУНК</div>
+            </div>
+        </div>
+        <div class="pshunk view-port">
+            <div class="pformula__aside">
+                <ul>
+                    <li>
+                        <a href="#">Программа «Менеджер»</a>
+                    </li>
+                    <li>
+                        <a href="#">Программа «Директор»</a>
+                    </li>
+                    <li>
+                        <a href="#">Программа «Формула успеха»</a>
+                    </li>
+                    <li>
+                        <a href="#">Программа «Авангард»</a>
+                    </li>
+                    <li>
+                        <a href="#">Программа «Живые деньги»</a>
+                    </li>
+                    <li>
+                        <a class="aside-active" href="#">Программа ШУНК</a>
+                    </li>
+                    <li>
+                        <a href="#">Программа ШУМ</a>
+                    </li>
+                    <li>
+                        <a href="#">Карьерные возможности</a>
+                    </li>
+                    <li>
+                        <a href="#">Буклеты «online»</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="pshunk__content">
+                <!-- FLEX-ROW ON TABLE OR LARGE-->
+                <div class="pshunk__h1 standart-gap">
+                    <h1 class="big-title lower-gap">Шаги Успеха Нового Консультанта</h1>
+                    <div class="pshunk__next">
+                        <a href="programm_shunk_steps.html">
+                            <p>Перейти к доступным изделиям</p><svg class="icon icon__arrow icon__arrow_pformula"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></a>
+                    </div>
+                </div>
+                <!-- IMAGE-BLOCK-FLEX ON 650 PX-->
+                <div class="pshunk__flex_row standart-gap">
+                    <div class="pshunk__image lower-gap">
+                        <img src="images/shunk-1.jpg">
+                    </div>
+                    <div class="pshunk__image_text">
+                        <h3 class="lower-gap">Шаги успеха нового консультанта</h3>
+                        <p class="lower-gap">Становитесь участником программы ШУНК - соберите свой расширенный набор самых популярных изделий из Каталога по суперцене!</p>
+                        <div class="pshunk__image_icons">
+                            <div class="pshunk__image_icon"><svg class="icon icon__shunk-12 icon__shunk-12_shunk"><use xlink:href="images/icons/sprite.svg#shunk-12"></use></svg>
+                                <p>Недель</p>
+                            </div>
+                            <div class="pshunk__image_icon"><svg class="icon icon__shunk-5step icon__shunk-5step_shunk"><use xlink:href="images/icons/sprite.svg#shunk-5step"></use></svg>
+                                <p>Шагов</p>
+                            </div>
+                            <div class="pshunk__image_icon"><svg class="icon icon__shunk-5offer icon__shunk-5offer_shunk"><use xlink:href="images/icons/sprite.svg#shunk-5offer"></use></svg>
+                                <p>Предложений</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- DESCTOP VERSION H2-->
+                <div class="pshunk__desktop_h2 standart-gap">
+                    <p>
+                        <span>ШАГ 1</span> Размещение 1 квалификационного заказа*</p>
+                </div>
+                <!-- MOBILE VERSION H2 ++++ BUTTON ++++-->
+                <div class="pshunk__mobile_h2 standart-gap">
+                    <p>ШАГ 1</p><svg class="icon icon__arrow icon__arrow_pformula_down"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                <!-- HIDDEN BLOCKS ACCORDEON-->
+                <div class="pshunk__hidden standart-gap">
+                    <div class="pshunk__mobile_h3 lower-gap">
+                        <h3>Размещение 1 квалификационного заказа*</h3>
+                    </div>
+                    <!-- FLEX_ROW ON DESKTOP-->
+                    <div class="pshunk__hidden_row">
+                        <div class="pshunk__image pshunk__image_relative lower-gap">
+                            <img src="images/shunk-2.jpg">
+                            <!-- ABSOLUTE BLOCK ON IMAGE-->
+                            <div class="pshunk__image_relative-block">
+                                <p>Суперцена</p>
+                                <span>1 499 руб.</span>
+                            </div>
+                        </div>
+                        <div class="pshunk__step">
+                            <span class="pshunk__step_span">РК028</span>
+                            <div class="pshunk__step_row lower-gap">
+                                <p>Стартовый Набор Успеха:</p>
+                                <span>1 499р.</span>
+                            </div>
+                            <ul class="pshunk__step_ul lower-gap">
+                                <li>
+                                    <p>“Браво-Дилайт” (430 мл)</p>
+                                </li>
+                                <li>
+                                    <p>Замесочное блюдо (3л)</p>
+                                </li>
+                                <li>
+                                    <p>Силиконовый скребок малый</p>
+                                </li>
+                                <li>
+                                    <p>Гид по изделиям</p>
+                                </li>
+                            </ul>
+                            <div class="pshunk__step_footnote">
+                                <p>*Приобретение Стартового Набора Успеха не является обязательным условием для прохождения следующих шагов</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- DESCTOP VERSION H2-->
+                <div class="pshunk__desktop_h2 standart-gap">
+                    <p>
+                        <span>ШАГ 2</span> Размещение 2 квалификационных заказов**</p>
+                </div>
+                <!-- MOBILE VERSION H2 ++++ BUTTON ++++-->
+                <div class="pshunk__mobile_h2 standart-gap">
+                    <p>ШАГ 2</p><svg class="icon icon__arrow icon__arrow_pformula_down"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                <!-- HIDDEN BLOCKS ACCORDEON-->
+                <div class="pshunk__hidden standart-gap">
+                    <div class="pshunk__mobile_h3 lower-gap">
+                        <h3>Размещение 2 квалификационных заказов**</h3>
+                    </div>
+                    <!-- FLEX_ROW ON DESKTOP-->
+                    <div class="pshunk__hidden_row">
+                        <div class="pshunk__image pshunk__image_relative lower-gap">
+                            <img src="images/shunk-3.jpg">
+                            <!-- ABSOLUTE BLOCK ON IMAGE-->
+                            <div class="pshunk__image_relative-block">
+                                <span>- 50% от</span>
+                                <p>Стандартной цены</p>
+                            </div>
+                        </div>
+                        <div class="pshunk__step">
+                            <span class="pshunk__step_span">РК029</span>
+                            <div class="pshunk__step_row lower-gap">
+                                <p>Кувшин “Очарование” (2,1 л)</p>
+                                <span>599р.</span>
+                            </div>
+                            <div class="pshunk__step_plus lower-gap">
+                                <span></span>
+                            </div>
+                            <div class="pshunk__step_description lower-gap">
+                                <p>Рецептурный буклет “20 лучших рецептов” - сборник простых и популярных рецептов, приготовленных с помощью изделий Tupperware!</p>
+                            </div>
+                            <div class="pshunk__step_mini lower-gap">
+                                <img src="images/shunk-mini.jpg">
+                            </div>
+                            <div class="pshunk__step_footnote">
+                                <p>** Специальными предложениями Консультант может воспользоваться в течение 12 недель в рамках прохождения программы. Объем заказов суммируется на протяжении всей программы и не привязан к конкретной неделе. Каждое следующее
+                                    РК становится доступным при покупке предыдущего РК и прохождении соответствующего обучения. РК не входят в оборот Консультанта</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- DESCTOP VERSION H2-->
+                <div class="pshunk__desktop_h2 standart-gap">
+                    <p>
+                        <span>ШАГ 3</span> Размещение 3 квалификационных заказов**</p>
+                </div>
+                <!-- MOBILE VERSION H2 ++++ BUTTON ++++-->
+                <div class="pshunk__mobile_h2 standart-gap">
+                    <p>ШАГ 3</p><svg class="icon icon__arrow icon__arrow_pformula_down"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                <!-- HIDDEN BLOCKS ACCORDEON-->
+                <div class="pshunk__hidden standart-gap">
+                    <div class="pshunk__mobile_h3 lower-gap">
+                        <h3>Размещение 3 квалификационных заказов**</h3>
+                    </div>
+                    <!-- FLEX_ROW ON DESKTOP-->
+                    <div class="pshunk__hidden_row">
+                        <div class="pshunk__image pshunk__image_relative lower-gap">
+                            <img src="images/shunk-4.jpg">
+                            <!-- ABSOLUTE BLOCK ON IMAGE-->
+                            <div class="pshunk__image_relative-block">
+                                <span>- 54% от</span>
+                                <p>Стандартной цены</p>
+                            </div>
+                        </div>
+                        <div class="pshunk__step">
+                            <span class="pshunk__step_span">РК030</span>
+                            <div class="pshunk__step_row lower-gap">
+                                <p>Набор “Поварёнок”</p>
+                                <span>599р.</span>
+                            </div>
+                            <div class="pshunk__step_footnote">
+                                <p>** Специальными предложениями Консультант может воспользоваться в течение 12 недель в рамках прохождения программы. Объем заказов суммируется на протяжении всей программы и не привязан к конкретной неделе. Каждое следующее
+                                    РК становится доступным при покупке предыдущего РК и прохождении соответствующего обучения. РК не входят в оборот Консультанта</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- DESCTOP VERSION H2-->
+                <div class="pshunk__desktop_h2 standart-gap">
+                    <p>
+                        <span>ШАГ 4</span> Размещение 4 квалификационных заказов**</p>
+                </div>
+                <!-- MOBILE VERSION H2 ++++ BUTTON ++++-->
+                <div class="pshunk__mobile_h2 standart-gap">
+                    <p>ШАГ 4</p><svg class="icon icon__arrow icon__arrow_pformula_down"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                <!-- HIDDEN BLOCKS ACCORDEON-->
+                <div class="pshunk__hidden standart-gap">
+                    <div class="pshunk__mobile_h3 lower-gap">
+                        <h3>Размещение 4 квалификационных заказов**</h3>
+                    </div>
+                    <!-- FLEX_ROW ON DESKTOP-->
+                    <div class="pshunk__hidden_row">
+                        <div class="pshunk__image pshunk__image_relative lower-gap">
+                            <img src="images/shunk-5.jpg">
+                            <!-- ABSOLUTE BLOCK ON IMAGE-->
+                            <div class="pshunk__image_relative-block">
+                                <span>- 43% от</span>
+                                <p>Стандартной цены</p>
+                            </div>
+                        </div>
+                        <div class="pshunk__step">
+                            <span class="pshunk__step_span">РК031</span>
+                            <div class="pshunk__step_row lower-gap">
+                                <p>Шейкер (600 мл)</p>
+                                <span>599р.</span>
+                            </div>
+                            <div class="pshunk__step_footnote">
+                                <p>** Специальными предложениями Консультант может воспользоваться в течение 12 недель в рамках прохождения программы. Объем заказов суммируется на протяжении всей программы и не привязан к конкретной неделе. Каждое следующее
+                                    РК становится доступным при покупке предыдущего РК и прохождении соответствующего обучения. РК не входят в оборот Консультанта</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- DESCTOP VERSION H2-->
+                <div class="pshunk__desktop_h2 standart-gap">
+                    <p>
+                        <span>ШАГ 5</span> Размещение 5 квалификационных заказов**</p>
+                </div>
+                <!-- MOBILE VERSION H2 ++++ BUTTON ++++-->
+                <div class="pshunk__mobile_h2 standart-gap">
+                    <p>ШАГ 5</p><svg class="icon icon__arrow icon__arrow_pformula_down"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                <!-- HIDDEN BLOCKS ACCORDEON-->
+                <div class="pshunk__hidden standart-gap">
+                    <div class="pshunk__mobile_h3 lower-gap">
+                        <h3>Размещение 5 квалификационных заказов**</h3>
+                    </div>
+                    <!-- FLEX_ROW ON DESKTOP-->
+                    <div class="pshunk__hidden_row">
+                        <div class="pshunk__image pshunk__image_relative lower-gap">
+                            <img src="images/shunk-6.jpg">
+                            <!-- ABSOLUTE BLOCK ON IMAGE-->
+                            <div class="pshunk__image_relative-block">
+                                <span>- 43% от</span>
+                                <p>Стандартной цены</p>
+                            </div>
+                        </div>
+                        <div class="pshunk__step">
+                            <span class="pshunk__step_span">РК032</span>
+                            <div class="pshunk__step_row lower-gap">
+                                <p>Измельчитель “Турбо” (300 мл)</p>
+                                <span>599р.</span>
+                            </div>
+                            <div class="pshunk__step_footnote">
+                                <p>** Специальными предложениями Консультант может воспользоваться в течение 12 недель в рамках прохождения программы. Объем заказов суммируется на протяжении всей программы и не привязан к конкретной неделе. Каждое следующее
+                                    РК становится доступным при покупке предыдущего РК и прохождении соответствующего обучения. РК не входят в оборот Консультанта</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- TRAINING-->
+                <h2 class="pshunk__training big-title standart-gap">Обучение и Тренинги</h2>
+                <!-- DESCTOP VERSION H2-->
+                <div class="pshunk__border">
+                    <div class="pshunk__desktop_h2 standart-gap">
+                        <span>1 - 4 недели программы</span>
+                    </div>
+                    <!-- MOBILE VERSION H2 ++++ BUTTON ++++-->
+                    <div class="pshunk__mobile_h2 lower-gap">
+                        <p>1 - 4 недели программы</p><svg class="icon icon__arrow icon__arrow_pformula_down"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                    <!-- HIDDEN BLOCKS ACCORDEON ROW ON DESKTOP-->
+                    <div class="pshunk__hidden_step standart-gap">
+                        <ul class="pshunk__step_ul lower-gap">
+                            <li>
+                                <p>Обучение “Волшебный список”</p>
+                            </li>
+                            <li>
+                                <p>Тренинг по хранению</p>
+                            </li>
+                        </ul>
+                        <!-- TRAINING BLOCK ROW-->
+                        <div class="pshunk__training_row">
+                            <div class="pshunk__training_box">
+                                <p class="lower-gap">Мы рекомендуем:</p>
+                                <a href="#">Гид по заморозке</a>
+                            </div>
+                            <div class="pshunk__training_box">
+                                <img src="images/shunk-mini.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- DESCTOP VERSION H2-->
+                <div class="pshunk__border">
+                    <div class="pshunk__desktop_h2 standart-gap">
+                        <span>5 - 8 недели программы</span>
+                    </div>
+                    <!-- MOBILE VERSION H2 ++++ BUTTON ++++-->
+                    <div class="pshunk__mobile_h2 lower-gap">
+                        <p>5 - 8 недели программы</p><svg class="icon icon__arrow icon__arrow_pformula_down"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                    <!-- HIDDEN BLOCKS ACCORDEON ROW ON DESKTOP-->
+                    <div class="pshunk__hidden_step standart-gap">
+                        <ul class="pshunk__step_ul lower-gap">
+                            <li>
+                                <p>Обучение “Презентация Tupperware. Часть 1”</p>
+                            </li>
+                            <li>
+                                <p>Тренинг по приготовлению в микроволновой печи</p>
+                            </li>
+                        </ul>
+                        <!-- TRAINING BLOCK ROW-->
+                        <div class="pshunk__training_row">
+                            <div class="pshunk__training_box">
+                                <p class="lower-gap">Мы рекомендуем:</p>
+                                <a href="#">Гид по микроволновой печи</a>
+                            </div>
+                            <div class="pshunk__training_box">
+                                <img src="images/shunk-mini.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- DESCTOP VERSION H2-->
+                <div class="pshunk__border_none">
+                    <div class="pshunk__desktop_h2 standart-gap">
+                        <span>9-12 недели программы</span>
+                    </div>
+                    <!-- MOBILE VERSION H2 ++++ BUTTON ++++-->
+                    <div class="pshunk__mobile_h2 lower-gap">
+                        <p>9-12 недели программы</p><svg class="icon icon__arrow icon__arrow_pformula_down"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></div>
+                    <!-- HIDDEN BLOCKS ACCORDEON ROW ON DESKTOP-->
+                    <div class="pshunk__hidden_step standart-gap">
+                        <ul class="pshunk__step_ul lower-gap">
+                            <li>
+                                <p>Обучение “Презентация Tupperware. Часть 2”</p>
+                            </li>
+                            <li>
+                                <p>Тренинг по тзделиям из коллекции “Микс”</p>
+                            </li>
+                        </ul>
+                        <!-- TRAINING BLOCK ROW-->
+                        <div class="pshunk__training_row">
+                            <div class="pshunk__training_box">
+                                <p class="lower-gap">Мы рекомендуем:</p>
+                                <a href="#">Рецептурный буклет “Коллекция “Микс”</a>
+                            </div>
+                            <div class="pshunk__training_box">
+                                <img src="images/shunk-mini.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pformula__wrapper standart-gap">
+                    <div class="pformula__info standart-gap">
+                        <a href="#"><svg class="icon icon__pdf-file icon__pdf-file_pformula"><use xlink:href="images/icons/sprite.svg#pdf-file"></use></svg>
+                            <p>ШУНК Россия.pdf</p>
+                        </a>
+                    </div>
+                    <div class="pformula__back">
+                        <a href="#">
+                            <p>Перейти к личным результатам</p><svg class="icon icon__arrow icon__arrow_pformula"><use xlink:href="images/icons/sprite.svg#arrow"></use></svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer view-port text-mid">
+            <a class="footer__logo" href="index.html">
+                <img class="footer__logo_img" src="images/logo.svg" alt="Логотип" />
+            </a>
+            <div class="footer__links">
+                <a class="footer__links_link" href="rules.html">Правила компании</a>
+                <a class="footer__links_link" href="delivery.html">Доставка и оплата</a>
+            </div>
+            <div class="footer__contacts">
+                <div class="footer__contacts_phone"><svg class="icon icon__phone icon__phone_footer"><use xlink:href="images/icons/sprite.svg#phone"></use></svg>
+                    <span>+7 (905) 599-82-28</span>
+                </div>
+                <div class="footer__contacts_mail"><svg class="icon icon__mail icon__mail_footer"><use xlink:href="images/icons/sprite.svg#mail"></use></svg>
+                    <span>570_akhpolova@tupperware.su</span>
+                </div>
+            </div>
+            <div class="footer__address"><svg class="icon icon__address icon__address_footer"><use xlink:href="images/icons/sprite.svg#address"></use></svg>
+                <span>Студия Tupperware</span>
+            </div>
+        </footer>
+    </body>
+</html>

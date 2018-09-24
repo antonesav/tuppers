@@ -1,0 +1,85 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+
+.calendar
+	font-family 'TupperPRO', sans-serif !important
+	&__empty
+		&_block
+			width 100%
+			height 200px
+			display none
+	&__banner
+		background-color $main-color
+		color $white-color
+		font-weight 500
+		padding 15px 10px
+		position relative
+		margin-bottom 2px
+		cursor pointer
+		& .icon__arrow_calendar, & .icon__arrow_calendar_down
+			position absolute
+			top 50%
+			margin-top -10px
+			right 20px
+	&__form
+		&_item
+			position relative
+		&_buttons
+			flex(row,space-between,center)
+		&_reset
+			cursor pointer
+			flex(row,flex-end,center)
+		&_search
+			background-color $main-color
+			text-transform uppercase
+			color $white-color
+			padding 10px 42px
+			margin-right 15px
+			font-size 12px
+			cursor pointer
+			width 130px
+			&:hover
+				background-color darken($main-color, 15%)
+	&__block
+		&_line
+			padding 15px 5px
+			border-bottom 1px solid $light-color
+			flex(row,space-between,center)
+	&__line
+		&_item
+			text-align left
+			width 25%
+
+@media screen and (min-width $view-port-mob)
+	.calendar
+		&__form
+			width 80%
+			margin 0 auto
+
+@media screen and (min-width $view-port-medium)
+	.calendar
+		&__form
+			width 60%
+
+@media screen and (min-width $view-port-tablet)
+	.calendar
+		&__form
+			flex(row,space-between)
+			flex-wrap wrap
+			width 100%
+			margin 0
+			&_item
+				width 45%
+
+@media screen and (min-width $view-port-large)
+	.calendar
+		&__form
+			flex(row,space-between,center)
+			&_item
+				width 25%
+
+@media screen and (min-width $view-port-xl)
+	.calendar
+		&__form
+			&_item
+				width 30%

@@ -1,0 +1,10 @@
+mixin order(data)
+    .orders__table
+        each item in data
+            .orders__table_line
+                .orders__line_item 02.04.18
+                a(href='order.html').orders__line_item 25456 (45673)
+                .orders__line_item= item.status
+                .orders__line_item Наталья Золотухина
+                .orders__line_item 4567.00
+                .orders__line_item= item.delivery

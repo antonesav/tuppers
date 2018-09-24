@@ -1,0 +1,55 @@
+extends ../layouts/default
+
+include ../modules/icon/icon
+include ../modules/path/path
+include ../modules/basket-box/basket-box
+
+block content
+	+path({title: ['Главная страница', 'Корзина. Шаг 1: Оформление заказа'], href: ['index.html']})
+	.basket.view-port
+		h1.basket__title Корзина. Шаг 1: Оформление заказа
+		.basket__clear
+			span.basket__clear_text Очистить корзину
+			.basket__clear_close
+				+icon('close', 'basket')
+		each item in basket_box
+			+basket-box(item)
+		aside.basket__aside
+			.basket__aside_item
+				.basket__aside_title Общая стоимость
+				.basket__aside_text
+					span.basket__aside_text_span Оборот
+					span.basket__aside_text_span 1 187 руб.
+				.basket__aside_text
+					span.basket__aside_text_span Ваша стоимость
+					span.basket__aside_text_span 987 руб.
+				form.basket__aside_form(method="POST")
+					p.basket__aside_form_title Промокод
+					input.basket__aside_form_input(type='text', name='vendor_code')
+					button.basket__aside_form_button(name='vendor_code_submit') Активировать
+				.basket__aside_total
+					span.basket__aside_total_span Итого:
+					span.basket__aside_total_span 1 067 руб.
+				.basket__aside_recount Пересчитать корзину
+				.basket__aside_order Оформить заказ
+			.basket__aside_item
+				.basket__aside_title.basket__aside_title_blue Результаты
+				.basket__aside_results
+					.basket__aside_results_text
+						p.basket__aside_results_descr Оборот за программу:
+						p.basket__aside_results_price 67 000 руб.
+					+icon('refresh', 'basket')
+				.basket__aside_results
+					.basket__aside_results_text
+						p.basket__aside_results_descr Заказ каталожных изделий на сумму:
+						p.basket__aside_results_price 3 999 руб.
+					+icon('refresh', 'basket')
+				.basket__aside_results
+					.basket__aside_results_text
+						p.basket__aside_results_descr Кол-во кв.заказов (оборот/8000 рублей):
+						p.basket__aside_results_price 8 кв. заказов.
+					+icon('refresh', 'basket')
+		.basket__back
+			.basket__back_content
+				+icon('arrow', 'basket-back icon__arrow_left')
+				span.basket__back_text Продолжить покупки

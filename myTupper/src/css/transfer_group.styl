@@ -1,0 +1,61 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+
+.transfer
+	font-family 'TupperPRO', sans-serif !important
+	&__button
+		flex(row,center)
+		padding 20px 0
+		& p
+			background-color $main-color
+			text-transform uppercase
+			display inline-block
+			color $white-color
+			padding 10px 30px
+			cursor pointer
+			font-weight 500
+			font-size 12px
+			&:hover
+				background-color darken($main-color,15%)
+	&__manager
+		cursor pointer
+		max-width 180px
+		flex(row,$ai:center)
+		&:hover .icon__search_add-consult
+			color darken($pink-color,35%)
+		& p
+			margin-right 10px
+	&__form
+		padding 10px 5px
+		margin 15px 0
+		height 232px
+		border 1px solid $light-color
+		border-radius 2px
+		&_line
+			padding 5px 0
+			flex(row,space-between,center)
+	&__line
+		&_empty
+			width 15%
+			flex(row,center,center)
+		&_txt
+			width 80%
+	&__arrows
+		flex(row,center)
+		&_item
+			cursor pointer
+			&:hover .icon__double-arrow_transfer
+				stroke-width 2px
+	&__consult
+		&_search
+			cursor pointer
+
+@media screen and (min-width $view-port-large)
+	.transfer
+		&__box
+			flex(row,space-between)
+		&__form
+			&_wrapper
+				width 48%
+		&__button
+			flex(row,flex-end)

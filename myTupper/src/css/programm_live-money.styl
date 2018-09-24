@@ -1,0 +1,164 @@
+@require 'partials/_params.styl'
+@require 'partials/_mixins.styl'
+
+.plive
+	font-family 'TupperPRO', sans-serif !important
+	& p
+		line-height 25px
+	&__image
+		& img
+			width 100%
+	&__text
+		&_desktop
+			display none
+			& h3
+				color $main-color
+		&_mobile
+			cursor pointer
+			flex(row,space-between,center)
+			& h3
+				color $main-color
+		&_p
+			& span
+				color $main-color
+	&__grey
+		background-color $fill-color
+		padding 20px
+		&_h3
+			margin-bottom 20px
+			color $main-color
+	&__block
+		flex(row,space-between,center)
+		background-color $main-color
+		color $white-color
+		padding 20px 25px
+		&-table
+			font-size 5px
+		& p
+			line-height normal
+			&:nth-child(1)
+				width 20%
+			&:nth-child(2)
+				width 10%
+			&:nth-child(3)
+				width 10%
+			&:nth-child(4)
+				width 10%
+			&:nth-child(5)
+				width 10%
+			&:nth-child(6)
+				width 10%
+			&:nth-child(7)
+				width 10%
+		&_line
+			border 1px solid $light-color
+			border-top none
+			padding 20px 25px
+			flex(row,space-between,center)
+			&:hover
+				background-color $fill-color
+			& p
+				line-height normal
+				&:nth-child(1)
+					width 20%
+				&:nth-child(2)
+					width 10%
+				&:nth-child(3)
+					width 10%
+				&:nth-child(4)
+					width 10%
+				&:nth-child(5)
+					width 10%
+				&:nth-child(6)
+					width 10%
+				&:nth-child(7)
+					width 10%
+	&__total
+		flex(row)
+		& p
+			text-transform uppercase
+		& span
+			margin-left 20px
+	&__blue
+		background-color $main-color
+		color $white-color
+		text-align center
+		padding 15px 0
+		&_p
+			& p:nth-child(1)
+				margin-bottom 15px
+	&__ul
+		margin-left 17px
+		& li
+			margin-bottom 15px
+			list-style-type disc
+			color grey
+			& p
+				color $black-color
+@media screen and (min-width $view-port-mob)
+	.plive
+		&__image
+			flex(row,center)
+			& img
+				width 440px
+		&__block
+			&-table
+				font-size 10px
+@media screen and (min-width $view-port-medium)
+	.plive
+		&__image
+			flex(row,center)
+			width 55%
+			& img
+				width 100%
+		&__text
+			&_desktop
+				display block
+				& h3
+					margin-bottom 20px
+			&_mobile
+				display none
+			&_width
+				width 43%
+		&__hidden
+			& .plive__text_p:nth-child(1)
+				display none
+		&__flex
+			&_desktop
+				flex(row,space-between)
+		&__block
+			&-table
+				font-size 14px
+		&__total
+			flex(row,flex-end)
+		&__header
+			width 43%
+		&__footer
+			width 43%
+@media screen and (min-width $view-port-tablet)
+	.plive
+		&__flex
+			&_row
+				flex(row,space-between,stretch)
+				&_left
+					flex(column,space-between)
+					//& .plive__blue_p
+					width 47%
+				&_right
+					width 50%
+		&__blue
+			&_p
+				&:nth-of-type(2)
+					margin 0
+
+
+@media screen and (min-width $view-port-large)
+	.plive
+		flex(row,space-between)
+		&__content
+			width 73%
+@media screen and (min-width $view-port-xl)
+	.plive
+		&__block
+			&-table
+				font-size 16px
